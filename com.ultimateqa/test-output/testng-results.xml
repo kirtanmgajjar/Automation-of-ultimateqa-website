@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="5" passed="5" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2023-11-14T12:53:31 IST" name="Default suite" finished-at="2023-11-14T12:55:12 IST" duration-ms="101063">
+    <groups>
+    </groups>
+    <test started-at="2023-11-14T12:53:31 IST" name="Default test" finished-at="2023-11-14T12:55:12 IST" duration-ms="101063">
+      <class name="test.SubmitFormTest">
+        <test-method is-config="true" signature="configurations()[pri:0, instance:test.SubmitFormTest@6743e411]" started-at="2023-11-14T12:53:31 IST" name="configurations" finished-at="2023-11-14T12:53:39 IST" duration-ms="8477" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- configurations -->
+        <test-method is-config="true" signature="openDataExcel()[pri:0, instance:test.SubmitFormTest@6743e411]" started-at="2023-11-14T12:53:39 IST" name="openDataExcel" finished-at="2023-11-14T12:53:40 IST" duration-ms="742" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openDataExcel -->
+        <test-method signature="clickConsultation()[pri:0, instance:test.SubmitFormTest@6743e411]" started-at="2023-11-14T12:53:40 IST" name="clickConsultation" description="To validate the functionality of &quot;Free Consultation Button&quot;" finished-at="2023-11-14T12:53:49 IST" duration-ms="9653" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- clickConsultation -->
+        <test-method signature="fillForm([Ljava.lang.String;)[pri:0, instance:test.SubmitFormTest@6743e411]" started-at="2023-11-14T12:53:50 IST" name="fillForm" description="To validate submit functioality by filling details" data-provider="filldetails" finished-at="2023-11-14T12:54:36 IST" depends-on-methods="test.SubmitFormTest.clickConsultation" duration-ms="46152" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[Ljava.lang.String;@2506e949]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- fillForm -->
+        <test-method signature="navigateToHomepage()[pri:0, instance:test.SubmitFormTest@6743e411]" started-at="2023-11-14T12:54:36 IST" name="navigateToHomepage" description="To validate the navigation to homepage" finished-at="2023-11-14T12:54:42 IST" depends-on-methods="test.SubmitFormTest.fillForm" duration-ms="6485" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- navigateToHomepage -->
+        <test-method signature="navigateToSignin()[pri:0, instance:test.SubmitFormTest@6743e411]" started-at="2023-11-14T12:54:43 IST" name="navigateToSignin" description="To validate page by navigating to Signin page" finished-at="2023-11-14T12:54:58 IST" depends-on-methods="test.SubmitFormTest.navigateToHomepage" duration-ms="15087" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- navigateToSignin -->
+        <test-method signature="signIn()[pri:0, instance:test.SubmitFormTest@6743e411]" started-at="2023-11-14T12:54:58 IST" name="signIn" description="To validate by sigining with wrong credentials and retreiving the error message" finished-at="2023-11-14T12:55:11 IST" depends-on-methods="test.SubmitFormTest.navigateToSignin" duration-ms="13268" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- signIn -->
+      </class> <!-- test.SubmitFormTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
