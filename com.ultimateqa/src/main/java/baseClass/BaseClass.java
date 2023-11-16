@@ -21,6 +21,7 @@ import org.testng.annotations.Listeners;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import pages.ConsultationPage;
+import pages.FreeCoursesPage;
 import pages.HomePage;
 import pages.SignInPage;
 import pages.SubmitForm;
@@ -46,6 +47,7 @@ public class BaseClass {
 	public static SubmitForm sf;
 	public static HomePage hp;
 	public static SignInPage sp;
+	public static FreeCoursesPage fp;
 	@BeforeTest
 	public void configurations() throws Exception
 	{
@@ -110,6 +112,7 @@ public class BaseClass {
 		sf = new SubmitForm();
 		hp = new HomePage();
 		sp = new SignInPage();
+		fp = new FreeCoursesPage();
 
 	}
 	@BeforeTest

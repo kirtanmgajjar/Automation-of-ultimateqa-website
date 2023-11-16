@@ -17,6 +17,8 @@ public class SubmitFormTest extends BaseClass {
 		cp.clickFreeConsultation();
 		setPassMessage("Form submission page is successfully opened");
 	}
+	
+	
 	@Test(testName = "Submit form",
 			description = "To validate submit functioality by filling details",
 			dependsOnMethods = {"clickConsultation"},
@@ -37,16 +39,31 @@ public class SubmitFormTest extends BaseClass {
 		setPassMessage("Navigated to homepage successfully");
 	}
 	
-	@Test(testName = "Navigate to SignIn page",
-			description = "To validate page by navigating to Signin page",
+	@Test(testName = "Search courses",
+			description = "To validate the search functionality for seaching courses based on the subject",
 			dependsOnMethods = "navigateToHomepage")
-	public void navigateToSignin()
+	public void validateSearchResults()
 	{
 		hp.hoverLearningMenu();
 		hp.clickFreeCourse();
-		hp.navigateToSignin();
+		fp.searchCourse("Selenium");
+		if(fp.hasSearchResults())
+			setPassMessage("Results Found");
+		else
+			setPassMessage("No Results Found");
+	}
+	
+	@Test(testName = "Navigate to SignIn page",
+			description = "To validate page by navigating to Signin page",
+			dependsOnMethods = "validateSearchResults")
+	public void navigateToSignin()
+	{
+
+		fp.navigateToSignin();
 		setPassMessage("Navigated to SignIn page successfully");
 	}
+	
+	
 	
 	@Test(testName = "Error Message",
 			description = "To validate by sigining with wrong credentials and retreiving the error message",
@@ -57,6 +74,7 @@ public class SubmitFormTest extends BaseClass {
 		sp.sendPassword();
 		sp.clickSubmit();
 	}
+	
 	@DataProvider(name = "filldetails")
 	public String[][] getData()
 	{

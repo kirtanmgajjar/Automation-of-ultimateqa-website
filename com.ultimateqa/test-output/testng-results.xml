@@ -1,44 +1,234 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="5" passed="5" failed="0" skipped="0">
+<testng-results ignored="0" total="6" passed="1" failed="1" skipped="4">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-11-14T12:53:31 IST" name="Default suite" finished-at="2023-11-14T12:55:12 IST" duration-ms="101063">
+  <suite started-at="2023-11-16T14:08:34 IST" name="Default suite" finished-at="2023-11-16T14:10:10 IST" duration-ms="96840">
     <groups>
     </groups>
-    <test started-at="2023-11-14T12:53:31 IST" name="Default test" finished-at="2023-11-14T12:55:12 IST" duration-ms="101063">
+    <test started-at="2023-11-16T14:08:34 IST" name="Default test" finished-at="2023-11-16T14:10:10 IST" duration-ms="96840">
       <class name="test.SubmitFormTest">
-        <test-method is-config="true" signature="configurations()[pri:0, instance:test.SubmitFormTest@6743e411]" started-at="2023-11-14T12:53:31 IST" name="configurations" finished-at="2023-11-14T12:53:39 IST" duration-ms="8477" status="PASS">
+        <test-method is-config="true" signature="configurations()[pri:0, instance:test.SubmitFormTest@3eb25e1a]" started-at="2023-11-16T14:08:34 IST" name="configurations" finished-at="2023-11-16T14:08:53 IST" duration-ms="18976" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- configurations -->
-        <test-method is-config="true" signature="openDataExcel()[pri:0, instance:test.SubmitFormTest@6743e411]" started-at="2023-11-14T12:53:39 IST" name="openDataExcel" finished-at="2023-11-14T12:53:40 IST" duration-ms="742" status="PASS">
+        <test-method is-config="true" signature="openDataExcel()[pri:0, instance:test.SubmitFormTest@3eb25e1a]" started-at="2023-11-16T14:08:53 IST" name="openDataExcel" finished-at="2023-11-16T14:08:53 IST" duration-ms="517" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- openDataExcel -->
-        <test-method signature="clickConsultation()[pri:0, instance:test.SubmitFormTest@6743e411]" started-at="2023-11-14T12:53:40 IST" name="clickConsultation" description="To validate the functionality of &quot;Free Consultation Button&quot;" finished-at="2023-11-14T12:53:49 IST" duration-ms="9653" status="PASS">
+        <test-method signature="clickConsultation()[pri:0, instance:test.SubmitFormTest@3eb25e1a]" started-at="2023-11-16T14:08:53 IST" name="clickConsultation" description="To validate the functionality of &quot;Free Consultation Button&quot;" finished-at="2023-11-16T14:09:08 IST" duration-ms="14915" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- clickConsultation -->
-        <test-method signature="fillForm([Ljava.lang.String;)[pri:0, instance:test.SubmitFormTest@6743e411]" started-at="2023-11-14T12:53:50 IST" name="fillForm" description="To validate submit functioality by filling details" data-provider="filldetails" finished-at="2023-11-14T12:54:36 IST" depends-on-methods="test.SubmitFormTest.clickConsultation" duration-ms="46152" status="PASS">
+        <test-method signature="fillForm([Ljava.lang.String;)[pri:0, instance:test.SubmitFormTest@3eb25e1a]" started-at="2023-11-16T14:09:08 IST" name="fillForm" description="To validate submit functioality by filling details" data-provider="filldetails" finished-at="2023-11-16T14:10:10 IST" depends-on-methods="test.SubmitFormTest.clickConsultation" duration-ms="62170" status="FAIL">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[Ljava.lang.String;@2506e949]]>
+                <![CDATA[[Ljava.lang.String;@794f11cd]]>
               </value>
             </param>
           </params>
+          <exception class="org.openqa.selenium.TimeoutException">
+            <message>
+              <![CDATA[Expected condition failed: waiting for presence of element located by: By.xpath: //*[@aria-checked='true'] (tried for 60 second(s) with 500 milliseconds interval)]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for presence of element located by: By.xpath: //*[@aria-checked='true'] (tried for 60 second(s) with 500 milliseconds interval)
+at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:230)
+at pages.SubmitForm.fillDetails(SubmitForm.java:59)
+at test.SubmitFormTest.fillForm(SubmitFormTest.java:28)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:848)
+at org.testng.TestRunner.run(TestRunner.java:621)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+at org.testng.TestNG.runSuites(TestNG.java:1114)
+at org.testng.TestNG.run(TestNG.java:1082)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=117.0.5938.63)
+Build info: version: '4.11.0', revision: '040bc5406b'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '19.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [192b6aa8d4fbef35f99cae07733399ea, findElement {using=xpath, value=//*[@aria-checked='true']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 117.0.5938.63, chrome: {chromedriverVersion: 117.0.5938.149 (e3344ddefa1..., userDataDir: C:\Windows\SystemTemp\scope...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:64917}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:64917/devtoo..., se:cdpVersion: 117.0.5938.63, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 192b6aa8d4fbef35f99cae07733399ea
+at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:484)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
+at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:349)
+at org.openqa.selenium.support.ui.ExpectedConditions$6.apply(ExpectedConditions.java:171)
+at org.openqa.selenium.support.ui.ExpectedConditions$6.apply(ExpectedConditions.java:168)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:205)
+... 28 more
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.TimeoutException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- fillForm -->
-        <test-method signature="navigateToHomepage()[pri:0, instance:test.SubmitFormTest@6743e411]" started-at="2023-11-14T12:54:36 IST" name="navigateToHomepage" description="To validate the navigation to homepage" finished-at="2023-11-14T12:54:42 IST" depends-on-methods="test.SubmitFormTest.fillForm" duration-ms="6485" status="PASS">
+        <test-method signature="navigateToHomepage()[pri:0, instance:test.SubmitFormTest@3eb25e1a]" started-at="2023-11-16T14:10:10 IST" name="navigateToHomepage" description="To validate the navigation to homepage" finished-at="2023-11-16T14:10:10 IST" depends-on-methods="test.SubmitFormTest.fillForm" duration-ms="0" status="SKIP">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method test.SubmitFormTest.navigateToHomepage() on instance test.SubmitFormTest@3eb25e1a depends on not successfully finished methods 
+[test.SubmitFormTest.fillForm() on instance test.SubmitFormTest@3eb25e1a]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method test.SubmitFormTest.navigateToHomepage() on instance test.SubmitFormTest@3eb25e1a depends on not successfully finished methods 
+[test.SubmitFormTest.fillForm() on instance test.SubmitFormTest@3eb25e1a]
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:156)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:848)
+at org.testng.TestRunner.run(TestRunner.java:621)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+at org.testng.TestNG.runSuites(TestNG.java:1114)
+at org.testng.TestNG.run(TestNG.java:1082)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- navigateToHomepage -->
-        <test-method signature="navigateToSignin()[pri:0, instance:test.SubmitFormTest@6743e411]" started-at="2023-11-14T12:54:43 IST" name="navigateToSignin" description="To validate page by navigating to Signin page" finished-at="2023-11-14T12:54:58 IST" depends-on-methods="test.SubmitFormTest.navigateToHomepage" duration-ms="15087" status="PASS">
+        <test-method signature="validateSearchResults()[pri:0, instance:test.SubmitFormTest@3eb25e1a]" started-at="2023-11-16T14:10:10 IST" name="validateSearchResults" description="To validate the search functionality for seaching courses based on the subject" finished-at="2023-11-16T14:10:10 IST" depends-on-methods="test.SubmitFormTest.navigateToHomepage" duration-ms="1" status="SKIP">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method test.SubmitFormTest.validateSearchResults() on instance test.SubmitFormTest@3eb25e1a depends on not successfully finished methods 
+[test.SubmitFormTest.navigateToHomepage() on instance test.SubmitFormTest@3eb25e1a]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method test.SubmitFormTest.validateSearchResults() on instance test.SubmitFormTest@3eb25e1a depends on not successfully finished methods 
+[test.SubmitFormTest.navigateToHomepage() on instance test.SubmitFormTest@3eb25e1a]
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:156)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:848)
+at org.testng.TestRunner.run(TestRunner.java:621)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+at org.testng.TestNG.runSuites(TestNG.java:1114)
+at org.testng.TestNG.run(TestNG.java:1082)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateSearchResults -->
+        <test-method signature="navigateToSignin()[pri:0, instance:test.SubmitFormTest@3eb25e1a]" started-at="2023-11-16T14:10:10 IST" name="navigateToSignin" description="To validate page by navigating to Signin page" finished-at="2023-11-16T14:10:10 IST" depends-on-methods="test.SubmitFormTest.validateSearchResults" duration-ms="0" status="SKIP">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method test.SubmitFormTest.navigateToSignin() on instance test.SubmitFormTest@3eb25e1a depends on not successfully finished methods 
+[test.SubmitFormTest.validateSearchResults() on instance test.SubmitFormTest@3eb25e1a]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method test.SubmitFormTest.navigateToSignin() on instance test.SubmitFormTest@3eb25e1a depends on not successfully finished methods 
+[test.SubmitFormTest.validateSearchResults() on instance test.SubmitFormTest@3eb25e1a]
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:156)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:848)
+at org.testng.TestRunner.run(TestRunner.java:621)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+at org.testng.TestNG.runSuites(TestNG.java:1114)
+at org.testng.TestNG.run(TestNG.java:1082)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- navigateToSignin -->
-        <test-method signature="signIn()[pri:0, instance:test.SubmitFormTest@6743e411]" started-at="2023-11-14T12:54:58 IST" name="signIn" description="To validate by sigining with wrong credentials and retreiving the error message" finished-at="2023-11-14T12:55:11 IST" depends-on-methods="test.SubmitFormTest.navigateToSignin" duration-ms="13268" status="PASS">
+        <test-method signature="signIn()[pri:0, instance:test.SubmitFormTest@3eb25e1a]" started-at="2023-11-16T14:10:10 IST" name="signIn" description="To validate by sigining with wrong credentials and retreiving the error message" finished-at="2023-11-16T14:10:10 IST" depends-on-methods="test.SubmitFormTest.navigateToSignin" duration-ms="0" status="SKIP">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method test.SubmitFormTest.signIn() on instance test.SubmitFormTest@3eb25e1a depends on not successfully finished methods 
+[test.SubmitFormTest.navigateToSignin() on instance test.SubmitFormTest@3eb25e1a]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method test.SubmitFormTest.signIn() on instance test.SubmitFormTest@3eb25e1a depends on not successfully finished methods 
+[test.SubmitFormTest.navigateToSignin() on instance test.SubmitFormTest@3eb25e1a]
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:156)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:848)
+at org.testng.TestRunner.run(TestRunner.java:621)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+at org.testng.TestNG.runSuites(TestNG.java:1114)
+at org.testng.TestNG.run(TestNG.java:1082)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- signIn -->

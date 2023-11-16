@@ -5,9 +5,10 @@
     <classes>
       <class name="test.SubmitFormTest">
         <methods>
+          <include name="validateSearchResults"/>
           <include name="fillForm" invocation-numbers="0"/>
-          <include name="openDataExcel"/>
           <include name="navigateToHomepage"/>
+          <include name="openDataExcel"/>
           <include name="signIn"/>
           <include name="navigateToSignin"/>
           <include name="configurations"/>
