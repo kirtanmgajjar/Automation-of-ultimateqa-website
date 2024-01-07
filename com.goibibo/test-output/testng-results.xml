@@ -1,0 +1,1425 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="46" passed="10" failed="3" skipped="33">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2024-01-07T21:47:05 IST" name="Suite" finished-at="2024-01-07T21:48:01 IST" duration-ms="56312">
+    <groups>
+    </groups>
+    <test started-at="2024-01-07T21:47:05 IST" name="Test2" finished-at="2024-01-07T21:47:34 IST" duration-ms="29447">
+      <class name="allTest.LoginTest">
+        <test-method is-config="true" signature="configPages()[pri:0, instance:allTest.LoginTest@e4487af]" started-at="2024-01-07T21:47:05 IST" name="configPages" finished-at="2024-01-07T21:47:15 IST" duration-ms="10132" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- configPages -->
+        <test-method signature="invalidSignIn(java.lang.String)[pri:0, instance:allTest.LoginTest@e4487af, attributes: &lt;name: passMessage, value:[Proper error messaged is displayed successfully]&gt;]" started-at="2024-01-07T21:47:15 IST" name="invalidSignIn" description="To verify that user is not able to enter invalid mobile number" data-provider="invalidMobileNumbers" finished-at="2024-01-07T21:47:15 IST" duration-ms="490" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[1234567890]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+          <custom-attributes>
+            <custom-attribute>
+              <name value="passMessage">
+              </name>
+              <value>
+                <![CDATA[[Proper error messaged is displayed successfully]]]>
+              </value>
+            </custom-attribute>
+          </custom-attributes>
+        </test-method> <!-- invalidSignIn -->
+        <test-method signature="invalidSignIn(java.lang.String)[pri:0, instance:allTest.LoginTest@e4487af, attributes: &lt;name: passMessage, value:[Proper error messaged is displayed successfully]&gt;]" started-at="2024-01-07T21:47:16 IST" name="invalidSignIn" description="To verify that user is not able to enter invalid mobile number" data-provider="invalidMobileNumbers" finished-at="2024-01-07T21:47:16 IST" duration-ms="443" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[edf4567890]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+          <custom-attributes>
+            <custom-attribute>
+              <name value="passMessage">
+              </name>
+              <value>
+                <![CDATA[[Proper error messaged is displayed successfully]]]>
+              </value>
+            </custom-attribute>
+          </custom-attributes>
+        </test-method> <!-- invalidSignIn -->
+        <test-method signature="signIn()[pri:0, instance:allTest.LoginTest@e4487af, attributes: &lt;name: passMessage, value:[User is logged in successfully]&gt;]" started-at="2024-01-07T21:47:17 IST" name="signIn" description="To verify that user is able to enter valid mobile number and able to login successfully" finished-at="2024-01-07T21:47:32 IST" depends-on-methods="allTest.LoginTest.invalidSignIn" duration-ms="15477" status="FAIL">
+          <exception class="org.openqa.selenium.NoSuchElementException">
+            <message>
+              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//*[contains(@class,'sc-1we57hl-0')]"}
+  (Session info: chrome=118.0.5993.71)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.11.0', revision: '040bc5406b'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '19.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [5d29aef4c59deafd82407f4e8f0f7c4c, findElement {using=xpath, value=//*[contains(@class,'sc-1we57hl-0')]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 118.0.5993.71, chrome: {chromedriverVersion: 118.0.5993.70 (e52f33f30b91..., userDataDir: C:\Windows\SystemTemp\scope...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:63253}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:63253/devtoo..., se:cdpVersion: 118.0.5993.71, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 5d29aef4c59deafd82407f4e8f0f7c4c]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//*[contains(@class,'sc-1we57hl-0')]"}
+  (Session info: chrome=118.0.5993.71)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.11.0', revision: '040bc5406b'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '19.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [5d29aef4c59deafd82407f4e8f0f7c4c, findElement {using=xpath, value=//*[contains(@class,'sc-1we57hl-0')]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 118.0.5993.71, chrome: {chromedriverVersion: 118.0.5993.70 (e52f33f30b91..., userDataDir: C:\Windows\SystemTemp\scope...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:63253}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:63253/devtoo..., se:cdpVersion: 118.0.5993.71, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 5d29aef4c59deafd82407f4e8f0f7c4c
+at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:484)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
+at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:349)
+at pages.Homepage.verifyValidLogin(Homepage.java:117)
+at allTest.LoginTest.signIn(LoginTest.java:37)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:848)
+at org.testng.TestRunner.run(TestRunner.java:621)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:481)
+at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+at java.base/java.lang.Thread.run(Thread.java:1589)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+          <reporter-output>
+          </reporter-output>
+          <custom-attributes>
+            <custom-attribute>
+              <name value="passMessage">
+              </name>
+              <value>
+                <![CDATA[[User is logged in successfully]]]>
+              </value>
+            </custom-attribute>
+          </custom-attributes>
+        </test-method> <!-- signIn -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:allTest.LoginTest@e4487af]" started-at="2024-01-07T21:47:33 IST" name="tearDown" finished-at="2024-01-07T21:47:34 IST" duration-ms="1437" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- allTest.LoginTest -->
+    </test> <!-- Test2 -->
+    <test started-at="2024-01-07T21:47:05 IST" name="Test1" finished-at="2024-01-07T21:47:53 IST" duration-ms="47999">
+      <class name="allTest.HotelsTest">
+        <test-method is-config="true" signature="configPages()[pri:0, instance:allTest.HotelsTest@1ff4931d]" started-at="2024-01-07T21:47:05 IST" name="configPages" finished-at="2024-01-07T21:47:10 IST" duration-ms="5780" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- configPages -->
+        <test-method signature="navigateToHotelsPage()[pri:0, instance:allTest.HotelsTest@1ff4931d, attributes: &lt;name: passMessage, value:[User is redirected to Hotels web page]&gt;]" started-at="2024-01-07T21:47:11 IST" name="navigateToHotelsPage" description="To validate if &#039;Hotel&#039; menu button is displayed and clickable" finished-at="2024-01-07T21:47:18 IST" duration-ms="7953" status="PASS">
+          <reporter-output>
+          </reporter-output>
+          <custom-attributes>
+            <custom-attribute>
+              <name value="passMessage">
+              </name>
+              <value>
+                <![CDATA[[User is redirected to Hotels web page]]]>
+              </value>
+            </custom-attribute>
+          </custom-attributes>
+        </test-method> <!-- navigateToHotelsPage -->
+        <test-method signature="validationOfRadioButtons()[pri:0, instance:allTest.HotelsTest@1ff4931d, attributes: &lt;name: passMessage, value:[India radio button is selected]&gt;]" started-at="2024-01-07T21:47:19 IST" name="validationOfRadioButtons" description="To validate the working of radio buttons" finished-at="2024-01-07T21:47:20 IST" depends-on-methods="allTest.HotelsTest.navigateToHotelsPage" duration-ms="968" status="PASS">
+          <reporter-output>
+          </reporter-output>
+          <custom-attributes>
+            <custom-attribute>
+              <name value="passMessage">
+              </name>
+              <value>
+                <![CDATA[[India radio button is selected]]]>
+              </value>
+            </custom-attribute>
+          </custom-attributes>
+        </test-method> <!-- validationOfRadioButtons -->
+        <test-method signature="validationOfWhereSearchfield()[pri:0, instance:allTest.HotelsTest@1ff4931d, attributes: &lt;name: passMessage, value:[A dropdown is displayed showing locations in Goa and the chosen location is displayed in the &#039;Where&#039; field]&gt;]" started-at="2024-01-07T21:47:20 IST" name="validationOfWhereSearchfield" description="To validate the functionality of &#039;Where&#039; search box to be able to take input and is able to select the required location" finished-at="2024-01-07T21:47:51 IST" depends-on-methods="allTest.HotelsTest.validationOfRadioButtons" duration-ms="30875" status="FAIL">
+          <exception class="org.openqa.selenium.TimeoutException">
+            <message>
+              <![CDATA[Expected condition failed: waiting for presence of any elements located by By.xpath: //*[@id='downshift-1-menu']/li (tried for 30 second(s) with 500 milliseconds interval)
+Build info: version: '4.11.0', revision: '040bc5406b'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '19.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 118.0.5993.71, chrome: {chromedriverVersion: 118.0.5993.70 (e52f33f30b91..., userDataDir: C:\Windows\SystemTemp\scope...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:63252}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:63252/devtoo..., se:cdpVersion: 118.0.5993.71, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: ba9d9ee8c27176ef7542101569a63537]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for presence of any elements located by By.xpath: //*[@id='downshift-1-menu']/li (tried for 30 second(s) with 500 milliseconds interval)
+Build info: version: '4.11.0', revision: '040bc5406b'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '19.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 118.0.5993.71, chrome: {chromedriverVersion: 118.0.5993.70 (e52f33f30b91..., userDataDir: C:\Windows\SystemTemp\scope...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:63252}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:63252/devtoo..., se:cdpVersion: 118.0.5993.71, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: ba9d9ee8c27176ef7542101569a63537
+at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:230)
+at pages.hotels.HotelsPage.enterLocationOfHotel(HotelsPage.java:94)
+at allTest.HotelsTest.validationOfWhereSearchfield(HotelsTest.java:84)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:848)
+at org.testng.TestRunner.run(TestRunner.java:621)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:481)
+at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+at java.base/java.lang.Thread.run(Thread.java:1589)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.TimeoutException -->
+          <reporter-output>
+          </reporter-output>
+          <custom-attributes>
+            <custom-attribute>
+              <name value="passMessage">
+              </name>
+              <value>
+                <![CDATA[[A dropdown is displayed showing locations in Goa and the chosen location is displayed in the 'Where' field]]]>
+              </value>
+            </custom-attribute>
+          </custom-attributes>
+        </test-method> <!-- validationOfWhereSearchfield -->
+        <test-method signature="validationOfDateFields()[pri:0, instance:allTest.HotelsTest@1ff4931d, attributes: &lt;name: passMessage, value:[The calender box appears and the selected &#039;Check In&#039; and &#039;Check Out&#039; dates is displayed in the respective fields]&gt;]" started-at="2024-01-07T21:47:51 IST" name="validationOfDateFields" description="To validate the functionality of date fields to be able select required dates" finished-at="2024-01-07T21:47:51 IST" depends-on-methods="allTest.HotelsTest.validationOfWhereSearchfield" duration-ms="0" status="SKIP">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method allTest.HotelsTest.validationOfDateFields() on instance allTest.HotelsTest@1ff4931d depends on not successfully finished methods 
+[allTest.HotelsTest.validationOfWhereSearchfield() on instance allTest.HotelsTest@1ff4931d]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method allTest.HotelsTest.validationOfDateFields() on instance allTest.HotelsTest@1ff4931d depends on not successfully finished methods 
+[allTest.HotelsTest.validationOfWhereSearchfield() on instance allTest.HotelsTest@1ff4931d]
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:156)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:848)
+at org.testng.TestRunner.run(TestRunner.java:621)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:481)
+at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+at java.base/java.lang.Thread.run(Thread.java:1589)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
+          <reporter-output>
+          </reporter-output>
+          <custom-attributes>
+            <custom-attribute>
+              <name value="passMessage">
+              </name>
+              <value>
+                <![CDATA[[The calender box appears and the selected 'Check In' and 'Check Out' dates is displayed in the respective fields]]]>
+              </value>
+            </custom-attribute>
+          </custom-attributes>
+        </test-method> <!-- validationOfDateFields -->
+        <test-method signature="validationOfAdultsField()[pri:0, instance:allTest.HotelsTest@1ff4931d, attributes: &lt;name: passMessage, value:[The dropdown menu appears and the selected number of adults is displayed in the field]&gt;]" started-at="2024-01-07T21:47:51 IST" name="validationOfAdultsField" description="To verify if user is able to select the required number of adults" finished-at="2024-01-07T21:47:51 IST" depends-on-methods="allTest.HotelsTest.validationOfDateFields" duration-ms="0" status="SKIP">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method allTest.HotelsTest.validationOfAdultsField() on instance allTest.HotelsTest@1ff4931d depends on not successfully finished methods 
+[allTest.HotelsTest.validationOfDateFields() on instance allTest.HotelsTest@1ff4931d]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method allTest.HotelsTest.validationOfAdultsField() on instance allTest.HotelsTest@1ff4931d depends on not successfully finished methods 
+[allTest.HotelsTest.validationOfDateFields() on instance allTest.HotelsTest@1ff4931d]
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:156)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:848)
+at org.testng.TestRunner.run(TestRunner.java:621)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:481)
+at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+at java.base/java.lang.Thread.run(Thread.java:1589)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
+          <reporter-output>
+          </reporter-output>
+          <custom-attributes>
+            <custom-attribute>
+              <name value="passMessage">
+              </name>
+              <value>
+                <![CDATA[[The dropdown menu appears and the selected number of adults is displayed in the field]]]>
+              </value>
+            </custom-attribute>
+          </custom-attributes>
+        </test-method> <!-- validationOfAdultsField -->
+        <test-method signature="validationOfRoomsField()[pri:0, instance:allTest.HotelsTest@1ff4931d, attributes: &lt;name: passMessage, value:[The dropdown menu appears and the selected number of rooms is displayed in the field]&gt;]" started-at="2024-01-07T21:47:51 IST" name="validationOfRoomsField" description="To verify if user is able to select the required number of rooms" finished-at="2024-01-07T21:47:51 IST" depends-on-methods="allTest.HotelsTest.validationOfDateFields" duration-ms="1" status="SKIP">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method allTest.HotelsTest.validationOfRoomsField() on instance allTest.HotelsTest@1ff4931d depends on not successfully finished methods 
+[allTest.HotelsTest.validationOfDateFields() on instance allTest.HotelsTest@1ff4931d]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method allTest.HotelsTest.validationOfRoomsField() on instance allTest.HotelsTest@1ff4931d depends on not successfully finished methods 
+[allTest.HotelsTest.validationOfDateFields() on instance allTest.HotelsTest@1ff4931d]
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:156)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:848)
+at org.testng.TestRunner.run(TestRunner.java:621)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:481)
+at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+at java.base/java.lang.Thread.run(Thread.java:1589)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
+          <reporter-output>
+          </reporter-output>
+          <custom-attributes>
+            <custom-attribute>
+              <name value="passMessage">
+              </name>
+              <value>
+                <![CDATA[[The dropdown menu appears and the selected number of rooms is displayed in the field]]]>
+              </value>
+            </custom-attribute>
+          </custom-attributes>
+        </test-method> <!-- validationOfRoomsField -->
+        <test-method signature="validationOfChildrenField()[pri:0, instance:allTest.HotelsTest@1ff4931d, attributes: &lt;name: passMessage, value:[The dropdown menu appears and the selected number of children is added and the age is able to gets selected for each of them]&gt;]" started-at="2024-01-07T21:47:51 IST" name="validationOfChildrenField" description="To verify if user is able to select the required number of children and should be able to select the age for each of the children added" finished-at="2024-01-07T21:47:51 IST" depends-on-methods="allTest.HotelsTest.validationOfAdultsField" duration-ms="0" status="SKIP">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method allTest.HotelsTest.validationOfChildrenField() on instance allTest.HotelsTest@1ff4931d depends on not successfully finished methods 
+[allTest.HotelsTest.validationOfAdultsField() on instance allTest.HotelsTest@1ff4931d]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method allTest.HotelsTest.validationOfChildrenField() on instance allTest.HotelsTest@1ff4931d depends on not successfully finished methods 
+[allTest.HotelsTest.validationOfAdultsField() on instance allTest.HotelsTest@1ff4931d]
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:156)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:848)
+at org.testng.TestRunner.run(TestRunner.java:621)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:481)
+at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+at java.base/java.lang.Thread.run(Thread.java:1589)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
+          <reporter-output>
+          </reporter-output>
+          <custom-attributes>
+            <custom-attribute>
+              <name value="passMessage">
+              </name>
+              <value>
+                <![CDATA[[The dropdown menu appears and the selected number of children is added and the age is able to gets selected for each of them]]]>
+              </value>
+            </custom-attribute>
+          </custom-attributes>
+        </test-method> <!-- validationOfChildrenField -->
+        <test-method signature="verify0RoomAdd()[pri:0, instance:allTest.HotelsTest@1ff4931d, attributes: &lt;name: passMessage, value:[The alert is displayed and &#039;Minimum 1 is required&#039; message is displayed]&gt;]" started-at="2024-01-07T21:47:51 IST" name="verify0RoomAdd" description="To verify if user is able to enter 0 room in the Rooms field" finished-at="2024-01-07T21:47:51 IST" depends-on-methods="allTest.HotelsTest.validationOfChildrenField" duration-ms="0" status="SKIP">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method allTest.HotelsTest.verify0RoomAdd() on instance allTest.HotelsTest@1ff4931d depends on not successfully finished methods 
+[allTest.HotelsTest.validationOfChildrenField() on instance allTest.HotelsTest@1ff4931d]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method allTest.HotelsTest.verify0RoomAdd() on instance allTest.HotelsTest@1ff4931d depends on not successfully finished methods 
+[allTest.HotelsTest.validationOfChildrenField() on instance allTest.HotelsTest@1ff4931d]
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:156)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:848)
+at org.testng.TestRunner.run(TestRunner.java:621)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:481)
+at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+at java.base/java.lang.Thread.run(Thread.java:1589)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
+          <reporter-output>
+          </reporter-output>
+          <custom-attributes>
+            <custom-attribute>
+              <name value="passMessage">
+              </name>
+              <value>
+                <![CDATA[[The alert is displayed and 'Minimum 1 is required' message is displayed]]]>
+              </value>
+            </custom-attribute>
+          </custom-attributes>
+        </test-method> <!-- verify0RoomAdd -->
+        <test-method signature="verify0AdultAdd()[pri:0, instance:allTest.HotelsTest@1ff4931d, attributes: &lt;name: passMessage, value:[The alert is displayed and &#039;Minimum 1 adult is required&#039; message is displayed]&gt;]" started-at="2024-01-07T21:47:51 IST" name="verify0AdultAdd" description="To verify if user is able to enter 0 adult in the Adults field" finished-at="2024-01-07T21:47:51 IST" depends-on-methods="allTest.HotelsTest.verify0RoomAdd" duration-ms="0" status="SKIP">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method allTest.HotelsTest.verify0AdultAdd() on instance allTest.HotelsTest@1ff4931d depends on not successfully finished methods 
+[allTest.HotelsTest.verify0RoomAdd() on instance allTest.HotelsTest@1ff4931d]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method allTest.HotelsTest.verify0AdultAdd() on instance allTest.HotelsTest@1ff4931d depends on not successfully finished methods 
+[allTest.HotelsTest.verify0RoomAdd() on instance allTest.HotelsTest@1ff4931d]
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:156)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:848)
+at org.testng.TestRunner.run(TestRunner.java:621)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:481)
+at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+at java.base/java.lang.Thread.run(Thread.java:1589)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
+          <reporter-output>
+          </reporter-output>
+          <custom-attributes>
+            <custom-attribute>
+              <name value="passMessage">
+              </name>
+              <value>
+                <![CDATA[[The alert is displayed and 'Minimum 1 adult is required' message is displayed]]]>
+              </value>
+            </custom-attribute>
+          </custom-attributes>
+        </test-method> <!-- verify0AdultAdd -->
+        <test-method signature="validationOfSearchField()[pri:0, instance:allTest.HotelsTest@1ff4931d, attributes: &lt;name: passMessage, value:[User is redirected to hotels list webpage]&gt;]" started-at="2024-01-07T21:47:51 IST" name="validationOfSearchField" description="To validate the functionality of Search button" finished-at="2024-01-07T21:47:51 IST" depends-on-methods="allTest.HotelsTest.verify0AdultAdd" duration-ms="0" status="SKIP">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method allTest.HotelsTest.validationOfSearchField() on instance allTest.HotelsTest@1ff4931d depends on not successfully finished methods 
+[allTest.HotelsTest.verify0AdultAdd() on instance allTest.HotelsTest@1ff4931d]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method allTest.HotelsTest.validationOfSearchField() on instance allTest.HotelsTest@1ff4931d depends on not successfully finished methods 
+[allTest.HotelsTest.verify0AdultAdd() on instance allTest.HotelsTest@1ff4931d]
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:156)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:848)
+at org.testng.TestRunner.run(TestRunner.java:621)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:481)
+at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+at java.base/java.lang.Thread.run(Thread.java:1589)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
+          <reporter-output>
+          </reporter-output>
+          <custom-attributes>
+            <custom-attribute>
+              <name value="passMessage">
+              </name>
+              <value>
+                <![CDATA[[User is redirected to hotels list webpage]]]>
+              </value>
+            </custom-attribute>
+          </custom-attributes>
+        </test-method> <!-- validationOfSearchField -->
+        <test-method signature="verifySearchCriteria()[pri:0, instance:allTest.HotelsTest@1ff4931d, attributes: &lt;name: passMessage, value:[The details displayed in the hotel results page matches with the details used to search the hotels]&gt;]" started-at="2024-01-07T21:47:51 IST" name="verifySearchCriteria" description="To verify the hotel search criteria details in the hotel results page" finished-at="2024-01-07T21:47:51 IST" depends-on-methods="allTest.HotelsTest.validationOfSearchField" duration-ms="1" status="SKIP">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method allTest.HotelsTest.verifySearchCriteria() on instance allTest.HotelsTest@1ff4931d depends on not successfully finished methods 
+[allTest.HotelsTest.validationOfSearchField() on instance allTest.HotelsTest@1ff4931d]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method allTest.HotelsTest.verifySearchCriteria() on instance allTest.HotelsTest@1ff4931d depends on not successfully finished methods 
+[allTest.HotelsTest.validationOfSearchField() on instance allTest.HotelsTest@1ff4931d]
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:156)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:848)
+at org.testng.TestRunner.run(TestRunner.java:621)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:481)
+at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+at java.base/java.lang.Thread.run(Thread.java:1589)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
+          <reporter-output>
+          </reporter-output>
+          <custom-attributes>
+            <custom-attribute>
+              <name value="passMessage">
+              </name>
+              <value>
+                <![CDATA[[The details displayed in the hotel results page matches with the details used to search the hotels]]]>
+              </value>
+            </custom-attribute>
+          </custom-attributes>
+        </test-method> <!-- verifySearchCriteria -->
+        <test-method signature="verifySortingOptions(java.lang.String)[pri:0, instance:allTest.HotelsTest@1ff4931d, attributes: &lt;name: passMessage, value:[The hotels displayed are sorted correctly]&gt;]" started-at="2024-01-07T21:47:51 IST" name="verifySortingOptions" description="To verify the functionality of the sorting options" finished-at="2024-01-07T21:47:51 IST" depends-on-methods="allTest.HotelsTest.verifySearchCriteria" duration-ms="0" status="SKIP">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method allTest.HotelsTest.verifySortingOptions() on instance allTest.HotelsTest@1ff4931d depends on not successfully finished methods 
+[allTest.HotelsTest.verifySearchCriteria() on instance allTest.HotelsTest@1ff4931d]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method allTest.HotelsTest.verifySortingOptions() on instance allTest.HotelsTest@1ff4931d depends on not successfully finished methods 
+[allTest.HotelsTest.verifySearchCriteria() on instance allTest.HotelsTest@1ff4931d]
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:156)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:848)
+at org.testng.TestRunner.run(TestRunner.java:621)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:481)
+at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+at java.base/java.lang.Thread.run(Thread.java:1589)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
+          <reporter-output>
+          </reporter-output>
+          <custom-attributes>
+            <custom-attribute>
+              <name value="passMessage">
+              </name>
+              <value>
+                <![CDATA[[The hotels displayed are sorted correctly]]]>
+              </value>
+            </custom-attribute>
+          </custom-attributes>
+        </test-method> <!-- verifySortingOptions -->
+        <test-method signature="verifyPriceFilter()[pri:0, instance:allTest.HotelsTest@1ff4931d, attributes: &lt;name: passMessage, value:[The hotel results shows the hotels having amount between 2001 and 4000]&gt;]" started-at="2024-01-07T21:47:51 IST" name="verifyPriceFilter" description="To verify the functionality of Price filters" finished-at="2024-01-07T21:47:51 IST" depends-on-methods="allTest.HotelsTest.verifySortingOptions" duration-ms="0" status="SKIP">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method allTest.HotelsTest.verifyPriceFilter() on instance allTest.HotelsTest@1ff4931d depends on not successfully finished methods 
+[allTest.HotelsTest.verifySortingOptions() on instance allTest.HotelsTest@1ff4931d]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method allTest.HotelsTest.verifyPriceFilter() on instance allTest.HotelsTest@1ff4931d depends on not successfully finished methods 
+[allTest.HotelsTest.verifySortingOptions() on instance allTest.HotelsTest@1ff4931d]
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:156)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:848)
+at org.testng.TestRunner.run(TestRunner.java:621)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:481)
+at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+at java.base/java.lang.Thread.run(Thread.java:1589)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
+          <reporter-output>
+          </reporter-output>
+          <custom-attributes>
+            <custom-attribute>
+              <name value="passMessage">
+              </name>
+              <value>
+                <![CDATA[[The hotel results shows the hotels having amount between 2001 and 4000]]]>
+              </value>
+            </custom-attribute>
+          </custom-attributes>
+        </test-method> <!-- verifyPriceFilter -->
+        <test-method signature="verifyCustomerRatingFilter()[pri:0, instance:allTest.HotelsTest@1ff4931d, attributes: &lt;name: passMessage, value:[The hotel results shows the hotels having rating above 4]&gt;]" started-at="2024-01-07T21:47:51 IST" name="verifyCustomerRatingFilter" description="To verify the functionality of Rating filters" finished-at="2024-01-07T21:47:51 IST" depends-on-methods="allTest.HotelsTest.verifyPriceFilter" duration-ms="0" status="SKIP">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method allTest.HotelsTest.verifyCustomerRatingFilter() on instance allTest.HotelsTest@1ff4931d depends on not successfully finished methods 
+[allTest.HotelsTest.verifyPriceFilter() on instance allTest.HotelsTest@1ff4931d]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method allTest.HotelsTest.verifyCustomerRatingFilter() on instance allTest.HotelsTest@1ff4931d depends on not successfully finished methods 
+[allTest.HotelsTest.verifyPriceFilter() on instance allTest.HotelsTest@1ff4931d]
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:156)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:848)
+at org.testng.TestRunner.run(TestRunner.java:621)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:481)
+at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+at java.base/java.lang.Thread.run(Thread.java:1589)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
+          <reporter-output>
+          </reporter-output>
+          <custom-attributes>
+            <custom-attribute>
+              <name value="passMessage">
+              </name>
+              <value>
+                <![CDATA[[The hotel results shows the hotels having rating above 4]]]>
+              </value>
+            </custom-attribute>
+          </custom-attributes>
+        </test-method> <!-- verifyCustomerRatingFilter -->
+        <test-method signature="verifyHotelSelection()[pri:0, instance:allTest.HotelsTest@1ff4931d, attributes: &lt;name: passMessage, value:[User is redirected to that specific hotel webpage to choose room type]&gt;]" started-at="2024-01-07T21:47:51 IST" name="verifyHotelSelection" description="To verify if user is able to select hotel and is redirected to room booking page" finished-at="2024-01-07T21:47:51 IST" depends-on-methods="allTest.HotelsTest.verifyCustomerRatingFilter" duration-ms="0" status="SKIP">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method allTest.HotelsTest.verifyHotelSelection() on instance allTest.HotelsTest@1ff4931d depends on not successfully finished methods 
+[allTest.HotelsTest.verifyCustomerRatingFilter() on instance allTest.HotelsTest@1ff4931d]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method allTest.HotelsTest.verifyHotelSelection() on instance allTest.HotelsTest@1ff4931d depends on not successfully finished methods 
+[allTest.HotelsTest.verifyCustomerRatingFilter() on instance allTest.HotelsTest@1ff4931d]
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:156)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:848)
+at org.testng.TestRunner.run(TestRunner.java:621)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:481)
+at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+at java.base/java.lang.Thread.run(Thread.java:1589)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
+          <reporter-output>
+          </reporter-output>
+          <custom-attributes>
+            <custom-attribute>
+              <name value="passMessage">
+              </name>
+              <value>
+                <![CDATA[[User is redirected to that specific hotel webpage to choose room type]]]>
+              </value>
+            </custom-attribute>
+          </custom-attributes>
+        </test-method> <!-- verifyHotelSelection -->
+        <test-method signature="verifyRoomOptionsSelection()[pri:0, instance:allTest.HotelsTest@1ff4931d, attributes: &lt;name: passMessage, value:[User is redirected to Room Info webpage]&gt;]" started-at="2024-01-07T21:47:51 IST" name="verifyRoomOptionsSelection" description="To verify if user is view the availble room options and is able to book the required room option" finished-at="2024-01-07T21:47:51 IST" depends-on-methods="allTest.HotelsTest.verifyHotelSelection" duration-ms="0" status="SKIP">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method allTest.HotelsTest.verifyRoomOptionsSelection() on instance allTest.HotelsTest@1ff4931d depends on not successfully finished methods 
+[allTest.HotelsTest.verifyHotelSelection() on instance allTest.HotelsTest@1ff4931d]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method allTest.HotelsTest.verifyRoomOptionsSelection() on instance allTest.HotelsTest@1ff4931d depends on not successfully finished methods 
+[allTest.HotelsTest.verifyHotelSelection() on instance allTest.HotelsTest@1ff4931d]
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:156)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:848)
+at org.testng.TestRunner.run(TestRunner.java:621)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:481)
+at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+at java.base/java.lang.Thread.run(Thread.java:1589)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
+          <reporter-output>
+          </reporter-output>
+          <custom-attributes>
+            <custom-attribute>
+              <name value="passMessage">
+              </name>
+              <value>
+                <![CDATA[[User is redirected to Room Info webpage]]]>
+              </value>
+            </custom-attribute>
+          </custom-attributes>
+        </test-method> <!-- verifyRoomOptionsSelection -->
+        <test-method signature="validateSearchCriteria()[pri:0, instance:allTest.HotelsTest@1ff4931d, attributes: &lt;name: passMessage, value:[The search criteria displayed matches with the search criteria used for the searching the hotel]&gt;]" started-at="2024-01-07T21:47:51 IST" name="validateSearchCriteria" description="To verify the search criteria details on the hotel info page" finished-at="2024-01-07T21:47:51 IST" depends-on-methods="allTest.HotelsTest.verifyRoomOptionsSelection" duration-ms="0" status="SKIP">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method allTest.HotelsTest.validateSearchCriteria() on instance allTest.HotelsTest@1ff4931d depends on not successfully finished methods 
+[allTest.HotelsTest.verifyRoomOptionsSelection() on instance allTest.HotelsTest@1ff4931d]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method allTest.HotelsTest.validateSearchCriteria() on instance allTest.HotelsTest@1ff4931d depends on not successfully finished methods 
+[allTest.HotelsTest.verifyRoomOptionsSelection() on instance allTest.HotelsTest@1ff4931d]
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:156)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:848)
+at org.testng.TestRunner.run(TestRunner.java:621)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:481)
+at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+at java.base/java.lang.Thread.run(Thread.java:1589)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
+          <reporter-output>
+          </reporter-output>
+          <custom-attributes>
+            <custom-attribute>
+              <name value="passMessage">
+              </name>
+              <value>
+                <![CDATA[[The search criteria displayed matches with the search criteria used for the searching the hotel]]]>
+              </value>
+            </custom-attribute>
+          </custom-attributes>
+        </test-method> <!-- validateSearchCriteria -->
+        <test-method signature="verifyOfferCodeSelection()[pri:0, instance:allTest.HotelsTest@1ff4931d, attributes: &lt;name: passMessage, value:[The selected offer code gets selected and highlighted and the offer code is applied in the price summary]&gt;]" started-at="2024-01-07T21:47:51 IST" name="verifyOfferCodeSelection" description="To verify if the offer code gets selected and gets applied in the price summary" finished-at="2024-01-07T21:47:51 IST" depends-on-methods="allTest.HotelsTest.validateSearchCriteria" duration-ms="0" status="SKIP">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method allTest.HotelsTest.verifyOfferCodeSelection() on instance allTest.HotelsTest@1ff4931d depends on not successfully finished methods 
+[allTest.HotelsTest.validateSearchCriteria() on instance allTest.HotelsTest@1ff4931d]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method allTest.HotelsTest.verifyOfferCodeSelection() on instance allTest.HotelsTest@1ff4931d depends on not successfully finished methods 
+[allTest.HotelsTest.validateSearchCriteria() on instance allTest.HotelsTest@1ff4931d]
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:156)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:848)
+at org.testng.TestRunner.run(TestRunner.java:621)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:481)
+at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+at java.base/java.lang.Thread.run(Thread.java:1589)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
+          <reporter-output>
+          </reporter-output>
+          <custom-attributes>
+            <custom-attribute>
+              <name value="passMessage">
+              </name>
+              <value>
+                <![CDATA[[The selected offer code gets selected and highlighted and the offer code is applied in the price summary]]]>
+              </value>
+            </custom-attribute>
+          </custom-attributes>
+        </test-method> <!-- verifyOfferCodeSelection -->
+        <test-method signature="verifyPriceSummary()[pri:0, instance:allTest.HotelsTest@1ff4931d, attributes: &lt;name: passMessage, value:[The price summary is correct based on the data displayed in the Room Booking page]&gt;]" started-at="2024-01-07T21:47:51 IST" name="verifyPriceSummary" description="To verify the displayed information of price summary" finished-at="2024-01-07T21:47:51 IST" depends-on-methods="allTest.HotelsTest.verifyOfferCodeSelection" duration-ms="0" status="SKIP">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method allTest.HotelsTest.verifyPriceSummary() on instance allTest.HotelsTest@1ff4931d depends on not successfully finished methods 
+[allTest.HotelsTest.verifyOfferCodeSelection() on instance allTest.HotelsTest@1ff4931d]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method allTest.HotelsTest.verifyPriceSummary() on instance allTest.HotelsTest@1ff4931d depends on not successfully finished methods 
+[allTest.HotelsTest.verifyOfferCodeSelection() on instance allTest.HotelsTest@1ff4931d]
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:156)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:848)
+at org.testng.TestRunner.run(TestRunner.java:621)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:481)
+at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+at java.base/java.lang.Thread.run(Thread.java:1589)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
+          <reporter-output>
+          </reporter-output>
+          <custom-attributes>
+            <custom-attribute>
+              <name value="passMessage">
+              </name>
+              <value>
+                <![CDATA[[The price summary is correct based on the data displayed in the Room Booking page]]]>
+              </value>
+            </custom-attribute>
+          </custom-attributes>
+        </test-method> <!-- verifyPriceSummary -->
+        <test-method signature="verifyRequiredFields()[pri:0, instance:allTest.HotelsTest@1ff4931d, attributes: &lt;name: passMessage, value:[User is able to fill details in the required fields]&gt;]" started-at="2024-01-07T21:47:51 IST" name="verifyRequiredFields" description="To verify if user is able to fill all the required guest details" finished-at="2024-01-07T21:47:51 IST" depends-on-methods="allTest.HotelsTest.verifyPriceSummary" duration-ms="0" status="SKIP">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method allTest.HotelsTest.verifyRequiredFields() on instance allTest.HotelsTest@1ff4931d depends on not successfully finished methods 
+[allTest.HotelsTest.verifyPriceSummary() on instance allTest.HotelsTest@1ff4931d]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method allTest.HotelsTest.verifyRequiredFields() on instance allTest.HotelsTest@1ff4931d depends on not successfully finished methods 
+[allTest.HotelsTest.verifyPriceSummary() on instance allTest.HotelsTest@1ff4931d]
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:156)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:848)
+at org.testng.TestRunner.run(TestRunner.java:621)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:481)
+at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+at java.base/java.lang.Thread.run(Thread.java:1589)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
+          <reporter-output>
+          </reporter-output>
+          <custom-attributes>
+            <custom-attribute>
+              <name value="passMessage">
+              </name>
+              <value>
+                <![CDATA[[User is able to fill details in the required fields]]]>
+              </value>
+            </custom-attribute>
+          </custom-attributes>
+        </test-method> <!-- verifyRequiredFields -->
+        <test-method signature="verifyPaymentButton()[pri:0, instance:allTest.HotelsTest@1ff4931d, attributes: &lt;name: passMessage, value:[User is redirected to payment gateway to complete the payment]&gt;]" started-at="2024-01-07T21:47:51 IST" name="verifyPaymentButton" description="To verify the functionality of &#039;Proceed To Payment Options&#039; button" finished-at="2024-01-07T21:47:51 IST" depends-on-methods="allTest.HotelsTest.verifyRequiredFields" duration-ms="0" status="SKIP">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method allTest.HotelsTest.verifyPaymentButton() on instance allTest.HotelsTest@1ff4931d depends on not successfully finished methods 
+[allTest.HotelsTest.verifyRequiredFields() on instance allTest.HotelsTest@1ff4931d]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method allTest.HotelsTest.verifyPaymentButton() on instance allTest.HotelsTest@1ff4931d depends on not successfully finished methods 
+[allTest.HotelsTest.verifyRequiredFields() on instance allTest.HotelsTest@1ff4931d]
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:156)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:848)
+at org.testng.TestRunner.run(TestRunner.java:621)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:481)
+at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+at java.base/java.lang.Thread.run(Thread.java:1589)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
+          <reporter-output>
+          </reporter-output>
+          <custom-attributes>
+            <custom-attribute>
+              <name value="passMessage">
+              </name>
+              <value>
+                <![CDATA[[User is redirected to payment gateway to complete the payment]]]>
+              </value>
+            </custom-attribute>
+          </custom-attributes>
+        </test-method> <!-- verifyPaymentButton -->
+        <test-method signature="verifyDetailsOnPaymentGateway()[pri:0, instance:allTest.HotelsTest@1ff4931d, attributes: &lt;name: passMessage, value:[All the details displayed is correct]&gt;]" started-at="2024-01-07T21:47:51 IST" name="verifyDetailsOnPaymentGateway" description="To verify the details on the Payment Gateway page" finished-at="2024-01-07T21:47:51 IST" depends-on-methods="allTest.HotelsTest.verifyPaymentButton" duration-ms="1" status="SKIP">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method allTest.HotelsTest.verifyDetailsOnPaymentGateway() on instance allTest.HotelsTest@1ff4931d depends on not successfully finished methods 
+[allTest.HotelsTest.verifyPaymentButton() on instance allTest.HotelsTest@1ff4931d]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method allTest.HotelsTest.verifyDetailsOnPaymentGateway() on instance allTest.HotelsTest@1ff4931d depends on not successfully finished methods 
+[allTest.HotelsTest.verifyPaymentButton() on instance allTest.HotelsTest@1ff4931d]
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:156)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:848)
+at org.testng.TestRunner.run(TestRunner.java:621)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:481)
+at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+at java.base/java.lang.Thread.run(Thread.java:1589)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
+          <reporter-output>
+          </reporter-output>
+          <custom-attributes>
+            <custom-attribute>
+              <name value="passMessage">
+              </name>
+              <value>
+                <![CDATA[[All the details displayed is correct]]]>
+              </value>
+            </custom-attribute>
+          </custom-attributes>
+        </test-method> <!-- verifyDetailsOnPaymentGateway -->
+        <test-method signature="verifyCardPaymentOption()[pri:0, instance:allTest.HotelsTest@1ff4931d, attributes: &lt;name: passMessage, value:[Enter card details message is displayed]&gt;]" started-at="2024-01-07T21:47:51 IST" name="verifyCardPaymentOption" description="To verify if user is able to choose &#039;Credit/Debit/ATM Card&#039; option" finished-at="2024-01-07T21:47:51 IST" depends-on-methods="allTest.HotelsTest.verifyDetailsOnPaymentGateway" duration-ms="0" status="SKIP">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method allTest.HotelsTest.verifyCardPaymentOption() on instance allTest.HotelsTest@1ff4931d depends on not successfully finished methods 
+[allTest.HotelsTest.verifyDetailsOnPaymentGateway() on instance allTest.HotelsTest@1ff4931d]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method allTest.HotelsTest.verifyCardPaymentOption() on instance allTest.HotelsTest@1ff4931d depends on not successfully finished methods 
+[allTest.HotelsTest.verifyDetailsOnPaymentGateway() on instance allTest.HotelsTest@1ff4931d]
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:156)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:848)
+at org.testng.TestRunner.run(TestRunner.java:621)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:481)
+at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+at java.base/java.lang.Thread.run(Thread.java:1589)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
+          <reporter-output>
+          </reporter-output>
+          <custom-attributes>
+            <custom-attribute>
+              <name value="passMessage">
+              </name>
+              <value>
+                <![CDATA[[Enter card details message is displayed]]]>
+              </value>
+            </custom-attribute>
+          </custom-attributes>
+        </test-method> <!-- verifyCardPaymentOption -->
+        <test-method signature="verifyCardDetailsFields()[pri:0, instance:allTest.HotelsTest@1ff4931d, attributes: &lt;name: passMessage, value:[User is able to enter all required details]&gt;]" started-at="2024-01-07T21:47:51 IST" name="verifyCardDetailsFields" description="To verify if user is able to enter credit card details" finished-at="2024-01-07T21:47:51 IST" depends-on-methods="allTest.HotelsTest.verifyCardPaymentOption" duration-ms="1" status="SKIP">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method allTest.HotelsTest.verifyCardDetailsFields() on instance allTest.HotelsTest@1ff4931d depends on not successfully finished methods 
+[allTest.HotelsTest.verifyCardPaymentOption() on instance allTest.HotelsTest@1ff4931d]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method allTest.HotelsTest.verifyCardDetailsFields() on instance allTest.HotelsTest@1ff4931d depends on not successfully finished methods 
+[allTest.HotelsTest.verifyCardPaymentOption() on instance allTest.HotelsTest@1ff4931d]
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:156)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:848)
+at org.testng.TestRunner.run(TestRunner.java:621)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:481)
+at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+at java.base/java.lang.Thread.run(Thread.java:1589)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
+          <reporter-output>
+          </reporter-output>
+          <custom-attributes>
+            <custom-attribute>
+              <name value="passMessage">
+              </name>
+              <value>
+                <![CDATA[[User is able to enter all required details]]]>
+              </value>
+            </custom-attribute>
+          </custom-attributes>
+        </test-method> <!-- verifyCardDetailsFields -->
+        <test-method signature="verifyPayWithoutSavingCardButton()[pri:0, instance:allTest.HotelsTest@1ff4931d, attributes: &lt;name: passMessage, value:[Error message is displayed as &#039;We are unable to process transactions for this user/card&#039;]&gt;]" started-at="2024-01-07T21:47:51 IST" name="verifyPayWithoutSavingCardButton" description="To verify functionality of &#039;Pay without saving card&#039; option" finished-at="2024-01-07T21:47:51 IST" depends-on-methods="allTest.HotelsTest.verifyCardDetailsFields" duration-ms="0" status="SKIP">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method allTest.HotelsTest.verifyPayWithoutSavingCardButton() on instance allTest.HotelsTest@1ff4931d depends on not successfully finished methods 
+[allTest.HotelsTest.verifyCardDetailsFields() on instance allTest.HotelsTest@1ff4931d]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method allTest.HotelsTest.verifyPayWithoutSavingCardButton() on instance allTest.HotelsTest@1ff4931d depends on not successfully finished methods 
+[allTest.HotelsTest.verifyCardDetailsFields() on instance allTest.HotelsTest@1ff4931d]
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:156)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:848)
+at org.testng.TestRunner.run(TestRunner.java:621)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:481)
+at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+at java.base/java.lang.Thread.run(Thread.java:1589)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
+          <reporter-output>
+          </reporter-output>
+          <custom-attributes>
+            <custom-attribute>
+              <name value="passMessage">
+              </name>
+              <value>
+                <![CDATA[[Error message is displayed as 'We are unable to process transactions for this user/card']]]>
+              </value>
+            </custom-attribute>
+          </custom-attributes>
+        </test-method> <!-- verifyPayWithoutSavingCardButton -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:allTest.HotelsTest@1ff4931d]" started-at="2024-01-07T21:47:51 IST" name="tearDown" finished-at="2024-01-07T21:47:53 IST" duration-ms="1258" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- allTest.HotelsTest -->
+    </test> <!-- Test1 -->
+    <test started-at="2024-01-07T21:47:05 IST" name="Test3" finished-at="2024-01-07T21:48:01 IST" duration-ms="56312">
+      <class name="allTest.FlightTest">
+        <test-method is-config="true" signature="configurations()[pri:0, instance:allTest.FlightTest@63070bab]" started-at="2024-01-07T21:47:05 IST" name="configurations" finished-at="2024-01-07T21:47:05 IST" duration-ms="21" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- configurations -->
+        <test-method is-config="true" signature="configPages()[pri:0, instance:allTest.FlightTest@63070bab]" started-at="2024-01-07T21:47:05 IST" name="configPages" finished-at="2024-01-07T21:47:15 IST" duration-ms="10479" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- configPages -->
+        <test-method signature="navigateToFLightsPage()[pri:0, instance:allTest.FlightTest@63070bab]" started-at="2024-01-07T21:47:15 IST" name="navigateToFLightsPage" description="To validate if Flight menu button is diaplyed and is clickable" finished-at="2024-01-07T21:47:17 IST" duration-ms="2279" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- navigateToFLightsPage -->
+        <test-method signature="verifyFromTextBox()[pri:0, instance:allTest.FlightTest@63070bab]" started-at="2024-01-07T21:47:18 IST" name="verifyFromTextBox" description="To validate From textbox is enabled" finished-at="2024-01-07T21:47:18 IST" depends-on-methods="allTest.FlightTest.navigateToFLightsPage" duration-ms="169" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyFromTextBox -->
+        <test-method signature="verifyOriginCity()[pri:0, instance:allTest.FlightTest@63070bab]" started-at="2024-01-07T21:47:19 IST" name="verifyOriginCity" description="To verify if user is able to click Bengaluru from city dropdown list" finished-at="2024-01-07T21:47:19 IST" depends-on-methods="allTest.FlightTest.verifyFromTextBox" duration-ms="550" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyOriginCity -->
+        <test-method signature="verifyToTextBox()[pri:0, instance:allTest.FlightTest@63070bab]" started-at="2024-01-07T21:47:20 IST" name="verifyToTextBox" description="To validate To textbox is enabled" finished-at="2024-01-07T21:47:20 IST" depends-on-methods="allTest.FlightTest.verifyOriginCity" duration-ms="19" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyToTextBox -->
+        <test-method signature="verifyDestinationCity()[pri:0, instance:allTest.FlightTest@63070bab]" started-at="2024-01-07T21:47:20 IST" name="verifyDestinationCity" description="To verify if user is able to click Ranchi from city dropdown list" finished-at="2024-01-07T21:47:20 IST" depends-on-methods="allTest.FlightTest.verifyToTextBox" duration-ms="528" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyDestinationCity -->
+        <test-method signature="verifyDateBtn()[pri:0, instance:allTest.FlightTest@63070bab]" started-at="2024-01-07T21:47:21 IST" name="verifyDateBtn" description="To verify Departure date button is clickable" finished-at="2024-01-07T21:47:21 IST" depends-on-methods="allTest.FlightTest.verifyDestinationCity" duration-ms="12" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyDateBtn -->
+        <test-method signature="validationOfLowestFares()[pri:0, instance:allTest.FlightTest@63070bab]" started-at="2024-01-07T21:47:21 IST" name="validationOfLowestFares" description="To verify fare displayed is lowest for the day" finished-at="2024-01-07T21:47:59 IST" depends-on-methods="allTest.FlightTest.verifyDateBtn" duration-ms="38495" status="FAIL">
+          <exception class="java.lang.NullPointerException">
+            <message>
+              <![CDATA[Cannot invoke "org.openqa.selenium.WebDriver.navigate()" because "this.driver" is null]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.navigate()" because "this.driver" is null
+at allTest.FlightTest.validationOfLowestFares(FlightTest.java:74)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:848)
+at org.testng.TestRunner.run(TestRunner.java:621)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:481)
+at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+at java.base/java.lang.Thread.run(Thread.java:1589)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validationOfLowestFares -->
+        <test-method signature="lowestDateSelection()[pri:0, instance:allTest.FlightTest@63070bab]" started-at="2024-01-07T21:48:00 IST" name="lowestDateSelection" description="To verify user is able to select date from Calendar for the lowest price" finished-at="2024-01-07T21:48:00 IST" depends-on-methods="allTest.FlightTest.validationOfLowestFares" duration-ms="0" status="SKIP">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method allTest.FlightTest.lowestDateSelection() on instance allTest.FlightTest@63070bab depends on not successfully finished methods 
+[allTest.FlightTest.validationOfLowestFares() on instance allTest.FlightTest@63070bab]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method allTest.FlightTest.lowestDateSelection() on instance allTest.FlightTest@63070bab depends on not successfully finished methods 
+[allTest.FlightTest.validationOfLowestFares() on instance allTest.FlightTest@63070bab]
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:156)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:848)
+at org.testng.TestRunner.run(TestRunner.java:621)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:481)
+at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+at java.base/java.lang.Thread.run(Thread.java:1589)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- lowestDateSelection -->
+        <test-method signature="enterTravellerDetails()[pri:0, instance:allTest.FlightTest@63070bab]" started-at="2024-01-07T21:48:00 IST" name="enterTravellerDetails" description="To verify user is able to add details in Travellers and class menu" finished-at="2024-01-07T21:48:00 IST" depends-on-methods="allTest.FlightTest.lowestDateSelection" duration-ms="0" status="SKIP">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method allTest.FlightTest.enterTravellerDetails() on instance allTest.FlightTest@63070bab depends on not successfully finished methods 
+[allTest.FlightTest.lowestDateSelection() on instance allTest.FlightTest@63070bab]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method allTest.FlightTest.enterTravellerDetails() on instance allTest.FlightTest@63070bab depends on not successfully finished methods 
+[allTest.FlightTest.lowestDateSelection() on instance allTest.FlightTest@63070bab]
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:156)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:848)
+at org.testng.TestRunner.run(TestRunner.java:621)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:481)
+at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+at java.base/java.lang.Thread.run(Thread.java:1589)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- enterTravellerDetails -->
+        <test-method signature="verifySearchButton()[pri:0, instance:allTest.FlightTest@63070bab]" started-at="2024-01-07T21:48:00 IST" name="verifySearchButton" description="To verify the functionality of &quot;Search flights&quot; button after user click it" finished-at="2024-01-07T21:48:00 IST" depends-on-methods="allTest.FlightTest.enterTravellerDetails" duration-ms="0" status="SKIP">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method allTest.FlightTest.verifySearchButton() on instance allTest.FlightTest@63070bab depends on not successfully finished methods 
+[allTest.FlightTest.enterTravellerDetails() on instance allTest.FlightTest@63070bab]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method allTest.FlightTest.verifySearchButton() on instance allTest.FlightTest@63070bab depends on not successfully finished methods 
+[allTest.FlightTest.enterTravellerDetails() on instance allTest.FlightTest@63070bab]
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:156)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:848)
+at org.testng.TestRunner.run(TestRunner.java:621)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:481)
+at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+at java.base/java.lang.Thread.run(Thread.java:1589)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifySearchButton -->
+        <test-method signature="verifyPriceFilter()[pri:0, instance:allTest.FlightTest@63070bab]" started-at="2024-01-07T21:48:00 IST" name="verifyPriceFilter" description="To verify the functionality of Price Filter" finished-at="2024-01-07T21:48:00 IST" depends-on-methods="allTest.FlightTest.verifySearchButton" duration-ms="0" status="SKIP">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method allTest.FlightTest.verifyPriceFilter() on instance allTest.FlightTest@63070bab depends on not successfully finished methods 
+[allTest.FlightTest.verifySearchButton() on instance allTest.FlightTest@63070bab]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method allTest.FlightTest.verifyPriceFilter() on instance allTest.FlightTest@63070bab depends on not successfully finished methods 
+[allTest.FlightTest.verifySearchButton() on instance allTest.FlightTest@63070bab]
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:156)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:848)
+at org.testng.TestRunner.run(TestRunner.java:621)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:481)
+at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+at java.base/java.lang.Thread.run(Thread.java:1589)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyPriceFilter -->
+        <test-method signature="verifyBookBtn()[pri:0, instance:allTest.FlightTest@63070bab]" started-at="2024-01-07T21:48:00 IST" name="verifyBookBtn" description="To verify the functionality of &quot;Book now&quot; button after user click on cheapest price flight" finished-at="2024-01-07T21:48:00 IST" depends-on-methods="allTest.FlightTest.verifyPriceFilter" duration-ms="0" status="SKIP">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method allTest.FlightTest.verifyBookBtn() on instance allTest.FlightTest@63070bab depends on not successfully finished methods 
+[allTest.FlightTest.verifyPriceFilter() on instance allTest.FlightTest@63070bab]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method allTest.FlightTest.verifyBookBtn() on instance allTest.FlightTest@63070bab depends on not successfully finished methods 
+[allTest.FlightTest.verifyPriceFilter() on instance allTest.FlightTest@63070bab]
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:156)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:848)
+at org.testng.TestRunner.run(TestRunner.java:621)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:481)
+at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+at java.base/java.lang.Thread.run(Thread.java:1589)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyBookBtn -->
+        <test-method signature="verifyFlightDetails()[pri:0, instance:allTest.FlightTest@63070bab]" started-at="2024-01-07T21:48:00 IST" name="verifyFlightDetails" description="To verify the details of flight is displayed at overview page" finished-at="2024-01-07T21:48:00 IST" depends-on-methods="allTest.FlightTest.verifyBookBtn" duration-ms="0" status="SKIP">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method allTest.FlightTest.verifyFlightDetails() on instance allTest.FlightTest@63070bab depends on not successfully finished methods 
+[allTest.FlightTest.verifyBookBtn() on instance allTest.FlightTest@63070bab]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method allTest.FlightTest.verifyFlightDetails() on instance allTest.FlightTest@63070bab depends on not successfully finished methods 
+[allTest.FlightTest.verifyBookBtn() on instance allTest.FlightTest@63070bab]
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:156)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:848)
+at org.testng.TestRunner.run(TestRunner.java:621)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:481)
+at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+at java.base/java.lang.Thread.run(Thread.java:1589)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyFlightDetails -->
+        <test-method signature="enterPassengerDetails([Ljava.lang.String;)[pri:0, instance:allTest.FlightTest@63070bab]" started-at="2024-01-07T21:48:00 IST" name="enterPassengerDetails" description="To verify user is able to fill passenger details " finished-at="2024-01-07T21:48:00 IST" depends-on-methods="allTest.FlightTest.verifyFlightDetails" duration-ms="0" status="SKIP">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method allTest.FlightTest.enterPassengerDetails() on instance allTest.FlightTest@63070bab depends on not successfully finished methods 
+[allTest.FlightTest.verifyFlightDetails() on instance allTest.FlightTest@63070bab]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method allTest.FlightTest.enterPassengerDetails() on instance allTest.FlightTest@63070bab depends on not successfully finished methods 
+[allTest.FlightTest.verifyFlightDetails() on instance allTest.FlightTest@63070bab]
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:156)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:848)
+at org.testng.TestRunner.run(TestRunner.java:621)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:481)
+at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+at java.base/java.lang.Thread.run(Thread.java:1589)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- enterPassengerDetails -->
+        <test-method signature="verifyPassengerDetails([Ljava.lang.String;)[pri:0, instance:allTest.FlightTest@63070bab]" started-at="2024-01-07T21:48:00 IST" name="verifyPassengerDetails" description="To verify passenger details are displayed correctly" finished-at="2024-01-07T21:48:00 IST" depends-on-methods="allTest.FlightTest.enterPassengerDetails" duration-ms="0" status="SKIP">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method allTest.FlightTest.verifyPassengerDetails() on instance allTest.FlightTest@63070bab depends on not successfully finished methods 
+[allTest.FlightTest.enterPassengerDetails() on instance allTest.FlightTest@63070bab]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method allTest.FlightTest.verifyPassengerDetails() on instance allTest.FlightTest@63070bab depends on not successfully finished methods 
+[allTest.FlightTest.enterPassengerDetails() on instance allTest.FlightTest@63070bab]
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:156)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:848)
+at org.testng.TestRunner.run(TestRunner.java:621)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:481)
+at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+at java.base/java.lang.Thread.run(Thread.java:1589)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyPassengerDetails -->
+        <test-method signature="verifyCardPaymentOption()[pri:0, instance:allTest.FlightTest@63070bab]" started-at="2024-01-07T21:48:00 IST" name="verifyCardPaymentOption" description="To verify if user is able to choose &#039;Credit/Debit/ATM Card&#039; option" finished-at="2024-01-07T21:48:00 IST" depends-on-methods="allTest.FlightTest.verifyPassengerDetails" duration-ms="0" status="SKIP">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method allTest.FlightTest.verifyCardPaymentOption() on instance allTest.FlightTest@63070bab depends on not successfully finished methods 
+[allTest.FlightTest.verifyPassengerDetails() on instance allTest.FlightTest@63070bab]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method allTest.FlightTest.verifyCardPaymentOption() on instance allTest.FlightTest@63070bab depends on not successfully finished methods 
+[allTest.FlightTest.verifyPassengerDetails() on instance allTest.FlightTest@63070bab]
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:156)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:848)
+at org.testng.TestRunner.run(TestRunner.java:621)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:481)
+at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+at java.base/java.lang.Thread.run(Thread.java:1589)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyCardPaymentOption -->
+        <test-method signature="verifyCardDetailsFields()[pri:0, instance:allTest.FlightTest@63070bab]" started-at="2024-01-07T21:48:00 IST" name="verifyCardDetailsFields" description="To verify if user is able to enter credit card details" finished-at="2024-01-07T21:48:00 IST" depends-on-methods="allTest.FlightTest.verifyCardPaymentOption" duration-ms="0" status="SKIP">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method allTest.FlightTest.verifyCardDetailsFields() on instance allTest.FlightTest@63070bab depends on not successfully finished methods 
+[allTest.FlightTest.verifyCardPaymentOption() on instance allTest.FlightTest@63070bab]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method allTest.FlightTest.verifyCardDetailsFields() on instance allTest.FlightTest@63070bab depends on not successfully finished methods 
+[allTest.FlightTest.verifyCardPaymentOption() on instance allTest.FlightTest@63070bab]
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:156)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:848)
+at org.testng.TestRunner.run(TestRunner.java:621)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:481)
+at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+at java.base/java.lang.Thread.run(Thread.java:1589)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyCardDetailsFields -->
+        <test-method signature="verifyPayWithoutSavingCardButton()[pri:0, instance:allTest.FlightTest@63070bab]" started-at="2024-01-07T21:48:00 IST" name="verifyPayWithoutSavingCardButton" description="To verify functionality of &#039;Pay without saving card&#039; option" finished-at="2024-01-07T21:48:00 IST" depends-on-methods="allTest.FlightTest.verifyCardDetailsFields" duration-ms="0" status="SKIP">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method allTest.FlightTest.verifyPayWithoutSavingCardButton() on instance allTest.FlightTest@63070bab depends on not successfully finished methods 
+[allTest.FlightTest.verifyCardDetailsFields() on instance allTest.FlightTest@63070bab]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method allTest.FlightTest.verifyPayWithoutSavingCardButton() on instance allTest.FlightTest@63070bab depends on not successfully finished methods 
+[allTest.FlightTest.verifyCardDetailsFields() on instance allTest.FlightTest@63070bab]
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:156)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:848)
+at org.testng.TestRunner.run(TestRunner.java:621)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:481)
+at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+at java.base/java.lang.Thread.run(Thread.java:1589)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyPayWithoutSavingCardButton -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:allTest.FlightTest@63070bab]" started-at="2024-01-07T21:48:00 IST" name="tearDown" finished-at="2024-01-07T21:48:01 IST" duration-ms="1210" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- allTest.FlightTest -->
+    </test> <!-- Test3 -->
+  </suite> <!-- Suite -->
+</testng-results>

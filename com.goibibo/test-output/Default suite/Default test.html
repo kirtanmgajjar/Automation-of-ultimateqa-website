@@ -1,0 +1,170 @@
+<html>
+<head>
+<title>TestNG:  Default test</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>Default test</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>18/0/0</td>
+</tr><tr>
+<td>Started on:</td><td>Sat Jan 06 18:02:18 IST 2024</td>
+</tr>
+<tr><td>Total time:</td><td>129 seconds (129461 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='allTest.FlightTest.validationOfLowestFares()'><b>validationOfLowestFares</b><br>Test class: allTest.FlightTest<br>Test method: To verify fare displayed is lowest for the day</td>
+<td></td>
+<td>41</td>
+<td>allTest.FlightTest@1c1bbc4e</td></tr>
+<tr>
+<td title='allTest.FlightTest.navigateToFLightsPage()'><b>navigateToFLightsPage</b><br>Test class: allTest.FlightTest<br>Test method: To validate if Flight menu button is diaplyed and is clickable</td>
+<td></td>
+<td>1</td>
+<td>allTest.FlightTest@1c1bbc4e</td></tr>
+<tr>
+<td title='allTest.FlightTest.verifyDestinationCity()'><b>verifyDestinationCity</b><br>Test class: allTest.FlightTest<br>Test method: To verify if user is able to click Ranchi from city dropdown list</td>
+<td></td>
+<td>0</td>
+<td>allTest.FlightTest@1c1bbc4e</td></tr>
+<tr>
+<td title='allTest.FlightTest.verifyFromTextBox()'><b>verifyFromTextBox</b><br>Test class: allTest.FlightTest<br>Test method: To validate From textbox is enabled</td>
+<td></td>
+<td>0</td>
+<td>allTest.FlightTest@1c1bbc4e</td></tr>
+<tr>
+<td title='allTest.FlightTest.verifyCardPaymentOption()'><b>verifyCardPaymentOption</b><br>Test class: allTest.FlightTest<br>Test method: To verify if user is able to choose 'Credit/Debit/ATM Card' option</td>
+<td></td>
+<td>0</td>
+<td>allTest.FlightTest@1c1bbc4e</td></tr>
+<tr>
+<td title='allTest.FlightTest.verifyToTextBox()'><b>verifyToTextBox</b><br>Test class: allTest.FlightTest<br>Test method: To validate To textbox is enabled</td>
+<td></td>
+<td>0</td>
+<td>allTest.FlightTest@1c1bbc4e</td></tr>
+<tr>
+<td title='allTest.FlightTest.verifyPriceFilter()'><b>verifyPriceFilter</b><br>Test class: allTest.FlightTest<br>Test method: To verify the functionality of Price Filter</td>
+<td></td>
+<td>24</td>
+<td>allTest.FlightTest@1c1bbc4e</td></tr>
+<tr>
+<td title='allTest.FlightTest.verifyDateBtn()'><b>verifyDateBtn</b><br>Test class: allTest.FlightTest<br>Test method: To verify Departure date button is clickable</td>
+<td></td>
+<td>0</td>
+<td>allTest.FlightTest@1c1bbc4e</td></tr>
+<tr>
+<td title='allTest.FlightTest.verifySearchButton()'><b>verifySearchButton</b><br>Test class: allTest.FlightTest<br>Test method: To verify the functionality of "Search flights" button after user click it</td>
+<td></td>
+<td>17</td>
+<td>allTest.FlightTest@1c1bbc4e</td></tr>
+<tr>
+<td title='allTest.FlightTest.enterPassengerDetails()'><b>enterPassengerDetails</b><br>Test class: allTest.FlightTest<br>Test method: To verify user is able to fill passenger details <br>Parameters: [Ljava.lang.String;@48567727</td>
+<td></td>
+<td>24</td>
+<td>allTest.FlightTest@1c1bbc4e</td></tr>
+<tr>
+<td title='allTest.FlightTest.verifyOriginCity()'><b>verifyOriginCity</b><br>Test class: allTest.FlightTest<br>Test method: To verify if user is able to click Bengaluru from city dropdown list</td>
+<td></td>
+<td>0</td>
+<td>allTest.FlightTest@1c1bbc4e</td></tr>
+<tr>
+<td title='allTest.FlightTest.enterTravellerDetails()'><b>enterTravellerDetails</b><br>Test class: allTest.FlightTest<br>Test method: To verify user is able to add details in Travellers and class menu</td>
+<td></td>
+<td>0</td>
+<td>allTest.FlightTest@1c1bbc4e</td></tr>
+<tr>
+<td title='allTest.FlightTest.verifyBookBtn()'><b>verifyBookBtn</b><br>Test class: allTest.FlightTest<br>Test method: To verify the functionality of "Book now" button after user click on cheapest price flight</td>
+<td></td>
+<td>2</td>
+<td>allTest.FlightTest@1c1bbc4e</td></tr>
+<tr>
+<td title='allTest.FlightTest.verifyCardDetailsFields()'><b>verifyCardDetailsFields</b><br>Test class: allTest.FlightTest<br>Test method: To verify if user is able to enter credit card details</td>
+<td></td>
+<td>1</td>
+<td>allTest.FlightTest@1c1bbc4e</td></tr>
+<tr>
+<td title='allTest.FlightTest.verifyPassengerDetails()'><b>verifyPassengerDetails</b><br>Test class: allTest.FlightTest<br>Test method: To verify passenger details are displayed correctly<br>Parameters: [Ljava.lang.String;@10e9a5fe</td>
+<td></td>
+<td>0</td>
+<td>allTest.FlightTest@1c1bbc4e</td></tr>
+<tr>
+<td title='allTest.FlightTest.lowestDateSelection()'><b>lowestDateSelection</b><br>Test class: allTest.FlightTest<br>Test method: To verify user is able to select date from Calendar for the lowest price</td>
+<td></td>
+<td>0</td>
+<td>allTest.FlightTest@1c1bbc4e</td></tr>
+<tr>
+<td title='allTest.FlightTest.verifyFlightDetails()'><b>verifyFlightDetails</b><br>Test class: allTest.FlightTest<br>Test method: To verify the details of flight is displayed at overview page</td>
+<td></td>
+<td>0</td>
+<td>allTest.FlightTest@1c1bbc4e</td></tr>
+<tr>
+<td title='allTest.FlightTest.verifyPayWithoutSavingCardButton()'><b>verifyPayWithoutSavingCardButton</b><br>Test class: allTest.FlightTest<br>Test method: To verify functionality of 'Pay without saving card' option</td>
+<td></td>
+<td>0</td>
+<td>allTest.FlightTest@1c1bbc4e</td></tr>
+</table><p>
+</body>
+</html>

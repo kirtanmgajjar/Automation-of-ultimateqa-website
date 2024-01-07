@@ -5,13 +5,12 @@ import static org.testng.Assert.assertEquals;
 import java.time.Duration;
 
 import org.openqa.selenium.StaleElementReferenceException;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-import baseClass.BaseClass;
-
-public class HomePage extends BaseClass{
+public class HomePage extends BasePage{
 	
 	@FindBy(xpath = "//*[@class = 'et_pb_menu__logo']/img")
 	WebElement homePageImg;
@@ -26,15 +25,20 @@ public class HomePage extends BaseClass{
 	@FindBy(className = "formkit-close")
 	WebElement close;
 	
-	public HomePage()
+	private String baseUrl;
+	
+	public HomePage(WebDriver driver, String baseUrl)
 	{
-		PageFactory.initElements(driver, this);
+		super(driver);
+		this.baseUrl = baseUrl;
+		driver.get(baseUrl);
+		close.click();
 	}
+	
 	public void navigateHomePage() throws InterruptedException
 	{
-//		driver.navigate().back();
-//		driver.navigate().back();
-		driver.get(url);
+		driver.get(baseUrl);
+		close.click();
 		assertEquals(driver.getTitle(), "Homepage - Ultimate QA");
 	}
 	
@@ -58,5 +62,11 @@ public class HomePage extends BaseClass{
 		signinButton.click();
 		assertEquals(check.getText(), "Welcome Back!");
 		System.out.println(check.getText());
+	}
+	
+	@Override
+	public void verifyPage() {
+		// TODO Auto-generated method stub
+		
 	}
 }

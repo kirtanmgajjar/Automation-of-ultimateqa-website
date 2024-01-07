@@ -1,29 +1,370 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="6" passed="1" failed="1" skipped="4">
+<testng-results ignored="0" total="12" passed="1" failed="1" skipped="10">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-11-16T14:08:34 IST" name="Default suite" finished-at="2023-11-16T14:10:10 IST" duration-ms="96840">
+  <suite started-at="2023-11-20T16:18:37 IST" name="Suite" finished-at="2023-11-20T16:20:07 IST" duration-ms="89687">
     <groups>
     </groups>
-    <test started-at="2023-11-16T14:08:34 IST" name="Default test" finished-at="2023-11-16T14:10:10 IST" duration-ms="96840">
+    <test started-at="2023-11-20T16:18:37 IST" name="Test2" finished-at="2023-11-20T16:19:13 IST" duration-ms="35166">
       <class name="test.SubmitFormTest">
-        <test-method is-config="true" signature="configurations()[pri:0, instance:test.SubmitFormTest@3eb25e1a]" started-at="2023-11-16T14:08:34 IST" name="configurations" finished-at="2023-11-16T14:08:53 IST" duration-ms="18976" status="PASS">
+        <test-method is-config="true" signature="config1()[pri:0, instance:test.SubmitFormTest@22fcf7ab]" started-at="2023-11-20T16:18:37 IST" name="config1" finished-at="2023-11-20T16:18:37 IST" duration-ms="16" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- configurations -->
-        <test-method is-config="true" signature="openDataExcel()[pri:0, instance:test.SubmitFormTest@3eb25e1a]" started-at="2023-11-16T14:08:53 IST" name="openDataExcel" finished-at="2023-11-16T14:08:53 IST" duration-ms="517" status="PASS">
+        </test-method> <!-- config1 -->
+        <test-method is-config="true" signature="openDataExcel()[pri:0, instance:test.SubmitFormTest@22fcf7ab]" started-at="2023-11-20T16:18:37 IST" name="openDataExcel" finished-at="2023-11-20T16:18:37 IST" duration-ms="756" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- openDataExcel -->
-        <test-method signature="clickConsultation()[pri:0, instance:test.SubmitFormTest@3eb25e1a]" started-at="2023-11-16T14:08:53 IST" name="clickConsultation" description="To validate the functionality of &quot;Free Consultation Button&quot;" finished-at="2023-11-16T14:09:08 IST" duration-ms="14915" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- clickConsultation -->
-        <test-method signature="fillForm([Ljava.lang.String;)[pri:0, instance:test.SubmitFormTest@3eb25e1a]" started-at="2023-11-16T14:09:08 IST" name="fillForm" description="To validate submit functioality by filling details" data-provider="filldetails" finished-at="2023-11-16T14:10:10 IST" depends-on-methods="test.SubmitFormTest.clickConsultation" duration-ms="62170" status="FAIL">
+        <test-method is-config="true" signature="config2(java.lang.String)[pri:0, instance:test.SubmitFormTest@22fcf7ab]" started-at="2023-11-20T16:18:37 IST" name="config2" finished-at="2023-11-20T16:19:13 IST" duration-ms="35122" status="FAIL">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[Ljava.lang.String;@794f11cd]]>
+                <![CDATA[Edge]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.openqa.selenium.TimeoutException">
+            <message>
+              <![CDATA[timeout: Timed out receiving message from renderer: 27.504
+  (Session info: MicrosoftEdge=119.0.2151.58)
+Build info: version: '4.11.0', revision: '040bc5406b'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '19.0.2'
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Command: [1550b0c0bb99e449c5b6d4dbf49ffa3a, get {url=https://ultimateqa.com/}]
+Capabilities {acceptInsecureCerts: false, browserName: msedge, browserVersion: 119.0.2151.58, fedcm:accounts: true, ms:edgeOptions: {debuggerAddress: localhost:54411}, msedge: {msedgedriverVersion: 119.0.2151.72 (e8225cce8e47..., userDataDir: C:\Windows\SystemTemp\scope...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:54411/devtoo..., se:cdpVersion: 119.0.2151.58, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 1550b0c0bb99e449c5b6d4dbf49ffa3a]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.TimeoutException: timeout: Timed out receiving message from renderer: 27.504
+  (Session info: MicrosoftEdge=119.0.2151.58)
+Build info: version: '4.11.0', revision: '040bc5406b'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '19.0.2'
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Command: [1550b0c0bb99e449c5b6d4dbf49ffa3a, get {url=https://ultimateqa.com/}]
+Capabilities {acceptInsecureCerts: false, browserName: msedge, browserVersion: 119.0.2151.58, fedcm:accounts: true, ms:edgeOptions: {debuggerAddress: localhost:54411}, msedge: {msedgedriverVersion: 119.0.2151.72 (e8225cce8e47..., userDataDir: C:\Windows\SystemTemp\scope...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:54411/devtoo..., se:cdpVersion: 119.0.2151.58, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 1550b0c0bb99e449c5b6d4dbf49ffa3a
+at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:484)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
+at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:300)
+at pages.HomePage.<init>(HomePage.java:34)
+at baseClass.BaseClass.config2(BaseClass.java:147)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:390)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:325)
+at org.testng.TestRunner.invokeTestConfigurations(TestRunner.java:663)
+at org.testng.TestRunner.beforeRun(TestRunner.java:652)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:481)
+at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+at java.base/java.lang.Thread.run(Thread.java:1589)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.TimeoutException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- config2 -->
+        <test-method signature="clickConsultation()[pri:0, instance:test.SubmitFormTest@22fcf7ab, attributes: &lt;name: passMessage, value:[Form submission page is successfully opened]&gt;]" started-at="2023-11-20T16:19:13 IST" name="clickConsultation" description="To validate the functionality of &quot;Free Consultation Button&quot;" finished-at="2023-11-20T16:19:13 IST" duration-ms="0" status="SKIP">
+          <exception class="org.openqa.selenium.TimeoutException">
+            <message>
+              <![CDATA[timeout: Timed out receiving message from renderer: 27.504
+  (Session info: MicrosoftEdge=119.0.2151.58)
+Build info: version: '4.11.0', revision: '040bc5406b'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '19.0.2'
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Command: [1550b0c0bb99e449c5b6d4dbf49ffa3a, get {url=https://ultimateqa.com/}]
+Capabilities {acceptInsecureCerts: false, browserName: msedge, browserVersion: 119.0.2151.58, fedcm:accounts: true, ms:edgeOptions: {debuggerAddress: localhost:54411}, msedge: {msedgedriverVersion: 119.0.2151.72 (e8225cce8e47..., userDataDir: C:\Windows\SystemTemp\scope...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:54411/devtoo..., se:cdpVersion: 119.0.2151.58, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 1550b0c0bb99e449c5b6d4dbf49ffa3a]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.TimeoutException: timeout: Timed out receiving message from renderer: 27.504
+  (Session info: MicrosoftEdge=119.0.2151.58)
+Build info: version: '4.11.0', revision: '040bc5406b'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '19.0.2'
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Command: [1550b0c0bb99e449c5b6d4dbf49ffa3a, get {url=https://ultimateqa.com/}]
+Capabilities {acceptInsecureCerts: false, browserName: msedge, browserVersion: 119.0.2151.58, fedcm:accounts: true, ms:edgeOptions: {debuggerAddress: localhost:54411}, msedge: {msedgedriverVersion: 119.0.2151.72 (e8225cce8e47..., userDataDir: C:\Windows\SystemTemp\scope...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:54411/devtoo..., se:cdpVersion: 119.0.2151.58, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 1550b0c0bb99e449c5b6d4dbf49ffa3a
+at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:484)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
+at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:300)
+at pages.HomePage.<init>(HomePage.java:34)
+at baseClass.BaseClass.config2(BaseClass.java:147)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:390)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:325)
+at org.testng.TestRunner.invokeTestConfigurations(TestRunner.java:663)
+at org.testng.TestRunner.beforeRun(TestRunner.java:652)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:481)
+at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+at java.base/java.lang.Thread.run(Thread.java:1589)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.TimeoutException -->
+          <reporter-output>
+          </reporter-output>
+          <custom-attributes>
+            <custom-attribute>
+              <name value="passMessage">
+              </name>
+              <value>
+                <![CDATA[[Form submission page is successfully opened]]]>
+              </value>
+            </custom-attribute>
+          </custom-attributes>
+        </test-method> <!-- clickConsultation -->
+        <test-method signature="fillForm([Ljava.lang.String;)[pri:0, instance:test.SubmitFormTest@22fcf7ab, attributes: &lt;name: passMessage, value:[Details are submitted successfully]&gt;]" started-at="2023-11-20T16:19:13 IST" name="fillForm" description="To validate submit functioality by filling details" finished-at="2023-11-20T16:19:13 IST" depends-on-methods="test.SubmitFormTest.clickConsultation" duration-ms="0" status="SKIP">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method test.SubmitFormTest.fillForm() on instance test.SubmitFormTest@22fcf7ab depends on not successfully finished methods 
+[test.SubmitFormTest.clickConsultation() on instance test.SubmitFormTest@22fcf7ab]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method test.SubmitFormTest.fillForm() on instance test.SubmitFormTest@22fcf7ab depends on not successfully finished methods 
+[test.SubmitFormTest.clickConsultation() on instance test.SubmitFormTest@22fcf7ab]
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:156)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:848)
+at org.testng.TestRunner.run(TestRunner.java:621)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:481)
+at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+at java.base/java.lang.Thread.run(Thread.java:1589)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
+          <reporter-output>
+          </reporter-output>
+          <custom-attributes>
+            <custom-attribute>
+              <name value="passMessage">
+              </name>
+              <value>
+                <![CDATA[[Details are submitted successfully]]]>
+              </value>
+            </custom-attribute>
+          </custom-attributes>
+        </test-method> <!-- fillForm -->
+        <test-method signature="navigateToHomepage()[pri:0, instance:test.SubmitFormTest@22fcf7ab, attributes: &lt;name: passMessage, value:[Navigated to homepage successfully]&gt;]" started-at="2023-11-20T16:19:13 IST" name="navigateToHomepage" description="To validate the navigation to homepage" finished-at="2023-11-20T16:19:13 IST" depends-on-methods="test.SubmitFormTest.fillForm" duration-ms="1" status="SKIP">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method test.SubmitFormTest.navigateToHomepage() on instance test.SubmitFormTest@22fcf7ab depends on not successfully finished methods 
+[test.SubmitFormTest.fillForm() on instance test.SubmitFormTest@22fcf7ab]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method test.SubmitFormTest.navigateToHomepage() on instance test.SubmitFormTest@22fcf7ab depends on not successfully finished methods 
+[test.SubmitFormTest.fillForm() on instance test.SubmitFormTest@22fcf7ab]
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:156)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:848)
+at org.testng.TestRunner.run(TestRunner.java:621)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:481)
+at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+at java.base/java.lang.Thread.run(Thread.java:1589)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
+          <reporter-output>
+          </reporter-output>
+          <custom-attributes>
+            <custom-attribute>
+              <name value="passMessage">
+              </name>
+              <value>
+                <![CDATA[[Navigated to homepage successfully]]]>
+              </value>
+            </custom-attribute>
+          </custom-attributes>
+        </test-method> <!-- navigateToHomepage -->
+        <test-method signature="validateSearchResults()[pri:0, instance:test.SubmitFormTest@22fcf7ab, attributes: &lt;name: passMessage, value:[Results Found]&gt;]" started-at="2023-11-20T16:19:13 IST" name="validateSearchResults" description="To validate the search functionality for seaching courses based on the subject" finished-at="2023-11-20T16:19:13 IST" depends-on-methods="test.SubmitFormTest.navigateToHomepage" duration-ms="0" status="SKIP">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method test.SubmitFormTest.validateSearchResults() on instance test.SubmitFormTest@22fcf7ab depends on not successfully finished methods 
+[test.SubmitFormTest.navigateToHomepage() on instance test.SubmitFormTest@22fcf7ab]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method test.SubmitFormTest.validateSearchResults() on instance test.SubmitFormTest@22fcf7ab depends on not successfully finished methods 
+[test.SubmitFormTest.navigateToHomepage() on instance test.SubmitFormTest@22fcf7ab]
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:156)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:848)
+at org.testng.TestRunner.run(TestRunner.java:621)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:481)
+at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+at java.base/java.lang.Thread.run(Thread.java:1589)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
+          <reporter-output>
+          </reporter-output>
+          <custom-attributes>
+            <custom-attribute>
+              <name value="passMessage">
+              </name>
+              <value>
+                <![CDATA[[Results Found]]]>
+              </value>
+            </custom-attribute>
+          </custom-attributes>
+        </test-method> <!-- validateSearchResults -->
+        <test-method signature="navigateToSignin()[pri:0, instance:test.SubmitFormTest@22fcf7ab, attributes: &lt;name: passMessage, value:[Navigated to SignIn page successfully]&gt;]" started-at="2023-11-20T16:19:13 IST" name="navigateToSignin" description="To validate page by navigating to Signin page" finished-at="2023-11-20T16:19:13 IST" depends-on-methods="test.SubmitFormTest.validateSearchResults" duration-ms="0" status="SKIP">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method test.SubmitFormTest.navigateToSignin() on instance test.SubmitFormTest@22fcf7ab depends on not successfully finished methods 
+[test.SubmitFormTest.validateSearchResults() on instance test.SubmitFormTest@22fcf7ab]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method test.SubmitFormTest.navigateToSignin() on instance test.SubmitFormTest@22fcf7ab depends on not successfully finished methods 
+[test.SubmitFormTest.validateSearchResults() on instance test.SubmitFormTest@22fcf7ab]
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:156)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:848)
+at org.testng.TestRunner.run(TestRunner.java:621)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:481)
+at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+at java.base/java.lang.Thread.run(Thread.java:1589)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
+          <reporter-output>
+          </reporter-output>
+          <custom-attributes>
+            <custom-attribute>
+              <name value="passMessage">
+              </name>
+              <value>
+                <![CDATA[[Navigated to SignIn page successfully]]]>
+              </value>
+            </custom-attribute>
+          </custom-attributes>
+        </test-method> <!-- navigateToSignin -->
+        <test-method signature="signIn()[pri:0, instance:test.SubmitFormTest@22fcf7ab, attributes: &lt;name: passMessage, value:[Error message successfully displayed]&gt;]" started-at="2023-11-20T16:19:13 IST" name="signIn" description="To validate by sigining with wrong credentials and retreiving the error message" finished-at="2023-11-20T16:19:13 IST" depends-on-methods="test.SubmitFormTest.navigateToSignin" duration-ms="1" status="SKIP">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method test.SubmitFormTest.signIn() on instance test.SubmitFormTest@22fcf7ab depends on not successfully finished methods 
+[test.SubmitFormTest.navigateToSignin() on instance test.SubmitFormTest@22fcf7ab]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method test.SubmitFormTest.signIn() on instance test.SubmitFormTest@22fcf7ab depends on not successfully finished methods 
+[test.SubmitFormTest.navigateToSignin() on instance test.SubmitFormTest@22fcf7ab]
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:156)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:848)
+at org.testng.TestRunner.run(TestRunner.java:621)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:481)
+at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+at java.base/java.lang.Thread.run(Thread.java:1589)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
+          <reporter-output>
+          </reporter-output>
+          <custom-attributes>
+            <custom-attribute>
+              <name value="passMessage">
+              </name>
+              <value>
+                <![CDATA[[Error message successfully displayed]]]>
+              </value>
+            </custom-attribute>
+          </custom-attributes>
+        </test-method> <!-- signIn -->
+        <test-method is-config="true" signature="end()[pri:0, instance:test.SubmitFormTest@22fcf7ab]" started-at="2023-11-20T16:19:13 IST" name="end" finished-at="2023-11-20T16:19:13 IST" duration-ms="0" status="SKIP">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- end -->
+      </class> <!-- test.SubmitFormTest -->
+    </test> <!-- Test2 -->
+    <test started-at="2023-11-20T16:18:37 IST" name="Test1" finished-at="2023-11-20T16:20:07 IST" duration-ms="89687">
+      <class name="test.SubmitFormTest">
+        <test-method is-config="true" signature="config2(java.lang.String)[pri:0, instance:test.SubmitFormTest@3b0090a4]" started-at="2023-11-20T16:18:37 IST" name="config2" finished-at="2023-11-20T16:18:49 IST" duration-ms="11802" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- config2 -->
+        <test-method signature="clickConsultation()[pri:0, instance:test.SubmitFormTest@3b0090a4, attributes: &lt;name: passMessage, value:[Form submission page is successfully opened]&gt;]" started-at="2023-11-20T16:18:49 IST" name="clickConsultation" description="To validate the functionality of &quot;Free Consultation Button&quot;" finished-at="2023-11-20T16:19:02 IST" duration-ms="12864" status="PASS">
+          <reporter-output>
+          </reporter-output>
+          <custom-attributes>
+            <custom-attribute>
+              <name value="passMessage">
+              </name>
+              <value>
+                <![CDATA[[Form submission page is successfully opened]]]>
+              </value>
+            </custom-attribute>
+          </custom-attributes>
+        </test-method> <!-- clickConsultation -->
+        <test-method signature="fillForm([Ljava.lang.String;)[pri:0, instance:test.SubmitFormTest@3b0090a4, attributes: &lt;name: passMessage, value:[Details are submitted successfully]&gt;]" started-at="2023-11-20T16:19:02 IST" name="fillForm" description="To validate submit functioality by filling details" data-provider="filldetails" finished-at="2023-11-20T16:20:06 IST" depends-on-methods="test.SubmitFormTest.clickConsultation" duration-ms="63607" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[Ljava.lang.String;@7067fec7]]>
               </value>
             </param>
           </params>
@@ -35,43 +376,30 @@
               <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for presence of element located by: By.xpath: //*[@aria-checked='true'] (tried for 60 second(s) with 500 milliseconds interval)
 at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
 at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:230)
-at pages.SubmitForm.fillDetails(SubmitForm.java:59)
-at test.SubmitFormTest.fillForm(SubmitFormTest.java:28)
+at pages.SubmitForm.fillDetails(SubmitForm.java:58)
+at test.SubmitFormTest.fillForm(SubmitFormTest.java:34)
 at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
 at java.base/java.lang.reflect.Method.invoke(Method.java:578)
 at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
 at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
 at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:848)
-at org.testng.TestRunner.run(TestRunner.java:621)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
-at org.testng.SuiteRunner.run(SuiteRunner.java:336)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
-at org.testng.TestNG.runSuites(TestNG.java:1114)
-at org.testng.TestNG.run(TestNG.java:1082)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-Caused by: org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
-from unknown error: web view not found
+at org.testng.internal.invokers.TestMethodWithDataProviderMethodWorker.call(TestMethodWithDataProviderMethodWorker.java:80)
+at org.testng.internal.invokers.TestMethodWithDataProviderMethodWorker.call(TestMethodWithDataProviderMethodWorker.java:17)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:577)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+at java.base/java.lang.Thread.run(Thread.java:1589)
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//*[@aria-checked='true']"}
   (Session info: chrome=117.0.5938.63)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
 Build info: version: '4.11.0', revision: '040bc5406b'
 System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '19.0.2'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [192b6aa8d4fbef35f99cae07733399ea, findElement {using=xpath, value=//*[@aria-checked='true']}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 117.0.5938.63, chrome: {chromedriverVersion: 117.0.5938.149 (e3344ddefa1..., userDataDir: C:\Windows\SystemTemp\scope...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:64917}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:64917/devtoo..., se:cdpVersion: 117.0.5938.63, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 192b6aa8d4fbef35f99cae07733399ea
+Command: [ec5a0a765f6fec396461e7794fe874bc, findElement {using=xpath, value=//*[@aria-checked='true']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 117.0.5938.63, chrome: {chromedriverVersion: 117.0.5938.149 (e3344ddefa1..., userDataDir: C:\Windows\SystemTemp\scope...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:54388}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:54388/devtoo..., se:cdpVersion: 117.0.5938.63, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: ec5a0a765f6fec396461e7794fe874bc
 at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
 at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
 at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:484)
@@ -89,22 +417,31 @@ at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:3
 at org.openqa.selenium.support.ui.ExpectedConditions$6.apply(ExpectedConditions.java:171)
 at org.openqa.selenium.support.ui.ExpectedConditions$6.apply(ExpectedConditions.java:168)
 at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:205)
-... 28 more
+... 15 more
 ]]>
             </full-stacktrace>
           </exception> <!-- org.openqa.selenium.TimeoutException -->
           <reporter-output>
           </reporter-output>
+          <custom-attributes>
+            <custom-attribute>
+              <name value="passMessage">
+              </name>
+              <value>
+                <![CDATA[[Details are submitted successfully]]]>
+              </value>
+            </custom-attribute>
+          </custom-attributes>
         </test-method> <!-- fillForm -->
-        <test-method signature="navigateToHomepage()[pri:0, instance:test.SubmitFormTest@3eb25e1a]" started-at="2023-11-16T14:10:10 IST" name="navigateToHomepage" description="To validate the navigation to homepage" finished-at="2023-11-16T14:10:10 IST" depends-on-methods="test.SubmitFormTest.fillForm" duration-ms="0" status="SKIP">
+        <test-method signature="navigateToHomepage()[pri:0, instance:test.SubmitFormTest@3b0090a4, attributes: &lt;name: passMessage, value:[Navigated to homepage successfully]&gt;]" started-at="2023-11-20T16:20:06 IST" name="navigateToHomepage" description="To validate the navigation to homepage" finished-at="2023-11-20T16:20:06 IST" depends-on-methods="test.SubmitFormTest.fillForm" duration-ms="0" status="SKIP">
           <exception class="java.lang.Throwable">
             <message>
-              <![CDATA[Method test.SubmitFormTest.navigateToHomepage() on instance test.SubmitFormTest@3eb25e1a depends on not successfully finished methods 
-[test.SubmitFormTest.fillForm() on instance test.SubmitFormTest@3eb25e1a]]]>
+              <![CDATA[Method test.SubmitFormTest.navigateToHomepage() on instance test.SubmitFormTest@3b0090a4 depends on not successfully finished methods 
+[test.SubmitFormTest.fillForm() on instance test.SubmitFormTest@3b0090a4]]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.Throwable: Method test.SubmitFormTest.navigateToHomepage() on instance test.SubmitFormTest@3eb25e1a depends on not successfully finished methods 
-[test.SubmitFormTest.fillForm() on instance test.SubmitFormTest@3eb25e1a]
+              <![CDATA[java.lang.Throwable: Method test.SubmitFormTest.navigateToHomepage() on instance test.SubmitFormTest@3b0090a4 depends on not successfully finished methods 
+[test.SubmitFormTest.fillForm() on instance test.SubmitFormTest@3b0090a4]
 at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:156)
 at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
 at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
@@ -112,33 +449,36 @@ at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
 at org.testng.TestRunner.privateRun(TestRunner.java:848)
 at org.testng.TestRunner.run(TestRunner.java:621)
 at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
-at org.testng.SuiteRunner.run(SuiteRunner.java:336)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
-at org.testng.TestNG.runSuites(TestNG.java:1114)
-at org.testng.TestNG.run(TestNG.java:1082)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:481)
+at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+at java.base/java.lang.Thread.run(Thread.java:1589)
 ]]>
             </full-stacktrace>
           </exception> <!-- java.lang.Throwable -->
           <reporter-output>
           </reporter-output>
+          <custom-attributes>
+            <custom-attribute>
+              <name value="passMessage">
+              </name>
+              <value>
+                <![CDATA[[Navigated to homepage successfully]]]>
+              </value>
+            </custom-attribute>
+          </custom-attributes>
         </test-method> <!-- navigateToHomepage -->
-        <test-method signature="validateSearchResults()[pri:0, instance:test.SubmitFormTest@3eb25e1a]" started-at="2023-11-16T14:10:10 IST" name="validateSearchResults" description="To validate the search functionality for seaching courses based on the subject" finished-at="2023-11-16T14:10:10 IST" depends-on-methods="test.SubmitFormTest.navigateToHomepage" duration-ms="1" status="SKIP">
+        <test-method signature="validateSearchResults()[pri:0, instance:test.SubmitFormTest@3b0090a4, attributes: &lt;name: passMessage, value:[Results Found]&gt;]" started-at="2023-11-20T16:20:06 IST" name="validateSearchResults" description="To validate the search functionality for seaching courses based on the subject" finished-at="2023-11-20T16:20:06 IST" depends-on-methods="test.SubmitFormTest.navigateToHomepage" duration-ms="0" status="SKIP">
           <exception class="java.lang.Throwable">
             <message>
-              <![CDATA[Method test.SubmitFormTest.validateSearchResults() on instance test.SubmitFormTest@3eb25e1a depends on not successfully finished methods 
-[test.SubmitFormTest.navigateToHomepage() on instance test.SubmitFormTest@3eb25e1a]]]>
+              <![CDATA[Method test.SubmitFormTest.validateSearchResults() on instance test.SubmitFormTest@3b0090a4 depends on not successfully finished methods 
+[test.SubmitFormTest.navigateToHomepage() on instance test.SubmitFormTest@3b0090a4]]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.Throwable: Method test.SubmitFormTest.validateSearchResults() on instance test.SubmitFormTest@3eb25e1a depends on not successfully finished methods 
-[test.SubmitFormTest.navigateToHomepage() on instance test.SubmitFormTest@3eb25e1a]
+              <![CDATA[java.lang.Throwable: Method test.SubmitFormTest.validateSearchResults() on instance test.SubmitFormTest@3b0090a4 depends on not successfully finished methods 
+[test.SubmitFormTest.navigateToHomepage() on instance test.SubmitFormTest@3b0090a4]
 at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:156)
 at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
 at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
@@ -146,33 +486,36 @@ at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
 at org.testng.TestRunner.privateRun(TestRunner.java:848)
 at org.testng.TestRunner.run(TestRunner.java:621)
 at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
-at org.testng.SuiteRunner.run(SuiteRunner.java:336)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
-at org.testng.TestNG.runSuites(TestNG.java:1114)
-at org.testng.TestNG.run(TestNG.java:1082)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:481)
+at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+at java.base/java.lang.Thread.run(Thread.java:1589)
 ]]>
             </full-stacktrace>
           </exception> <!-- java.lang.Throwable -->
           <reporter-output>
           </reporter-output>
+          <custom-attributes>
+            <custom-attribute>
+              <name value="passMessage">
+              </name>
+              <value>
+                <![CDATA[[Results Found]]]>
+              </value>
+            </custom-attribute>
+          </custom-attributes>
         </test-method> <!-- validateSearchResults -->
-        <test-method signature="navigateToSignin()[pri:0, instance:test.SubmitFormTest@3eb25e1a]" started-at="2023-11-16T14:10:10 IST" name="navigateToSignin" description="To validate page by navigating to Signin page" finished-at="2023-11-16T14:10:10 IST" depends-on-methods="test.SubmitFormTest.validateSearchResults" duration-ms="0" status="SKIP">
+        <test-method signature="navigateToSignin()[pri:0, instance:test.SubmitFormTest@3b0090a4, attributes: &lt;name: passMessage, value:[Navigated to SignIn page successfully]&gt;]" started-at="2023-11-20T16:20:06 IST" name="navigateToSignin" description="To validate page by navigating to Signin page" finished-at="2023-11-20T16:20:06 IST" depends-on-methods="test.SubmitFormTest.validateSearchResults" duration-ms="0" status="SKIP">
           <exception class="java.lang.Throwable">
             <message>
-              <![CDATA[Method test.SubmitFormTest.navigateToSignin() on instance test.SubmitFormTest@3eb25e1a depends on not successfully finished methods 
-[test.SubmitFormTest.validateSearchResults() on instance test.SubmitFormTest@3eb25e1a]]]>
+              <![CDATA[Method test.SubmitFormTest.navigateToSignin() on instance test.SubmitFormTest@3b0090a4 depends on not successfully finished methods 
+[test.SubmitFormTest.validateSearchResults() on instance test.SubmitFormTest@3b0090a4]]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.Throwable: Method test.SubmitFormTest.navigateToSignin() on instance test.SubmitFormTest@3eb25e1a depends on not successfully finished methods 
-[test.SubmitFormTest.validateSearchResults() on instance test.SubmitFormTest@3eb25e1a]
+              <![CDATA[java.lang.Throwable: Method test.SubmitFormTest.navigateToSignin() on instance test.SubmitFormTest@3b0090a4 depends on not successfully finished methods 
+[test.SubmitFormTest.validateSearchResults() on instance test.SubmitFormTest@3b0090a4]
 at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:156)
 at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
 at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
@@ -180,33 +523,36 @@ at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
 at org.testng.TestRunner.privateRun(TestRunner.java:848)
 at org.testng.TestRunner.run(TestRunner.java:621)
 at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
-at org.testng.SuiteRunner.run(SuiteRunner.java:336)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
-at org.testng.TestNG.runSuites(TestNG.java:1114)
-at org.testng.TestNG.run(TestNG.java:1082)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:481)
+at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+at java.base/java.lang.Thread.run(Thread.java:1589)
 ]]>
             </full-stacktrace>
           </exception> <!-- java.lang.Throwable -->
           <reporter-output>
           </reporter-output>
+          <custom-attributes>
+            <custom-attribute>
+              <name value="passMessage">
+              </name>
+              <value>
+                <![CDATA[[Navigated to SignIn page successfully]]]>
+              </value>
+            </custom-attribute>
+          </custom-attributes>
         </test-method> <!-- navigateToSignin -->
-        <test-method signature="signIn()[pri:0, instance:test.SubmitFormTest@3eb25e1a]" started-at="2023-11-16T14:10:10 IST" name="signIn" description="To validate by sigining with wrong credentials and retreiving the error message" finished-at="2023-11-16T14:10:10 IST" depends-on-methods="test.SubmitFormTest.navigateToSignin" duration-ms="0" status="SKIP">
+        <test-method signature="signIn()[pri:0, instance:test.SubmitFormTest@3b0090a4, attributes: &lt;name: passMessage, value:[Error message successfully displayed]&gt;]" started-at="2023-11-20T16:20:06 IST" name="signIn" description="To validate by sigining with wrong credentials and retreiving the error message" finished-at="2023-11-20T16:20:06 IST" depends-on-methods="test.SubmitFormTest.navigateToSignin" duration-ms="0" status="SKIP">
           <exception class="java.lang.Throwable">
             <message>
-              <![CDATA[Method test.SubmitFormTest.signIn() on instance test.SubmitFormTest@3eb25e1a depends on not successfully finished methods 
-[test.SubmitFormTest.navigateToSignin() on instance test.SubmitFormTest@3eb25e1a]]]>
+              <![CDATA[Method test.SubmitFormTest.signIn() on instance test.SubmitFormTest@3b0090a4 depends on not successfully finished methods 
+[test.SubmitFormTest.navigateToSignin() on instance test.SubmitFormTest@3b0090a4]]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.Throwable: Method test.SubmitFormTest.signIn() on instance test.SubmitFormTest@3eb25e1a depends on not successfully finished methods 
-[test.SubmitFormTest.navigateToSignin() on instance test.SubmitFormTest@3eb25e1a]
+              <![CDATA[java.lang.Throwable: Method test.SubmitFormTest.signIn() on instance test.SubmitFormTest@3b0090a4 depends on not successfully finished methods 
+[test.SubmitFormTest.navigateToSignin() on instance test.SubmitFormTest@3b0090a4]
 at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:156)
 at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
 at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
@@ -214,25 +560,32 @@ at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
 at org.testng.TestRunner.privateRun(TestRunner.java:848)
 at org.testng.TestRunner.run(TestRunner.java:621)
 at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
-at org.testng.SuiteRunner.run(SuiteRunner.java:336)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
-at org.testng.TestNG.runSuites(TestNG.java:1114)
-at org.testng.TestNG.run(TestNG.java:1082)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:481)
+at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+at java.base/java.lang.Thread.run(Thread.java:1589)
 ]]>
             </full-stacktrace>
           </exception> <!-- java.lang.Throwable -->
           <reporter-output>
           </reporter-output>
+          <custom-attributes>
+            <custom-attribute>
+              <name value="passMessage">
+              </name>
+              <value>
+                <![CDATA[[Error message successfully displayed]]]>
+              </value>
+            </custom-attribute>
+          </custom-attributes>
         </test-method> <!-- signIn -->
+        <test-method is-config="true" signature="end()[pri:0, instance:test.SubmitFormTest@3b0090a4]" started-at="2023-11-20T16:20:06 IST" name="end" finished-at="2023-11-20T16:20:07 IST" duration-ms="1147" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- end -->
       </class> <!-- test.SubmitFormTest -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+    </test> <!-- Test1 -->
+  </suite> <!-- Suite -->
 </testng-results>

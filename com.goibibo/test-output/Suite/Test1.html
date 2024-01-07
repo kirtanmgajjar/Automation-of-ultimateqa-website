@@ -1,0 +1,875 @@
+<html>
+<head>
+<title>TestNG:  Test1</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>Test1</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>2/1/22</td>
+</tr><tr>
+<td>Started on:</td><td>Sun Jan 07 21:47:05 IST 2024</td>
+</tr>
+<tr><td>Total time:</td><td>47 seconds (47999 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='allTest.HotelsTest.validationOfWhereSearchfield()'><b>validationOfWhereSearchfield</b><br>Test class: allTest.HotelsTest<br>Test method: To validate the functionality of 'Where' search box to be able to take input and is able to select the required location</td>
+<td>
+<a href="#attributes-1841499447" onClick='toggleBox("attributes-1841499447", this, "Show attributes", "Hide attributes");'>Show attributes</a>
+
+<a href="#attributes-1841499447"></a><div class='log' id="attributes-1841499447">
+name: passMessage, value:[A dropdown is displayed showing locations in Goa and the chosen location is displayed in the &apos;Where&apos; field]<br></div></td><td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for presence of any elements located by By.xpath: //*[@id=&apos;downshift-1-menu&apos;]/li (tried for 30 second(s) with 500 milliseconds interval)
+Build info: version: &apos;4.11.0&apos;, revision: &apos;040bc5406b&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;19.0.2&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 118.0.5993.71, chrome: {chromedriverVersion: 118.0.5993.70 (e52f33f30b91..., userDataDir: C:\Windows\SystemTemp\scope...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:63252}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:63252/devtoo..., se:cdpVersion: 118.0.5993.71, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: ba9d9ee8c27176ef7542101569a63537
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:230)
+	at pages.hotels.HotelsPage.enterLocationOfHotel(HotelsPage.java:94)
+	at allTest.HotelsTest.validationOfWhereSearchfield(HotelsTest.java:84)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1589)
+... Removed 15 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1841499447", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1841499447'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for presence of any elements located by By.xpath: //*[@id=&apos;downshift-1-menu&apos;]/li (tried for 30 second(s) with 500 milliseconds interval)
+Build info: version: &apos;4.11.0&apos;, revision: &apos;040bc5406b&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;19.0.2&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 118.0.5993.71, chrome: {chromedriverVersion: 118.0.5993.70 (e52f33f30b91..., userDataDir: C:\Windows\SystemTemp\scope...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:63252}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:63252/devtoo..., se:cdpVersion: 118.0.5993.71, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: ba9d9ee8c27176ef7542101569a63537
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:230)
+	at pages.hotels.HotelsPage.enterLocationOfHotel(HotelsPage.java:94)
+	at allTest.HotelsTest.validationOfWhereSearchfield(HotelsTest.java:84)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:848)
+	at org.testng.TestRunner.run(TestRunner.java:621)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:481)
+	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1589)
+</pre></div></td>
+<td>30</td>
+<td>allTest.HotelsTest@1ff4931d</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='allTest.HotelsTest.navigateToHotelsPage()'><b>navigateToHotelsPage</b><br>Test class: allTest.HotelsTest<br>Test method: To validate if 'Hotel' menu button is displayed and clickable</td>
+<td>
+<a href="#attributes-283632068" onClick='toggleBox("attributes-283632068", this, "Show attributes", "Hide attributes");'>Show attributes</a>
+
+<a href="#attributes-283632068"></a><div class='log' id="attributes-283632068">
+name: passMessage, value:[User is redirected to Hotels web page]<br></div></td><td></td>
+<td>7</td>
+<td>allTest.HotelsTest@1ff4931d</td></tr>
+<tr>
+<td title='allTest.HotelsTest.validationOfRadioButtons()'><b>validationOfRadioButtons</b><br>Test class: allTest.HotelsTest<br>Test method: To validate the working of radio buttons</td>
+<td>
+<a href="#attributes-214606014" onClick='toggleBox("attributes-214606014", this, "Show attributes", "Hide attributes");'>Show attributes</a>
+
+<a href="#attributes-214606014"></a><div class='log' id="attributes-214606014">
+name: passMessage, value:[India radio button is selected]<br></div></td><td></td>
+<td>0</td>
+<td>allTest.HotelsTest@1ff4931d</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-skipped'>
+<tr><td colspan='4' align='center'><b>SKIPPED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='allTest.HotelsTest.verify0AdultAdd()'><b>verify0AdultAdd</b><br>Test class: allTest.HotelsTest<br>Test method: To verify if user is able to enter 0 adult in the Adults field</td>
+<td>
+<a href="#attributes-102217622" onClick='toggleBox("attributes-102217622", this, "Show attributes", "Hide attributes");'>Show attributes</a>
+
+<a href="#attributes-102217622"></a><div class='log' id="attributes-102217622">
+name: passMessage, value:[The alert is displayed and &apos;Minimum 1 adult is required&apos; message is displayed]<br></div></td><td><div><pre>java.lang.Throwable: Method allTest.HotelsTest.verify0AdultAdd() on instance allTest.HotelsTest@1ff4931d depends on not successfully finished methods 
+[allTest.HotelsTest.verify0RoomAdd() on instance allTest.HotelsTest@1ff4931d]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1589)
+... Removed 8 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace102217622", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace102217622'><pre>java.lang.Throwable: Method allTest.HotelsTest.verify0AdultAdd() on instance allTest.HotelsTest@1ff4931d depends on not successfully finished methods 
+[allTest.HotelsTest.verify0RoomAdd() on instance allTest.HotelsTest@1ff4931d]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:156)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:848)
+	at org.testng.TestRunner.run(TestRunner.java:621)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:481)
+	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1589)
+</pre></div></td>
+<td>0</td>
+<td>allTest.HotelsTest@1ff4931d</td></tr>
+<tr>
+<td title='allTest.HotelsTest.verifySearchCriteria()'><b>verifySearchCriteria</b><br>Test class: allTest.HotelsTest<br>Test method: To verify the hotel search criteria details in the hotel results page</td>
+<td>
+<a href="#attributes-255057490" onClick='toggleBox("attributes-255057490", this, "Show attributes", "Hide attributes");'>Show attributes</a>
+
+<a href="#attributes-255057490"></a><div class='log' id="attributes-255057490">
+name: passMessage, value:[The details displayed in the hotel results page matches with the details used to search the hotels]<br></div></td><td><div><pre>java.lang.Throwable: Method allTest.HotelsTest.verifySearchCriteria() on instance allTest.HotelsTest@1ff4931d depends on not successfully finished methods 
+[allTest.HotelsTest.validationOfSearchField() on instance allTest.HotelsTest@1ff4931d]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1589)
+... Removed 8 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace255057490", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace255057490'><pre>java.lang.Throwable: Method allTest.HotelsTest.verifySearchCriteria() on instance allTest.HotelsTest@1ff4931d depends on not successfully finished methods 
+[allTest.HotelsTest.validationOfSearchField() on instance allTest.HotelsTest@1ff4931d]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:156)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:848)
+	at org.testng.TestRunner.run(TestRunner.java:621)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:481)
+	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1589)
+</pre></div></td>
+<td>0</td>
+<td>allTest.HotelsTest@1ff4931d</td></tr>
+<tr>
+<td title='allTest.HotelsTest.verifyPriceFilter()'><b>verifyPriceFilter</b><br>Test class: allTest.HotelsTest<br>Test method: To verify the functionality of Price filters</td>
+<td>
+<a href="#attributes-2089009570" onClick='toggleBox("attributes-2089009570", this, "Show attributes", "Hide attributes");'>Show attributes</a>
+
+<a href="#attributes-2089009570"></a><div class='log' id="attributes-2089009570">
+name: passMessage, value:[The hotel results shows the hotels having amount between 2001 and 4000]<br></div></td><td><div><pre>java.lang.Throwable: Method allTest.HotelsTest.verifyPriceFilter() on instance allTest.HotelsTest@1ff4931d depends on not successfully finished methods 
+[allTest.HotelsTest.verifySortingOptions() on instance allTest.HotelsTest@1ff4931d]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1589)
+... Removed 8 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace2089009570", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace2089009570'><pre>java.lang.Throwable: Method allTest.HotelsTest.verifyPriceFilter() on instance allTest.HotelsTest@1ff4931d depends on not successfully finished methods 
+[allTest.HotelsTest.verifySortingOptions() on instance allTest.HotelsTest@1ff4931d]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:156)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:848)
+	at org.testng.TestRunner.run(TestRunner.java:621)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:481)
+	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1589)
+</pre></div></td>
+<td>0</td>
+<td>allTest.HotelsTest@1ff4931d</td></tr>
+<tr>
+<td title='allTest.HotelsTest.validationOfSearchField()'><b>validationOfSearchField</b><br>Test class: allTest.HotelsTest<br>Test method: To validate the functionality of Search button</td>
+<td>
+<a href="#attributes-722986645" onClick='toggleBox("attributes-722986645", this, "Show attributes", "Hide attributes");'>Show attributes</a>
+
+<a href="#attributes-722986645"></a><div class='log' id="attributes-722986645">
+name: passMessage, value:[User is redirected to hotels list webpage]<br></div></td><td><div><pre>java.lang.Throwable: Method allTest.HotelsTest.validationOfSearchField() on instance allTest.HotelsTest@1ff4931d depends on not successfully finished methods 
+[allTest.HotelsTest.verify0AdultAdd() on instance allTest.HotelsTest@1ff4931d]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1589)
+... Removed 8 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace722986645", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace722986645'><pre>java.lang.Throwable: Method allTest.HotelsTest.validationOfSearchField() on instance allTest.HotelsTest@1ff4931d depends on not successfully finished methods 
+[allTest.HotelsTest.verify0AdultAdd() on instance allTest.HotelsTest@1ff4931d]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:156)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:848)
+	at org.testng.TestRunner.run(TestRunner.java:621)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:481)
+	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1589)
+</pre></div></td>
+<td>0</td>
+<td>allTest.HotelsTest@1ff4931d</td></tr>
+<tr>
+<td title='allTest.HotelsTest.verifyPriceSummary()'><b>verifyPriceSummary</b><br>Test class: allTest.HotelsTest<br>Test method: To verify the displayed information of price summary</td>
+<td>
+<a href="#attributes-1000659303" onClick='toggleBox("attributes-1000659303", this, "Show attributes", "Hide attributes");'>Show attributes</a>
+
+<a href="#attributes-1000659303"></a><div class='log' id="attributes-1000659303">
+name: passMessage, value:[The price summary is correct based on the data displayed in the Room Booking page]<br></div></td><td><div><pre>java.lang.Throwable: Method allTest.HotelsTest.verifyPriceSummary() on instance allTest.HotelsTest@1ff4931d depends on not successfully finished methods 
+[allTest.HotelsTest.verifyOfferCodeSelection() on instance allTest.HotelsTest@1ff4931d]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1589)
+... Removed 8 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1000659303", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1000659303'><pre>java.lang.Throwable: Method allTest.HotelsTest.verifyPriceSummary() on instance allTest.HotelsTest@1ff4931d depends on not successfully finished methods 
+[allTest.HotelsTest.verifyOfferCodeSelection() on instance allTest.HotelsTest@1ff4931d]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:156)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:848)
+	at org.testng.TestRunner.run(TestRunner.java:621)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:481)
+	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1589)
+</pre></div></td>
+<td>0</td>
+<td>allTest.HotelsTest@1ff4931d</td></tr>
+<tr>
+<td title='allTest.HotelsTest.verifyCardDetailsFields()'><b>verifyCardDetailsFields</b><br>Test class: allTest.HotelsTest<br>Test method: To verify if user is able to enter credit card details</td>
+<td>
+<a href="#attributes-1990326786" onClick='toggleBox("attributes-1990326786", this, "Show attributes", "Hide attributes");'>Show attributes</a>
+
+<a href="#attributes-1990326786"></a><div class='log' id="attributes-1990326786">
+name: passMessage, value:[User is able to enter all required details]<br></div></td><td><div><pre>java.lang.Throwable: Method allTest.HotelsTest.verifyCardDetailsFields() on instance allTest.HotelsTest@1ff4931d depends on not successfully finished methods 
+[allTest.HotelsTest.verifyCardPaymentOption() on instance allTest.HotelsTest@1ff4931d]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1589)
+... Removed 8 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1990326786", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1990326786'><pre>java.lang.Throwable: Method allTest.HotelsTest.verifyCardDetailsFields() on instance allTest.HotelsTest@1ff4931d depends on not successfully finished methods 
+[allTest.HotelsTest.verifyCardPaymentOption() on instance allTest.HotelsTest@1ff4931d]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:156)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:848)
+	at org.testng.TestRunner.run(TestRunner.java:621)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:481)
+	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1589)
+</pre></div></td>
+<td>0</td>
+<td>allTest.HotelsTest@1ff4931d</td></tr>
+<tr>
+<td title='allTest.HotelsTest.validationOfRoomsField()'><b>validationOfRoomsField</b><br>Test class: allTest.HotelsTest<br>Test method: To verify if user is able to select the required number of rooms</td>
+<td>
+<a href="#attributes-1246973338" onClick='toggleBox("attributes-1246973338", this, "Show attributes", "Hide attributes");'>Show attributes</a>
+
+<a href="#attributes-1246973338"></a><div class='log' id="attributes-1246973338">
+name: passMessage, value:[The dropdown menu appears and the selected number of rooms is displayed in the field]<br></div></td><td><div><pre>java.lang.Throwable: Method allTest.HotelsTest.validationOfRoomsField() on instance allTest.HotelsTest@1ff4931d depends on not successfully finished methods 
+[allTest.HotelsTest.validationOfDateFields() on instance allTest.HotelsTest@1ff4931d]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1589)
+... Removed 8 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1246973338", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1246973338'><pre>java.lang.Throwable: Method allTest.HotelsTest.validationOfRoomsField() on instance allTest.HotelsTest@1ff4931d depends on not successfully finished methods 
+[allTest.HotelsTest.validationOfDateFields() on instance allTest.HotelsTest@1ff4931d]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:156)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:848)
+	at org.testng.TestRunner.run(TestRunner.java:621)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:481)
+	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1589)
+</pre></div></td>
+<td>0</td>
+<td>allTest.HotelsTest@1ff4931d</td></tr>
+<tr>
+<td title='allTest.HotelsTest.verifyPaymentButton()'><b>verifyPaymentButton</b><br>Test class: allTest.HotelsTest<br>Test method: To verify the functionality of 'Proceed To Payment Options' button</td>
+<td>
+<a href="#attributes-676847518" onClick='toggleBox("attributes-676847518", this, "Show attributes", "Hide attributes");'>Show attributes</a>
+
+<a href="#attributes-676847518"></a><div class='log' id="attributes-676847518">
+name: passMessage, value:[User is redirected to payment gateway to complete the payment]<br></div></td><td><div><pre>java.lang.Throwable: Method allTest.HotelsTest.verifyPaymentButton() on instance allTest.HotelsTest@1ff4931d depends on not successfully finished methods 
+[allTest.HotelsTest.verifyRequiredFields() on instance allTest.HotelsTest@1ff4931d]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1589)
+... Removed 8 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace676847518", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace676847518'><pre>java.lang.Throwable: Method allTest.HotelsTest.verifyPaymentButton() on instance allTest.HotelsTest@1ff4931d depends on not successfully finished methods 
+[allTest.HotelsTest.verifyRequiredFields() on instance allTest.HotelsTest@1ff4931d]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:156)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:848)
+	at org.testng.TestRunner.run(TestRunner.java:621)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:481)
+	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1589)
+</pre></div></td>
+<td>0</td>
+<td>allTest.HotelsTest@1ff4931d</td></tr>
+<tr>
+<td title='allTest.HotelsTest.verifyPayWithoutSavingCardButton()'><b>verifyPayWithoutSavingCardButton</b><br>Test class: allTest.HotelsTest<br>Test method: To verify functionality of 'Pay without saving card' option</td>
+<td>
+<a href="#attributes-594618744" onClick='toggleBox("attributes-594618744", this, "Show attributes", "Hide attributes");'>Show attributes</a>
+
+<a href="#attributes-594618744"></a><div class='log' id="attributes-594618744">
+name: passMessage, value:[Error message is displayed as &apos;We are unable to process transactions for this user/card&apos;]<br></div></td><td><div><pre>java.lang.Throwable: Method allTest.HotelsTest.verifyPayWithoutSavingCardButton() on instance allTest.HotelsTest@1ff4931d depends on not successfully finished methods 
+[allTest.HotelsTest.verifyCardDetailsFields() on instance allTest.HotelsTest@1ff4931d]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1589)
+... Removed 8 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace594618744", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace594618744'><pre>java.lang.Throwable: Method allTest.HotelsTest.verifyPayWithoutSavingCardButton() on instance allTest.HotelsTest@1ff4931d depends on not successfully finished methods 
+[allTest.HotelsTest.verifyCardDetailsFields() on instance allTest.HotelsTest@1ff4931d]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:156)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:848)
+	at org.testng.TestRunner.run(TestRunner.java:621)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:481)
+	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1589)
+</pre></div></td>
+<td>0</td>
+<td>allTest.HotelsTest@1ff4931d</td></tr>
+<tr>
+<td title='allTest.HotelsTest.validationOfDateFields()'><b>validationOfDateFields</b><br>Test class: allTest.HotelsTest<br>Test method: To validate the functionality of date fields to be able select required dates</td>
+<td>
+<a href="#attributes-869457624" onClick='toggleBox("attributes-869457624", this, "Show attributes", "Hide attributes");'>Show attributes</a>
+
+<a href="#attributes-869457624"></a><div class='log' id="attributes-869457624">
+name: passMessage, value:[The calender box appears and the selected &apos;Check In&apos; and &apos;Check Out&apos; dates is displayed in the respective fields]<br></div></td><td><div><pre>java.lang.Throwable: Method allTest.HotelsTest.validationOfDateFields() on instance allTest.HotelsTest@1ff4931d depends on not successfully finished methods 
+[allTest.HotelsTest.validationOfWhereSearchfield() on instance allTest.HotelsTest@1ff4931d]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1589)
+... Removed 8 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace869457624", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace869457624'><pre>java.lang.Throwable: Method allTest.HotelsTest.validationOfDateFields() on instance allTest.HotelsTest@1ff4931d depends on not successfully finished methods 
+[allTest.HotelsTest.validationOfWhereSearchfield() on instance allTest.HotelsTest@1ff4931d]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:156)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:848)
+	at org.testng.TestRunner.run(TestRunner.java:621)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:481)
+	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1589)
+</pre></div></td>
+<td>0</td>
+<td>allTest.HotelsTest@1ff4931d</td></tr>
+<tr>
+<td title='allTest.HotelsTest.verifyCustomerRatingFilter()'><b>verifyCustomerRatingFilter</b><br>Test class: allTest.HotelsTest<br>Test method: To verify the functionality of Rating filters</td>
+<td>
+<a href="#attributes-1394850287" onClick='toggleBox("attributes-1394850287", this, "Show attributes", "Hide attributes");'>Show attributes</a>
+
+<a href="#attributes-1394850287"></a><div class='log' id="attributes-1394850287">
+name: passMessage, value:[The hotel results shows the hotels having rating above 4]<br></div></td><td><div><pre>java.lang.Throwable: Method allTest.HotelsTest.verifyCustomerRatingFilter() on instance allTest.HotelsTest@1ff4931d depends on not successfully finished methods 
+[allTest.HotelsTest.verifyPriceFilter() on instance allTest.HotelsTest@1ff4931d]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1589)
+... Removed 8 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1394850287", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1394850287'><pre>java.lang.Throwable: Method allTest.HotelsTest.verifyCustomerRatingFilter() on instance allTest.HotelsTest@1ff4931d depends on not successfully finished methods 
+[allTest.HotelsTest.verifyPriceFilter() on instance allTest.HotelsTest@1ff4931d]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:156)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:848)
+	at org.testng.TestRunner.run(TestRunner.java:621)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:481)
+	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1589)
+</pre></div></td>
+<td>0</td>
+<td>allTest.HotelsTest@1ff4931d</td></tr>
+<tr>
+<td title='allTest.HotelsTest.verifyHotelSelection()'><b>verifyHotelSelection</b><br>Test class: allTest.HotelsTest<br>Test method: To verify if user is able to select hotel and is redirected to room booking page</td>
+<td>
+<a href="#attributes-1181962268" onClick='toggleBox("attributes-1181962268", this, "Show attributes", "Hide attributes");'>Show attributes</a>
+
+<a href="#attributes-1181962268"></a><div class='log' id="attributes-1181962268">
+name: passMessage, value:[User is redirected to that specific hotel webpage to choose room type]<br></div></td><td><div><pre>java.lang.Throwable: Method allTest.HotelsTest.verifyHotelSelection() on instance allTest.HotelsTest@1ff4931d depends on not successfully finished methods 
+[allTest.HotelsTest.verifyCustomerRatingFilter() on instance allTest.HotelsTest@1ff4931d]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1589)
+... Removed 8 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1181962268", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1181962268'><pre>java.lang.Throwable: Method allTest.HotelsTest.verifyHotelSelection() on instance allTest.HotelsTest@1ff4931d depends on not successfully finished methods 
+[allTest.HotelsTest.verifyCustomerRatingFilter() on instance allTest.HotelsTest@1ff4931d]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:156)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:848)
+	at org.testng.TestRunner.run(TestRunner.java:621)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:481)
+	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1589)
+</pre></div></td>
+<td>0</td>
+<td>allTest.HotelsTest@1ff4931d</td></tr>
+<tr>
+<td title='allTest.HotelsTest.verifyRoomOptionsSelection()'><b>verifyRoomOptionsSelection</b><br>Test class: allTest.HotelsTest<br>Test method: To verify if user is view the availble room options and is able to book the required room option</td>
+<td>
+<a href="#attributes-1107663242" onClick='toggleBox("attributes-1107663242", this, "Show attributes", "Hide attributes");'>Show attributes</a>
+
+<a href="#attributes-1107663242"></a><div class='log' id="attributes-1107663242">
+name: passMessage, value:[User is redirected to Room Info webpage]<br></div></td><td><div><pre>java.lang.Throwable: Method allTest.HotelsTest.verifyRoomOptionsSelection() on instance allTest.HotelsTest@1ff4931d depends on not successfully finished methods 
+[allTest.HotelsTest.verifyHotelSelection() on instance allTest.HotelsTest@1ff4931d]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1589)
+... Removed 8 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1107663242", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1107663242'><pre>java.lang.Throwable: Method allTest.HotelsTest.verifyRoomOptionsSelection() on instance allTest.HotelsTest@1ff4931d depends on not successfully finished methods 
+[allTest.HotelsTest.verifyHotelSelection() on instance allTest.HotelsTest@1ff4931d]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:156)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:848)
+	at org.testng.TestRunner.run(TestRunner.java:621)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:481)
+	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1589)
+</pre></div></td>
+<td>0</td>
+<td>allTest.HotelsTest@1ff4931d</td></tr>
+<tr>
+<td title='allTest.HotelsTest.validationOfAdultsField()'><b>validationOfAdultsField</b><br>Test class: allTest.HotelsTest<br>Test method: To verify if user is able to select the required number of adults</td>
+<td>
+<a href="#attributes-1195090507" onClick='toggleBox("attributes-1195090507", this, "Show attributes", "Hide attributes");'>Show attributes</a>
+
+<a href="#attributes-1195090507"></a><div class='log' id="attributes-1195090507">
+name: passMessage, value:[The dropdown menu appears and the selected number of adults is displayed in the field]<br></div></td><td><div><pre>java.lang.Throwable: Method allTest.HotelsTest.validationOfAdultsField() on instance allTest.HotelsTest@1ff4931d depends on not successfully finished methods 
+[allTest.HotelsTest.validationOfDateFields() on instance allTest.HotelsTest@1ff4931d]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1589)
+... Removed 8 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1195090507", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1195090507'><pre>java.lang.Throwable: Method allTest.HotelsTest.validationOfAdultsField() on instance allTest.HotelsTest@1ff4931d depends on not successfully finished methods 
+[allTest.HotelsTest.validationOfDateFields() on instance allTest.HotelsTest@1ff4931d]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:156)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:848)
+	at org.testng.TestRunner.run(TestRunner.java:621)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:481)
+	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1589)
+</pre></div></td>
+<td>0</td>
+<td>allTest.HotelsTest@1ff4931d</td></tr>
+<tr>
+<td title='allTest.HotelsTest.verifyRequiredFields()'><b>verifyRequiredFields</b><br>Test class: allTest.HotelsTest<br>Test method: To verify if user is able to fill all the required guest details</td>
+<td>
+<a href="#attributes-1839502964" onClick='toggleBox("attributes-1839502964", this, "Show attributes", "Hide attributes");'>Show attributes</a>
+
+<a href="#attributes-1839502964"></a><div class='log' id="attributes-1839502964">
+name: passMessage, value:[User is able to fill details in the required fields]<br></div></td><td><div><pre>java.lang.Throwable: Method allTest.HotelsTest.verifyRequiredFields() on instance allTest.HotelsTest@1ff4931d depends on not successfully finished methods 
+[allTest.HotelsTest.verifyPriceSummary() on instance allTest.HotelsTest@1ff4931d]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1589)
+... Removed 8 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1839502964", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1839502964'><pre>java.lang.Throwable: Method allTest.HotelsTest.verifyRequiredFields() on instance allTest.HotelsTest@1ff4931d depends on not successfully finished methods 
+[allTest.HotelsTest.verifyPriceSummary() on instance allTest.HotelsTest@1ff4931d]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:156)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:848)
+	at org.testng.TestRunner.run(TestRunner.java:621)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:481)
+	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1589)
+</pre></div></td>
+<td>0</td>
+<td>allTest.HotelsTest@1ff4931d</td></tr>
+<tr>
+<td title='allTest.HotelsTest.verifyDetailsOnPaymentGateway()'><b>verifyDetailsOnPaymentGateway</b><br>Test class: allTest.HotelsTest<br>Test method: To verify the details on the Payment Gateway page</td>
+<td>
+<a href="#attributes-963053111" onClick='toggleBox("attributes-963053111", this, "Show attributes", "Hide attributes");'>Show attributes</a>
+
+<a href="#attributes-963053111"></a><div class='log' id="attributes-963053111">
+name: passMessage, value:[All the details displayed is correct]<br></div></td><td><div><pre>java.lang.Throwable: Method allTest.HotelsTest.verifyDetailsOnPaymentGateway() on instance allTest.HotelsTest@1ff4931d depends on not successfully finished methods 
+[allTest.HotelsTest.verifyPaymentButton() on instance allTest.HotelsTest@1ff4931d]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1589)
+... Removed 8 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace963053111", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace963053111'><pre>java.lang.Throwable: Method allTest.HotelsTest.verifyDetailsOnPaymentGateway() on instance allTest.HotelsTest@1ff4931d depends on not successfully finished methods 
+[allTest.HotelsTest.verifyPaymentButton() on instance allTest.HotelsTest@1ff4931d]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:156)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:848)
+	at org.testng.TestRunner.run(TestRunner.java:621)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:481)
+	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1589)
+</pre></div></td>
+<td>0</td>
+<td>allTest.HotelsTest@1ff4931d</td></tr>
+<tr>
+<td title='allTest.HotelsTest.validateSearchCriteria()'><b>validateSearchCriteria</b><br>Test class: allTest.HotelsTest<br>Test method: To verify the search criteria details on the hotel info page</td>
+<td>
+<a href="#attributes-1119250978" onClick='toggleBox("attributes-1119250978", this, "Show attributes", "Hide attributes");'>Show attributes</a>
+
+<a href="#attributes-1119250978"></a><div class='log' id="attributes-1119250978">
+name: passMessage, value:[The search criteria displayed matches with the search criteria used for the searching the hotel]<br></div></td><td><div><pre>java.lang.Throwable: Method allTest.HotelsTest.validateSearchCriteria() on instance allTest.HotelsTest@1ff4931d depends on not successfully finished methods 
+[allTest.HotelsTest.verifyRoomOptionsSelection() on instance allTest.HotelsTest@1ff4931d]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1589)
+... Removed 8 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1119250978", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1119250978'><pre>java.lang.Throwable: Method allTest.HotelsTest.validateSearchCriteria() on instance allTest.HotelsTest@1ff4931d depends on not successfully finished methods 
+[allTest.HotelsTest.verifyRoomOptionsSelection() on instance allTest.HotelsTest@1ff4931d]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:156)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:848)
+	at org.testng.TestRunner.run(TestRunner.java:621)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:481)
+	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1589)
+</pre></div></td>
+<td>0</td>
+<td>allTest.HotelsTest@1ff4931d</td></tr>
+<tr>
+<td title='allTest.HotelsTest.validationOfChildrenField()'><b>validationOfChildrenField</b><br>Test class: allTest.HotelsTest<br>Test method: To verify if user is able to select the required number of children and should be able to select the age for each of the children added</td>
+<td>
+<a href="#attributes-773660875" onClick='toggleBox("attributes-773660875", this, "Show attributes", "Hide attributes");'>Show attributes</a>
+
+<a href="#attributes-773660875"></a><div class='log' id="attributes-773660875">
+name: passMessage, value:[The dropdown menu appears and the selected number of children is added and the age is able to gets selected for each of them]<br></div></td><td><div><pre>java.lang.Throwable: Method allTest.HotelsTest.validationOfChildrenField() on instance allTest.HotelsTest@1ff4931d depends on not successfully finished methods 
+[allTest.HotelsTest.validationOfAdultsField() on instance allTest.HotelsTest@1ff4931d]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1589)
+... Removed 8 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace773660875", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace773660875'><pre>java.lang.Throwable: Method allTest.HotelsTest.validationOfChildrenField() on instance allTest.HotelsTest@1ff4931d depends on not successfully finished methods 
+[allTest.HotelsTest.validationOfAdultsField() on instance allTest.HotelsTest@1ff4931d]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:156)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:848)
+	at org.testng.TestRunner.run(TestRunner.java:621)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:481)
+	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1589)
+</pre></div></td>
+<td>0</td>
+<td>allTest.HotelsTest@1ff4931d</td></tr>
+<tr>
+<td title='allTest.HotelsTest.verify0RoomAdd()'><b>verify0RoomAdd</b><br>Test class: allTest.HotelsTest<br>Test method: To verify if user is able to enter 0 room in the Rooms field</td>
+<td>
+<a href="#attributes-42586303" onClick='toggleBox("attributes-42586303", this, "Show attributes", "Hide attributes");'>Show attributes</a>
+
+<a href="#attributes-42586303"></a><div class='log' id="attributes-42586303">
+name: passMessage, value:[The alert is displayed and &apos;Minimum 1 is required&apos; message is displayed]<br></div></td><td><div><pre>java.lang.Throwable: Method allTest.HotelsTest.verify0RoomAdd() on instance allTest.HotelsTest@1ff4931d depends on not successfully finished methods 
+[allTest.HotelsTest.validationOfChildrenField() on instance allTest.HotelsTest@1ff4931d]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1589)
+... Removed 8 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace42586303", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace42586303'><pre>java.lang.Throwable: Method allTest.HotelsTest.verify0RoomAdd() on instance allTest.HotelsTest@1ff4931d depends on not successfully finished methods 
+[allTest.HotelsTest.validationOfChildrenField() on instance allTest.HotelsTest@1ff4931d]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:156)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:848)
+	at org.testng.TestRunner.run(TestRunner.java:621)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:481)
+	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1589)
+</pre></div></td>
+<td>0</td>
+<td>allTest.HotelsTest@1ff4931d</td></tr>
+<tr>
+<td title='allTest.HotelsTest.verifyCardPaymentOption()'><b>verifyCardPaymentOption</b><br>Test class: allTest.HotelsTest<br>Test method: To verify if user is able to choose 'Credit/Debit/ATM Card' option</td>
+<td>
+<a href="#attributes-1882948045" onClick='toggleBox("attributes-1882948045", this, "Show attributes", "Hide attributes");'>Show attributes</a>
+
+<a href="#attributes-1882948045"></a><div class='log' id="attributes-1882948045">
+name: passMessage, value:[Enter card details message is displayed]<br></div></td><td><div><pre>java.lang.Throwable: Method allTest.HotelsTest.verifyCardPaymentOption() on instance allTest.HotelsTest@1ff4931d depends on not successfully finished methods 
+[allTest.HotelsTest.verifyDetailsOnPaymentGateway() on instance allTest.HotelsTest@1ff4931d]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1589)
+... Removed 8 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1882948045", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1882948045'><pre>java.lang.Throwable: Method allTest.HotelsTest.verifyCardPaymentOption() on instance allTest.HotelsTest@1ff4931d depends on not successfully finished methods 
+[allTest.HotelsTest.verifyDetailsOnPaymentGateway() on instance allTest.HotelsTest@1ff4931d]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:156)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:848)
+	at org.testng.TestRunner.run(TestRunner.java:621)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:481)
+	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1589)
+</pre></div></td>
+<td>0</td>
+<td>allTest.HotelsTest@1ff4931d</td></tr>
+<tr>
+<td title='allTest.HotelsTest.verifySortingOptions()'><b>verifySortingOptions</b><br>Test class: allTest.HotelsTest<br>Test method: To verify the functionality of the sorting options</td>
+<td>
+<a href="#attributes-1123911360" onClick='toggleBox("attributes-1123911360", this, "Show attributes", "Hide attributes");'>Show attributes</a>
+
+<a href="#attributes-1123911360"></a><div class='log' id="attributes-1123911360">
+name: passMessage, value:[The hotels displayed are sorted correctly]<br></div></td><td><div><pre>java.lang.Throwable: Method allTest.HotelsTest.verifySortingOptions() on instance allTest.HotelsTest@1ff4931d depends on not successfully finished methods 
+[allTest.HotelsTest.verifySearchCriteria() on instance allTest.HotelsTest@1ff4931d]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1589)
+... Removed 8 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1123911360", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1123911360'><pre>java.lang.Throwable: Method allTest.HotelsTest.verifySortingOptions() on instance allTest.HotelsTest@1ff4931d depends on not successfully finished methods 
+[allTest.HotelsTest.verifySearchCriteria() on instance allTest.HotelsTest@1ff4931d]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:156)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:848)
+	at org.testng.TestRunner.run(TestRunner.java:621)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:481)
+	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1589)
+</pre></div></td>
+<td>0</td>
+<td>allTest.HotelsTest@1ff4931d</td></tr>
+<tr>
+<td title='allTest.HotelsTest.verifyOfferCodeSelection()'><b>verifyOfferCodeSelection</b><br>Test class: allTest.HotelsTest<br>Test method: To verify if the offer code gets selected and gets applied in the price summary</td>
+<td>
+<a href="#attributes-497997651" onClick='toggleBox("attributes-497997651", this, "Show attributes", "Hide attributes");'>Show attributes</a>
+
+<a href="#attributes-497997651"></a><div class='log' id="attributes-497997651">
+name: passMessage, value:[The selected offer code gets selected and highlighted and the offer code is applied in the price summary]<br></div></td><td><div><pre>java.lang.Throwable: Method allTest.HotelsTest.verifyOfferCodeSelection() on instance allTest.HotelsTest@1ff4931d depends on not successfully finished methods 
+[allTest.HotelsTest.validateSearchCriteria() on instance allTest.HotelsTest@1ff4931d]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1589)
+... Removed 8 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace497997651", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace497997651'><pre>java.lang.Throwable: Method allTest.HotelsTest.verifyOfferCodeSelection() on instance allTest.HotelsTest@1ff4931d depends on not successfully finished methods 
+[allTest.HotelsTest.validateSearchCriteria() on instance allTest.HotelsTest@1ff4931d]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:156)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:848)
+	at org.testng.TestRunner.run(TestRunner.java:621)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:481)
+	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1589)
+</pre></div></td>
+<td>0</td>
+<td>allTest.HotelsTest@1ff4931d</td></tr>
+</table><p>
+</body>
+</html>

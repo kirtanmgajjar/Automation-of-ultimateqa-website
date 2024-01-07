@@ -3,14 +3,13 @@ package pages;
 import static org.testng.Assert.assertEquals;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 
-import baseClass.BaseClass;
-
-public class SubmitForm extends BaseClass{
+public class SubmitForm extends BasePage{
 	
 	@FindBy(id = "control-0")
 	WebElement name;
@@ -32,18 +31,18 @@ public class SubmitForm extends BaseClass{
 	WebElement captcha;
 	
 	
-	public SubmitForm()
+	public SubmitForm(WebDriver driver)
 	{
-		PageFactory.initElements(driver, this);
+		super(driver);
 	}
 	public void verifyPageTitle()
 	{
 		String title = driver.getTitle();
 		assertEquals(title, "Feel like your automation could be better? Get a second pair of eyes on your automation.");
 	}
-	public void fillDetails(String Data[]) {
-		System.out.println(dataExcel.getRowCount());
-		System.out.println(dataExcel.getColumnCount());
+	
+	public void fillDetails(String Data[]) 
+	{
 		name.sendKeys(Data[0]);
 		email.sendKeys(Data[1]);
 		jobTitle.sendKeys(Data[2]);
@@ -62,6 +61,11 @@ public class SubmitForm extends BaseClass{
 		wait.until(ExpectedConditions.visibilityOf(msg));
 		assertEquals(msg.getText(), "Thank You!");
 		//driver.navigate().refresh();
+		
+	}
+	@Override
+	public void verifyPage() {
+		// TODO Auto-generated method stub
 		
 	}
 }

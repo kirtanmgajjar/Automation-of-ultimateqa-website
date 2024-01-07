@@ -5,13 +5,14 @@
     <classes>
       <class name="test.SubmitFormTest">
         <methods>
+          <include name="fillForm"/>
           <include name="validateSearchResults"/>
-          <include name="fillForm" invocation-numbers="0"/>
-          <include name="navigateToHomepage"/>
+          <include name="config1"/>
+          <include name="config2"/>
           <include name="openDataExcel"/>
+          <include name="navigateToHomepage"/>
           <include name="signIn"/>
           <include name="navigateToSignin"/>
-          <include name="configurations"/>
           <include name="clickConsultation"/>
         </methods>
       </class> <!-- test.SubmitFormTest -->

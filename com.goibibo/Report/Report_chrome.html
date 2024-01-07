@@ -1,0 +1,2917 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>UI Automation Results</title>
+<link rel="apple-touch-icon" href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@b00a2d0486596e73dd7326beacf352c639623a0e/commons/img/logo.png">
+<link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@b00a2d0486596e73dd7326beacf352c639623a0e/commons/img/logo.png">
+<link href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@d6562a79075e061305ccfdb82f01e5e195e2d307/spark/css/spark-style.css" rel="stylesheet" />
+<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@7cc78ce/spark/js/jsontree.js"></script>
+<style type="text/css"></style></head><body class="spa -report dark">
+  <div class="app">
+    <div class="layout">
+<div class="header navbar">
+<div class="vheader">
+<div class="nav-logo">
+<a href="#">
+<div class="logo" style="background-image: url('https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@b00a2d0486596e73dd7326beacf352c639623a0e/commons/img/logo.png')"></div>
+</a>
+</div>
+<ul class="nav-left">
+<li class="search-box">
+<a class="search-toggle" href="#">
+<i class="search-icon fa fa-search"></i>
+<i class="search-icon-close fa fa-close"></i>
+</a>
+</li>
+<li class="search-input"><input id="search-tests" class="form-control" type="text" placeholder="Search..."></li>
+</ul>
+<ul class="nav-right">
+<li class="m-r-10">
+<a href="#"><span class="badge badge-primary">Test Report</span></a>
+</li>
+<li class="m-r-10">
+<a href="#"><span class="badge badge-primary">Jan 07, 2024 21:47:11</span></a>
+</li>
+</ul>
+</div>
+</div><div class="side-nav">
+<div class="side-nav-inner">
+<ul class="side-nav-menu">
+<li class="nav-item dropdown" onclick="toggleView('dashboard-view')">
+<a id="nav-dashboard" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-bar-chart"></i></span>
+</a>
+</li>
+<li class="nav-item dropdown" onclick="toggleView('test-view')">
+<a id="nav-test" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-list"></i></span>
+</a>
+</li>
+<li class="nav-item dropdown" onclick="toggleView('category-view')">
+<a id="nav-category" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-tag"></i></span>
+</a>
+</li>
+</ul>
+</div>
+</div>      <div class="vcontainer">
+        <div class="main-content">
+<div class="container-fluid p-4 view dashboard-view">
+<div class="row">
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0">Started</p>
+<h3>Jan 07, 2024 21:47:11</h3>
+</div></div>
+</div>
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0">Ended</p>
+<h3>Jan 07, 2024 21:48:01</h3>
+</div></div>
+</div>
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0 text-pass">Tests Passed</p>
+<h3>10</h3>
+</div></div>
+</div>
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0 text-fail">Tests Failed</p>
+<h3>3</h3>
+</div></div>
+</div>
+</div>
+<div class="row">
+<div class="col-md-6">
+<div class="card">
+<div class="card-header">
+<h6 class="card-title">Tests</h6>
+</div>
+<div class="card-body">
+<div class="">
+<canvas id='parent-analysis' width='115' height='90'></canvas>
+</div>
+</div>
+<div class="card-footer">
+<div><small data-tooltip='21%'>
+<b>10</b> tests passed
+</small>
+</div>
+<div>
+<small data-tooltip='6%'><b>3</b> tests failed,
+<b>33</b> skipped, <b data-tooltip='0%'>0</b> others
+</small>
+</div>
+</div>
+</div>
+</div>
+<div class="col-md-6">
+<div class="card">
+<div class="card-header">
+<h6 class="card-title">Log events</h6>
+</div>
+<div class="card-body">
+<div class="">
+<canvas id='events-analysis' width='115' height='90'></canvas>
+</div>
+</div>
+<div class="card-footer">
+<div><small data-tooltip='4%'><b>4</b> events passed</small></div>
+<div>
+<small data-tooltip='3%'><b>3</b> events failed,
+<b data-tooltip='%'>79</b> others
+</small>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="row"><div class="col-md-12">
+<div class="card"><div class="card-header"><p>Timeline</p></div>
+<div class="card-body pt-0"><div>
+<canvas id="timeline" height="120"></canvas>
+</div></div>
+</div>
+</div></div>
+<script>
+var timeline = {
+"Navigation to Hotel page":7.271,"Verify login functionality using invalid mobile number":1.011,"Navigation to Hotel page":0,"Verify login functionality using invalid mobile number":0.866,"Verify login functionality using valid mobile number":15.967,"Verification of From textfield":0,"From city":0,"Validation of radio buttons":1.248,"Verification of To textfield":0,"To city":0,"Validation of 'Where' menu":31.182,"Verification of Date Button":0,"Verification of Cheap Fares":38.74,"Validation of the date fields":0.003,"Validation of 'Adults' field":0.004,"Validation of 'Rooms' field":0.003,"Validation of 'Children' fields":0.003,"Verify functionality to add 0 rooms":0.003,"Verify functionality to add 0 adults":0.003,"Validation of 'Search' field":0.003,"Verification of Hotel search criteria":0.002,"Verification of sorting options":0.003,"Validation of Price filter":0.003,"Validation of Customer Rating filter":0.002,"Verify selection of hotel":0.002,"Verify selection of room options":0.002,"Verification of search criteria":0.001,"Verification of Offer Code selection":0.003,"Verification of Price Summary":0.005,"Verification of required fields":0.004,"Verification of 'Proceed To Payment Options' button":0.003,"Verfication of details on Payment Gateway":0.003,"Verfication of 'Credit/Debit/ATM Card' option":0.008,"Verfication of card details fields":0.003,"Verfication of 'Pay without saving card' option":0.003,"Selecting lowest fare date":0.003,"Traveller Details":0.002,"Validation of Search button":0.003,"Validation of price filter":0.002,"Validation of book flight button":0.003,"Validation of flight details":0.003,"Filling passenger details":0.002,"Verify Passenger details":0.003,"Verfication of 'Credit/Debit/ATM Card' option":0.003,"Verfication of card details fields":0.002,"Verfication of 'Pay without saving card' option":0.002
+};
+</script>
+<div class="row">
+<div class="col-lg-6 col-md-12 category-container">
+<div class="card">
+<div class="card-header"><p>Tags</p></div>
+<div class="card-body pb-0 pt-0"><table class="table table-sm table-bordered">
+<thead><tr class="bg-gray"><th>Name</th><th>Passed</th><th>Failed</th><th>Skipped</th><th>Others</th><th>Passed %</th></tr></thead><tbody>
+<tr>
+<td>chrome_LoginTest</td>
+<td>2</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>66.667%</td>
+</tr>
+<tr>
+<td>chrome_HotelsTest</td>
+<td>2</td>
+<td>1</td>
+<td>22</td>
+<td>0</td>
+<td>8%</td>
+</tr>
+<tr>
+<td>chrome_FlightTest</td>
+<td>6</td>
+<td>1</td>
+<td>11</td>
+<td>0</td>
+<td>33.333%</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+</div>
+</div>
+<script>
+var statusGroup = {
+parentCount: 5,
+passParent: 10,
+failParent: 3,
+warningParent: 0,
+skipParent: 33,
+childCount: 5,
+passChild: 0,
+failChild: 0,
+warningChild: 0,
+skipChild: 0,
+infoChild: 0,
+grandChildCount: 5,
+passGrandChild: 0,
+failGrandChild: 0,
+warningGrandChild: 0,
+skipGrandChild: 0,
+infoGrandChild: 0,
+eventsCount: 5,
+passEvents: 4,
+failEvents: 3,
+warningEvents: 0,
+skipEvents: 33,
+infoEvents: 46
+};
+</script><div class="test-wrapper row view test-view">
+  <div class="test-list">
+    <div class="test-list-tools">
+<ul class="tools pull-left">
+<li><a href="#"><span class="font-size-14">Tests</span></a></li>
+</ul>
+<ul class="tools text-right">
+<li class="dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-exclamation-circle"></i></a>
+<ul id="status-toggle" class="dropdown-menu dropdown-md p-v-0">
+<a class="dropdown-item" status="pass" href="#"><span>Pass</span><span class="status success"></span></a>
+<a class="dropdown-item" status="fail" href="#"><span>Fail</span><span class="status danger"></span></a>
+<a class="dropdown-item" status="skip" href="#"><span>Skip</span><span class="status warning"></span></a>
+<div class="dropdown-divider"></div>
+<a status="clear" class="dropdown-item" href="#"><span>Clear</span><span class="pull-right"><i class="fa fa-close"></i></span></a>
+</ul>
+</li>
+<li class="dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-tag"></i></a>
+<ul id="tag-toggle" class="dropdown-menu dropdown-md p-v-0">
+<a class="dropdown-item" href="#">chrome_LoginTest</a><a class="dropdown-item" href="#">chrome_HotelsTest</a><a class="dropdown-item" href="#">chrome_FlightTest</a>
+</ul>
+</li>
+</ul>
+</div>    <div class="test-list-wrapper scrollable">
+      <ul class="test-list-item">
+        <li class="test-item"  status="pass" test-id="1"
+          author=""
+          tag="chrome_HotelsTest"
+          device="">
+          <div class="test-detail">
+            <p class="name">Navigation to Hotel page</p>
+            <p class="text-sm">
+              <span>9:47:12 PM</span> / <span>00:00:07:271</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">Navigation to Hotel page</h5>
+<span class='badge badge-success'>01.07.2024 9:47:12 PM</span>
+<span class='badge badge-danger'>01.07.2024 9:47:19 PM</span>
+<span class='badge badge-default'>00:00:07:271</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=1</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">chrome_HotelsTest</span></div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>9:47:12 PM</td>
+        <td>
+          To validate if 'Hotel' menu button is displayed and clickable
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>9:47:19 PM</td>
+        <td>
+          User is redirected to Hotels web page
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='../Screenshot/5.png' src="../Screenshot/5.png">
+    
+    </div></div>
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="2"
+          author=""
+          tag="chrome_LoginTest"
+          device="">
+          <div class="test-detail">
+            <p class="name">Verify login functionality using invalid mobile number</p>
+            <p class="text-sm">
+              <span>9:47:15 PM</span> / <span>00:00:01:011</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">Verify login functionality using invalid mobile number</h5>
+<span class='badge badge-success'>01.07.2024 9:47:15 PM</span>
+<span class='badge badge-danger'>01.07.2024 9:47:16 PM</span>
+<span class='badge badge-default'>00:00:01:011</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=2</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">chrome_LoginTest</span></div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>9:47:15 PM</td>
+        <td>
+          To verify that user is not able to enter invalid mobile number
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>9:47:16 PM</td>
+        <td>
+          Proper error messaged is displayed successfully
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='../Screenshot/1.png' src="../Screenshot/1.png">
+    
+    </div></div>
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="3"
+          author=""
+          tag="chrome_FlightTest"
+          device="">
+          <div class="test-detail">
+            <p class="name">Navigation to Hotel page</p>
+            <p class="text-sm">
+              <span>9:47:15 PM</span> / <span>00:00:00:000</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">Navigation to Hotel page</h5>
+<span class='badge badge-success'>01.07.2024 9:47:15 PM</span>
+<span class='badge badge-danger'>01.07.2024 9:47:15 PM</span>
+<span class='badge badge-default'>00:00:00:000</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=3</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">chrome_FlightTest</span></div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>9:47:15 PM</td>
+        <td>
+          To validate if Flight menu button is diaplyed and is clickable
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="4"
+          author=""
+          tag="chrome_LoginTest"
+          device="">
+          <div class="test-detail">
+            <p class="name">Verify login functionality using invalid mobile number</p>
+            <p class="text-sm">
+              <span>9:47:16 PM</span> / <span>00:00:00:866</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">Verify login functionality using invalid mobile number</h5>
+<span class='badge badge-success'>01.07.2024 9:47:16 PM</span>
+<span class='badge badge-danger'>01.07.2024 9:47:17 PM</span>
+<span class='badge badge-default'>00:00:00:866</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=4</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">chrome_LoginTest</span></div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>9:47:16 PM</td>
+        <td>
+          To verify that user is not able to enter invalid mobile number
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>9:47:17 PM</td>
+        <td>
+          Proper error messaged is displayed successfully
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='../Screenshot/2.png' src="../Screenshot/2.png">
+    
+    </div></div>
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="fail" test-id="5"
+          author=""
+          tag="chrome_LoginTest"
+          device="">
+          <div class="test-detail">
+            <p class="name">Verify login functionality using valid mobile number</p>
+            <p class="text-sm">
+              <span>9:47:17 PM</span> / <span>00:00:15:967</span>
+              <span class="badge fail-bg log float-right">Fail</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-fail">Verify login functionality using valid mobile number</h5>
+<span class='badge badge-success'>01.07.2024 9:47:17 PM</span>
+<span class='badge badge-danger'>01.07.2024 9:47:33 PM</span>
+<span class='badge badge-default'>00:00:15:967</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=5</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">chrome_LoginTest</span></div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>9:47:17 PM</td>
+        <td>
+          To verify that user is able to enter valid mobile number and able to login successfully
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>9:47:33 PM</td>
+        <td>
+          no such element: Unable to locate element: {"method":"xpath","selector":"//*[contains(@class,'sc-1we57hl-0')]"}
+  (Session info: chrome=118.0.5993.71)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.11.0', revision: '040bc5406b'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '19.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [5d29aef4c59deafd82407f4e8f0f7c4c, findElement {using=xpath, value=//*[contains(@class,'sc-1we57hl-0')]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 118.0.5993.71, chrome: {chromedriverVersion: 118.0.5993.70 (e52f33f30b91..., userDataDir: C:\Windows\SystemTemp\scope...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:63253}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:63253/devtoo..., se:cdpVersion: 118.0.5993.71, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 5d29aef4c59deafd82407f4e8f0f7c4c
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='../Screenshot/11.png' src="../Screenshot/11.png">
+    
+    </div></div>
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="6"
+          author=""
+          tag="chrome_FlightTest"
+          device="">
+          <div class="test-detail">
+            <p class="name">Verification of From textfield</p>
+            <p class="text-sm">
+              <span>9:47:18 PM</span> / <span>00:00:00:000</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">Verification of From textfield</h5>
+<span class='badge badge-success'>01.07.2024 9:47:18 PM</span>
+<span class='badge badge-danger'>01.07.2024 9:47:18 PM</span>
+<span class='badge badge-default'>00:00:00:000</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=6</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">chrome_FlightTest</span></div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>9:47:18 PM</td>
+        <td>
+          To validate From textbox is enabled
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="7"
+          author=""
+          tag="chrome_FlightTest"
+          device="">
+          <div class="test-detail">
+            <p class="name">From city</p>
+            <p class="text-sm">
+              <span>9:47:19 PM</span> / <span>00:00:00:000</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">From city</h5>
+<span class='badge badge-success'>01.07.2024 9:47:19 PM</span>
+<span class='badge badge-danger'>01.07.2024 9:47:19 PM</span>
+<span class='badge badge-default'>00:00:00:000</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=7</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">chrome_FlightTest</span></div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>9:47:19 PM</td>
+        <td>
+          To verify if user is able to click Bengaluru from city dropdown list
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="8"
+          author=""
+          tag="chrome_HotelsTest"
+          device="">
+          <div class="test-detail">
+            <p class="name">Validation of radio buttons</p>
+            <p class="text-sm">
+              <span>9:47:19 PM</span> / <span>00:00:01:248</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">Validation of radio buttons</h5>
+<span class='badge badge-success'>01.07.2024 9:47:19 PM</span>
+<span class='badge badge-danger'>01.07.2024 9:47:20 PM</span>
+<span class='badge badge-default'>00:00:01:248</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=8</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">chrome_HotelsTest</span></div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>9:47:19 PM</td>
+        <td>
+          To validate the working of radio buttons
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>9:47:20 PM</td>
+        <td>
+          India radio button is selected
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='../Screenshot/8.png' src="../Screenshot/8.png">
+    
+    </div></div>
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="9"
+          author=""
+          tag="chrome_FlightTest"
+          device="">
+          <div class="test-detail">
+            <p class="name">Verification of To textfield</p>
+            <p class="text-sm">
+              <span>9:47:20 PM</span> / <span>00:00:00:000</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">Verification of To textfield</h5>
+<span class='badge badge-success'>01.07.2024 9:47:20 PM</span>
+<span class='badge badge-danger'>01.07.2024 9:47:20 PM</span>
+<span class='badge badge-default'>00:00:00:000</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=9</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">chrome_FlightTest</span></div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>9:47:20 PM</td>
+        <td>
+          To validate To textbox is enabled
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="10"
+          author=""
+          tag="chrome_FlightTest"
+          device="">
+          <div class="test-detail">
+            <p class="name">To city</p>
+            <p class="text-sm">
+              <span>9:47:20 PM</span> / <span>00:00:00:000</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">To city</h5>
+<span class='badge badge-success'>01.07.2024 9:47:20 PM</span>
+<span class='badge badge-danger'>01.07.2024 9:47:20 PM</span>
+<span class='badge badge-default'>00:00:00:000</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=10</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">chrome_FlightTest</span></div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>9:47:20 PM</td>
+        <td>
+          To verify if user is able to click Ranchi from city dropdown list
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="fail" test-id="11"
+          author=""
+          tag="chrome_HotelsTest"
+          device="">
+          <div class="test-detail">
+            <p class="name">Validation of 'Where' menu</p>
+            <p class="text-sm">
+              <span>9:47:20 PM</span> / <span>00:00:31:182</span>
+              <span class="badge fail-bg log float-right">Fail</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-fail">Validation of 'Where' menu</h5>
+<span class='badge badge-success'>01.07.2024 9:47:20 PM</span>
+<span class='badge badge-danger'>01.07.2024 9:47:51 PM</span>
+<span class='badge badge-default'>00:00:31:182</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=11</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">chrome_HotelsTest</span></div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>9:47:20 PM</td>
+        <td>
+          To validate the functionality of 'Where' search box to be able to take input and is able to select the required location
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>9:47:51 PM</td>
+        <td>
+          Expected condition failed: waiting for presence of any elements located by By.xpath: //*[@id='downshift-1-menu']/li (tried for 30 second(s) with 500 milliseconds interval)
+Build info: version: '4.11.0', revision: '040bc5406b'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '19.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 118.0.5993.71, chrome: {chromedriverVersion: 118.0.5993.70 (e52f33f30b91..., userDataDir: C:\Windows\SystemTemp\scope...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:63252}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:63252/devtoo..., se:cdpVersion: 118.0.5993.71, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: ba9d9ee8c27176ef7542101569a63537
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='../Screenshot/12.png' src="../Screenshot/12.png">
+    
+    </div></div>
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="12"
+          author=""
+          tag="chrome_FlightTest"
+          device="">
+          <div class="test-detail">
+            <p class="name">Verification of Date Button</p>
+            <p class="text-sm">
+              <span>9:47:21 PM</span> / <span>00:00:00:000</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">Verification of Date Button</h5>
+<span class='badge badge-success'>01.07.2024 9:47:21 PM</span>
+<span class='badge badge-danger'>01.07.2024 9:47:21 PM</span>
+<span class='badge badge-default'>00:00:00:000</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=12</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">chrome_FlightTest</span></div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>9:47:21 PM</td>
+        <td>
+          To verify Departure date button is clickable
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="fail" test-id="13"
+          author=""
+          tag="chrome_FlightTest"
+          device="">
+          <div class="test-detail">
+            <p class="name">Verification of Cheap Fares</p>
+            <p class="text-sm">
+              <span>9:47:21 PM</span> / <span>00:00:38:740</span>
+              <span class="badge fail-bg log float-right">Fail</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-fail">Verification of Cheap Fares</h5>
+<span class='badge badge-success'>01.07.2024 9:47:21 PM</span>
+<span class='badge badge-danger'>01.07.2024 9:48:00 PM</span>
+<span class='badge badge-default'>00:00:38:740</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=13</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">chrome_FlightTest</span></div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>9:47:21 PM</td>
+        <td>
+          To verify fare displayed is lowest for the day
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>9:48:00 PM</td>
+        <td>
+          Cannot invoke "org.openqa.selenium.WebDriver.navigate()" because "this.driver" is null
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='../Screenshot/13.png' src="../Screenshot/13.png">
+    
+    </div></div>
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="skip" test-id="14"
+          author=""
+          tag="chrome_HotelsTest"
+          device="">
+          <div class="test-detail">
+            <p class="name">Validation of the date fields</p>
+            <p class="text-sm">
+              <span>9:47:51 PM</span> / <span>00:00:00:003</span>
+              <span class="badge skip-bg log float-right">Skip</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-skip">Validation of the date fields</h5>
+<span class='badge badge-success'>01.07.2024 9:47:51 PM</span>
+<span class='badge badge-danger'>01.07.2024 9:47:51 PM</span>
+<span class='badge badge-default'>00:00:00:003</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=14</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">chrome_HotelsTest</span></div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>9:47:51 PM</td>
+        <td>
+          To validate the functionality of date fields to be able select required dates
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log skip-bg">Skip</span></td>
+        <td>9:47:51 PM</td>
+        <td>
+          Method allTest.HotelsTest.validationOfDateFields() on instance allTest.HotelsTest@1ff4931d depends on not successfully finished methods 
+[allTest.HotelsTest.validationOfWhereSearchfield() on instance allTest.HotelsTest@1ff4931d]
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="skip" test-id="15"
+          author=""
+          tag="chrome_HotelsTest"
+          device="">
+          <div class="test-detail">
+            <p class="name">Validation of 'Adults' field</p>
+            <p class="text-sm">
+              <span>9:47:51 PM</span> / <span>00:00:00:004</span>
+              <span class="badge skip-bg log float-right">Skip</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-skip">Validation of 'Adults' field</h5>
+<span class='badge badge-success'>01.07.2024 9:47:51 PM</span>
+<span class='badge badge-danger'>01.07.2024 9:47:51 PM</span>
+<span class='badge badge-default'>00:00:00:004</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=15</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">chrome_HotelsTest</span></div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>9:47:51 PM</td>
+        <td>
+          To verify if user is able to select the required number of adults
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log skip-bg">Skip</span></td>
+        <td>9:47:51 PM</td>
+        <td>
+          Method allTest.HotelsTest.validationOfAdultsField() on instance allTest.HotelsTest@1ff4931d depends on not successfully finished methods 
+[allTest.HotelsTest.validationOfDateFields() on instance allTest.HotelsTest@1ff4931d]
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="skip" test-id="16"
+          author=""
+          tag="chrome_HotelsTest"
+          device="">
+          <div class="test-detail">
+            <p class="name">Validation of 'Rooms' field</p>
+            <p class="text-sm">
+              <span>9:47:51 PM</span> / <span>00:00:00:003</span>
+              <span class="badge skip-bg log float-right">Skip</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-skip">Validation of 'Rooms' field</h5>
+<span class='badge badge-success'>01.07.2024 9:47:51 PM</span>
+<span class='badge badge-danger'>01.07.2024 9:47:51 PM</span>
+<span class='badge badge-default'>00:00:00:003</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=16</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">chrome_HotelsTest</span></div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>9:47:51 PM</td>
+        <td>
+          To verify if user is able to select the required number of rooms
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log skip-bg">Skip</span></td>
+        <td>9:47:51 PM</td>
+        <td>
+          Method allTest.HotelsTest.validationOfRoomsField() on instance allTest.HotelsTest@1ff4931d depends on not successfully finished methods 
+[allTest.HotelsTest.validationOfDateFields() on instance allTest.HotelsTest@1ff4931d]
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="skip" test-id="17"
+          author=""
+          tag="chrome_HotelsTest"
+          device="">
+          <div class="test-detail">
+            <p class="name">Validation of 'Children' fields</p>
+            <p class="text-sm">
+              <span>9:47:51 PM</span> / <span>00:00:00:003</span>
+              <span class="badge skip-bg log float-right">Skip</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-skip">Validation of 'Children' fields</h5>
+<span class='badge badge-success'>01.07.2024 9:47:51 PM</span>
+<span class='badge badge-danger'>01.07.2024 9:47:51 PM</span>
+<span class='badge badge-default'>00:00:00:003</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=17</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">chrome_HotelsTest</span></div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>9:47:51 PM</td>
+        <td>
+          To verify if user is able to select the required number of children and should be able to select the age for each of the children added
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log skip-bg">Skip</span></td>
+        <td>9:47:51 PM</td>
+        <td>
+          Method allTest.HotelsTest.validationOfChildrenField() on instance allTest.HotelsTest@1ff4931d depends on not successfully finished methods 
+[allTest.HotelsTest.validationOfAdultsField() on instance allTest.HotelsTest@1ff4931d]
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="skip" test-id="18"
+          author=""
+          tag="chrome_HotelsTest"
+          device="">
+          <div class="test-detail">
+            <p class="name">Verify functionality to add 0 rooms</p>
+            <p class="text-sm">
+              <span>9:47:51 PM</span> / <span>00:00:00:003</span>
+              <span class="badge skip-bg log float-right">Skip</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-skip">Verify functionality to add 0 rooms</h5>
+<span class='badge badge-success'>01.07.2024 9:47:51 PM</span>
+<span class='badge badge-danger'>01.07.2024 9:47:51 PM</span>
+<span class='badge badge-default'>00:00:00:003</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=18</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">chrome_HotelsTest</span></div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>9:47:51 PM</td>
+        <td>
+          To verify if user is able to enter 0 room in the Rooms field
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log skip-bg">Skip</span></td>
+        <td>9:47:51 PM</td>
+        <td>
+          Method allTest.HotelsTest.verify0RoomAdd() on instance allTest.HotelsTest@1ff4931d depends on not successfully finished methods 
+[allTest.HotelsTest.validationOfChildrenField() on instance allTest.HotelsTest@1ff4931d]
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="skip" test-id="19"
+          author=""
+          tag="chrome_HotelsTest"
+          device="">
+          <div class="test-detail">
+            <p class="name">Verify functionality to add 0 adults</p>
+            <p class="text-sm">
+              <span>9:47:51 PM</span> / <span>00:00:00:003</span>
+              <span class="badge skip-bg log float-right">Skip</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-skip">Verify functionality to add 0 adults</h5>
+<span class='badge badge-success'>01.07.2024 9:47:51 PM</span>
+<span class='badge badge-danger'>01.07.2024 9:47:51 PM</span>
+<span class='badge badge-default'>00:00:00:003</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=19</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">chrome_HotelsTest</span></div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>9:47:51 PM</td>
+        <td>
+          To verify if user is able to enter 0 adult in the Adults field
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log skip-bg">Skip</span></td>
+        <td>9:47:51 PM</td>
+        <td>
+          Method allTest.HotelsTest.verify0AdultAdd() on instance allTest.HotelsTest@1ff4931d depends on not successfully finished methods 
+[allTest.HotelsTest.verify0RoomAdd() on instance allTest.HotelsTest@1ff4931d]
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="skip" test-id="20"
+          author=""
+          tag="chrome_HotelsTest"
+          device="">
+          <div class="test-detail">
+            <p class="name">Validation of 'Search' field</p>
+            <p class="text-sm">
+              <span>9:47:51 PM</span> / <span>00:00:00:003</span>
+              <span class="badge skip-bg log float-right">Skip</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-skip">Validation of 'Search' field</h5>
+<span class='badge badge-success'>01.07.2024 9:47:51 PM</span>
+<span class='badge badge-danger'>01.07.2024 9:47:51 PM</span>
+<span class='badge badge-default'>00:00:00:003</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=20</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">chrome_HotelsTest</span></div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>9:47:51 PM</td>
+        <td>
+          To validate the functionality of Search button
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log skip-bg">Skip</span></td>
+        <td>9:47:51 PM</td>
+        <td>
+          Method allTest.HotelsTest.validationOfSearchField() on instance allTest.HotelsTest@1ff4931d depends on not successfully finished methods 
+[allTest.HotelsTest.verify0AdultAdd() on instance allTest.HotelsTest@1ff4931d]
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="skip" test-id="21"
+          author=""
+          tag="chrome_HotelsTest"
+          device="">
+          <div class="test-detail">
+            <p class="name">Verification of Hotel search criteria</p>
+            <p class="text-sm">
+              <span>9:47:51 PM</span> / <span>00:00:00:002</span>
+              <span class="badge skip-bg log float-right">Skip</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-skip">Verification of Hotel search criteria</h5>
+<span class='badge badge-success'>01.07.2024 9:47:51 PM</span>
+<span class='badge badge-danger'>01.07.2024 9:47:51 PM</span>
+<span class='badge badge-default'>00:00:00:002</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=21</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">chrome_HotelsTest</span></div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>9:47:51 PM</td>
+        <td>
+          To verify the hotel search criteria details in the hotel results page
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log skip-bg">Skip</span></td>
+        <td>9:47:51 PM</td>
+        <td>
+          Method allTest.HotelsTest.verifySearchCriteria() on instance allTest.HotelsTest@1ff4931d depends on not successfully finished methods 
+[allTest.HotelsTest.validationOfSearchField() on instance allTest.HotelsTest@1ff4931d]
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="skip" test-id="22"
+          author=""
+          tag="chrome_HotelsTest"
+          device="">
+          <div class="test-detail">
+            <p class="name">Verification of sorting options</p>
+            <p class="text-sm">
+              <span>9:47:51 PM</span> / <span>00:00:00:003</span>
+              <span class="badge skip-bg log float-right">Skip</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-skip">Verification of sorting options</h5>
+<span class='badge badge-success'>01.07.2024 9:47:51 PM</span>
+<span class='badge badge-danger'>01.07.2024 9:47:51 PM</span>
+<span class='badge badge-default'>00:00:00:003</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=22</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">chrome_HotelsTest</span></div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>9:47:51 PM</td>
+        <td>
+          To verify the functionality of the sorting options
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log skip-bg">Skip</span></td>
+        <td>9:47:51 PM</td>
+        <td>
+          Method allTest.HotelsTest.verifySortingOptions() on instance allTest.HotelsTest@1ff4931d depends on not successfully finished methods 
+[allTest.HotelsTest.verifySearchCriteria() on instance allTest.HotelsTest@1ff4931d]
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="skip" test-id="23"
+          author=""
+          tag="chrome_HotelsTest"
+          device="">
+          <div class="test-detail">
+            <p class="name">Validation of Price filter</p>
+            <p class="text-sm">
+              <span>9:47:51 PM</span> / <span>00:00:00:003</span>
+              <span class="badge skip-bg log float-right">Skip</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-skip">Validation of Price filter</h5>
+<span class='badge badge-success'>01.07.2024 9:47:51 PM</span>
+<span class='badge badge-danger'>01.07.2024 9:47:51 PM</span>
+<span class='badge badge-default'>00:00:00:003</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=23</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">chrome_HotelsTest</span></div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>9:47:51 PM</td>
+        <td>
+          To verify the functionality of Price filters
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log skip-bg">Skip</span></td>
+        <td>9:47:51 PM</td>
+        <td>
+          Method allTest.HotelsTest.verifyPriceFilter() on instance allTest.HotelsTest@1ff4931d depends on not successfully finished methods 
+[allTest.HotelsTest.verifySortingOptions() on instance allTest.HotelsTest@1ff4931d]
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="skip" test-id="24"
+          author=""
+          tag="chrome_HotelsTest"
+          device="">
+          <div class="test-detail">
+            <p class="name">Validation of Customer Rating filter</p>
+            <p class="text-sm">
+              <span>9:47:51 PM</span> / <span>00:00:00:002</span>
+              <span class="badge skip-bg log float-right">Skip</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-skip">Validation of Customer Rating filter</h5>
+<span class='badge badge-success'>01.07.2024 9:47:51 PM</span>
+<span class='badge badge-danger'>01.07.2024 9:47:51 PM</span>
+<span class='badge badge-default'>00:00:00:002</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=24</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">chrome_HotelsTest</span></div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>9:47:51 PM</td>
+        <td>
+          To verify the functionality of Rating filters
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log skip-bg">Skip</span></td>
+        <td>9:47:51 PM</td>
+        <td>
+          Method allTest.HotelsTest.verifyCustomerRatingFilter() on instance allTest.HotelsTest@1ff4931d depends on not successfully finished methods 
+[allTest.HotelsTest.verifyPriceFilter() on instance allTest.HotelsTest@1ff4931d]
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="skip" test-id="25"
+          author=""
+          tag="chrome_HotelsTest"
+          device="">
+          <div class="test-detail">
+            <p class="name">Verify selection of hotel</p>
+            <p class="text-sm">
+              <span>9:47:51 PM</span> / <span>00:00:00:002</span>
+              <span class="badge skip-bg log float-right">Skip</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-skip">Verify selection of hotel</h5>
+<span class='badge badge-success'>01.07.2024 9:47:51 PM</span>
+<span class='badge badge-danger'>01.07.2024 9:47:51 PM</span>
+<span class='badge badge-default'>00:00:00:002</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=25</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">chrome_HotelsTest</span></div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>9:47:51 PM</td>
+        <td>
+          To verify if user is able to select hotel and is redirected to room booking page
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log skip-bg">Skip</span></td>
+        <td>9:47:51 PM</td>
+        <td>
+          Method allTest.HotelsTest.verifyHotelSelection() on instance allTest.HotelsTest@1ff4931d depends on not successfully finished methods 
+[allTest.HotelsTest.verifyCustomerRatingFilter() on instance allTest.HotelsTest@1ff4931d]
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="skip" test-id="26"
+          author=""
+          tag="chrome_HotelsTest"
+          device="">
+          <div class="test-detail">
+            <p class="name">Verify selection of room options</p>
+            <p class="text-sm">
+              <span>9:47:51 PM</span> / <span>00:00:00:002</span>
+              <span class="badge skip-bg log float-right">Skip</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-skip">Verify selection of room options</h5>
+<span class='badge badge-success'>01.07.2024 9:47:51 PM</span>
+<span class='badge badge-danger'>01.07.2024 9:47:51 PM</span>
+<span class='badge badge-default'>00:00:00:002</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=26</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">chrome_HotelsTest</span></div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>9:47:51 PM</td>
+        <td>
+          To verify if user is view the availble room options and is able to book the required room option
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log skip-bg">Skip</span></td>
+        <td>9:47:51 PM</td>
+        <td>
+          Method allTest.HotelsTest.verifyRoomOptionsSelection() on instance allTest.HotelsTest@1ff4931d depends on not successfully finished methods 
+[allTest.HotelsTest.verifyHotelSelection() on instance allTest.HotelsTest@1ff4931d]
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="skip" test-id="27"
+          author=""
+          tag="chrome_HotelsTest"
+          device="">
+          <div class="test-detail">
+            <p class="name">Verification of search criteria</p>
+            <p class="text-sm">
+              <span>9:47:51 PM</span> / <span>00:00:00:001</span>
+              <span class="badge skip-bg log float-right">Skip</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-skip">Verification of search criteria</h5>
+<span class='badge badge-success'>01.07.2024 9:47:51 PM</span>
+<span class='badge badge-danger'>01.07.2024 9:47:51 PM</span>
+<span class='badge badge-default'>00:00:00:001</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=27</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">chrome_HotelsTest</span></div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>9:47:51 PM</td>
+        <td>
+          To verify the search criteria details on the hotel info page
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log skip-bg">Skip</span></td>
+        <td>9:47:51 PM</td>
+        <td>
+          Method allTest.HotelsTest.validateSearchCriteria() on instance allTest.HotelsTest@1ff4931d depends on not successfully finished methods 
+[allTest.HotelsTest.verifyRoomOptionsSelection() on instance allTest.HotelsTest@1ff4931d]
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="skip" test-id="28"
+          author=""
+          tag="chrome_HotelsTest"
+          device="">
+          <div class="test-detail">
+            <p class="name">Verification of Offer Code selection</p>
+            <p class="text-sm">
+              <span>9:47:51 PM</span> / <span>00:00:00:003</span>
+              <span class="badge skip-bg log float-right">Skip</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-skip">Verification of Offer Code selection</h5>
+<span class='badge badge-success'>01.07.2024 9:47:51 PM</span>
+<span class='badge badge-danger'>01.07.2024 9:47:51 PM</span>
+<span class='badge badge-default'>00:00:00:003</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=28</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">chrome_HotelsTest</span></div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>9:47:51 PM</td>
+        <td>
+          To verify if the offer code gets selected and gets applied in the price summary
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log skip-bg">Skip</span></td>
+        <td>9:47:51 PM</td>
+        <td>
+          Method allTest.HotelsTest.verifyOfferCodeSelection() on instance allTest.HotelsTest@1ff4931d depends on not successfully finished methods 
+[allTest.HotelsTest.validateSearchCriteria() on instance allTest.HotelsTest@1ff4931d]
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="skip" test-id="29"
+          author=""
+          tag="chrome_HotelsTest"
+          device="">
+          <div class="test-detail">
+            <p class="name">Verification of Price Summary</p>
+            <p class="text-sm">
+              <span>9:47:51 PM</span> / <span>00:00:00:005</span>
+              <span class="badge skip-bg log float-right">Skip</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-skip">Verification of Price Summary</h5>
+<span class='badge badge-success'>01.07.2024 9:47:51 PM</span>
+<span class='badge badge-danger'>01.07.2024 9:47:51 PM</span>
+<span class='badge badge-default'>00:00:00:005</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=29</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">chrome_HotelsTest</span></div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>9:47:51 PM</td>
+        <td>
+          To verify the displayed information of price summary
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log skip-bg">Skip</span></td>
+        <td>9:47:51 PM</td>
+        <td>
+          Method allTest.HotelsTest.verifyPriceSummary() on instance allTest.HotelsTest@1ff4931d depends on not successfully finished methods 
+[allTest.HotelsTest.verifyOfferCodeSelection() on instance allTest.HotelsTest@1ff4931d]
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="skip" test-id="30"
+          author=""
+          tag="chrome_HotelsTest"
+          device="">
+          <div class="test-detail">
+            <p class="name">Verification of required fields</p>
+            <p class="text-sm">
+              <span>9:47:51 PM</span> / <span>00:00:00:004</span>
+              <span class="badge skip-bg log float-right">Skip</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-skip">Verification of required fields</h5>
+<span class='badge badge-success'>01.07.2024 9:47:51 PM</span>
+<span class='badge badge-danger'>01.07.2024 9:47:51 PM</span>
+<span class='badge badge-default'>00:00:00:004</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=30</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">chrome_HotelsTest</span></div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>9:47:51 PM</td>
+        <td>
+          To verify if user is able to fill all the required guest details
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log skip-bg">Skip</span></td>
+        <td>9:47:51 PM</td>
+        <td>
+          Method allTest.HotelsTest.verifyRequiredFields() on instance allTest.HotelsTest@1ff4931d depends on not successfully finished methods 
+[allTest.HotelsTest.verifyPriceSummary() on instance allTest.HotelsTest@1ff4931d]
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="skip" test-id="31"
+          author=""
+          tag="chrome_HotelsTest"
+          device="">
+          <div class="test-detail">
+            <p class="name">Verification of 'Proceed To Payment Options' button</p>
+            <p class="text-sm">
+              <span>9:47:51 PM</span> / <span>00:00:00:003</span>
+              <span class="badge skip-bg log float-right">Skip</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-skip">Verification of 'Proceed To Payment Options' button</h5>
+<span class='badge badge-success'>01.07.2024 9:47:51 PM</span>
+<span class='badge badge-danger'>01.07.2024 9:47:51 PM</span>
+<span class='badge badge-default'>00:00:00:003</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=31</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">chrome_HotelsTest</span></div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>9:47:51 PM</td>
+        <td>
+          To verify the functionality of 'Proceed To Payment Options' button
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log skip-bg">Skip</span></td>
+        <td>9:47:51 PM</td>
+        <td>
+          Method allTest.HotelsTest.verifyPaymentButton() on instance allTest.HotelsTest@1ff4931d depends on not successfully finished methods 
+[allTest.HotelsTest.verifyRequiredFields() on instance allTest.HotelsTest@1ff4931d]
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="skip" test-id="32"
+          author=""
+          tag="chrome_HotelsTest"
+          device="">
+          <div class="test-detail">
+            <p class="name">Verfication of details on Payment Gateway</p>
+            <p class="text-sm">
+              <span>9:47:51 PM</span> / <span>00:00:00:003</span>
+              <span class="badge skip-bg log float-right">Skip</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-skip">Verfication of details on Payment Gateway</h5>
+<span class='badge badge-success'>01.07.2024 9:47:51 PM</span>
+<span class='badge badge-danger'>01.07.2024 9:47:51 PM</span>
+<span class='badge badge-default'>00:00:00:003</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=32</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">chrome_HotelsTest</span></div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>9:47:51 PM</td>
+        <td>
+          To verify the details on the Payment Gateway page
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log skip-bg">Skip</span></td>
+        <td>9:47:51 PM</td>
+        <td>
+          Method allTest.HotelsTest.verifyDetailsOnPaymentGateway() on instance allTest.HotelsTest@1ff4931d depends on not successfully finished methods 
+[allTest.HotelsTest.verifyPaymentButton() on instance allTest.HotelsTest@1ff4931d]
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="skip" test-id="33"
+          author=""
+          tag="chrome_HotelsTest"
+          device="">
+          <div class="test-detail">
+            <p class="name">Verfication of 'Credit/Debit/ATM Card' option</p>
+            <p class="text-sm">
+              <span>9:47:51 PM</span> / <span>00:00:00:008</span>
+              <span class="badge skip-bg log float-right">Skip</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-skip">Verfication of 'Credit/Debit/ATM Card' option</h5>
+<span class='badge badge-success'>01.07.2024 9:47:51 PM</span>
+<span class='badge badge-danger'>01.07.2024 9:47:51 PM</span>
+<span class='badge badge-default'>00:00:00:008</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=33</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">chrome_HotelsTest</span></div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>9:47:51 PM</td>
+        <td>
+          To verify if user is able to choose 'Credit/Debit/ATM Card' option
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log skip-bg">Skip</span></td>
+        <td>9:47:51 PM</td>
+        <td>
+          Method allTest.HotelsTest.verifyCardPaymentOption() on instance allTest.HotelsTest@1ff4931d depends on not successfully finished methods 
+[allTest.HotelsTest.verifyDetailsOnPaymentGateway() on instance allTest.HotelsTest@1ff4931d]
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="skip" test-id="34"
+          author=""
+          tag="chrome_HotelsTest"
+          device="">
+          <div class="test-detail">
+            <p class="name">Verfication of card details fields</p>
+            <p class="text-sm">
+              <span>9:47:51 PM</span> / <span>00:00:00:003</span>
+              <span class="badge skip-bg log float-right">Skip</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-skip">Verfication of card details fields</h5>
+<span class='badge badge-success'>01.07.2024 9:47:51 PM</span>
+<span class='badge badge-danger'>01.07.2024 9:47:51 PM</span>
+<span class='badge badge-default'>00:00:00:003</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=34</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">chrome_HotelsTest</span></div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>9:47:51 PM</td>
+        <td>
+          To verify if user is able to enter credit card details
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log skip-bg">Skip</span></td>
+        <td>9:47:51 PM</td>
+        <td>
+          Method allTest.HotelsTest.verifyCardDetailsFields() on instance allTest.HotelsTest@1ff4931d depends on not successfully finished methods 
+[allTest.HotelsTest.verifyCardPaymentOption() on instance allTest.HotelsTest@1ff4931d]
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="skip" test-id="35"
+          author=""
+          tag="chrome_HotelsTest"
+          device="">
+          <div class="test-detail">
+            <p class="name">Verfication of 'Pay without saving card' option</p>
+            <p class="text-sm">
+              <span>9:47:51 PM</span> / <span>00:00:00:003</span>
+              <span class="badge skip-bg log float-right">Skip</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-skip">Verfication of 'Pay without saving card' option</h5>
+<span class='badge badge-success'>01.07.2024 9:47:51 PM</span>
+<span class='badge badge-danger'>01.07.2024 9:47:51 PM</span>
+<span class='badge badge-default'>00:00:00:003</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=35</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">chrome_HotelsTest</span></div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>9:47:51 PM</td>
+        <td>
+          To verify functionality of 'Pay without saving card' option
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log skip-bg">Skip</span></td>
+        <td>9:47:51 PM</td>
+        <td>
+          Method allTest.HotelsTest.verifyPayWithoutSavingCardButton() on instance allTest.HotelsTest@1ff4931d depends on not successfully finished methods 
+[allTest.HotelsTest.verifyCardDetailsFields() on instance allTest.HotelsTest@1ff4931d]
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="skip" test-id="36"
+          author=""
+          tag="chrome_FlightTest"
+          device="">
+          <div class="test-detail">
+            <p class="name">Selecting lowest fare date</p>
+            <p class="text-sm">
+              <span>9:48:00 PM</span> / <span>00:00:00:003</span>
+              <span class="badge skip-bg log float-right">Skip</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-skip">Selecting lowest fare date</h5>
+<span class='badge badge-success'>01.07.2024 9:48:00 PM</span>
+<span class='badge badge-danger'>01.07.2024 9:48:00 PM</span>
+<span class='badge badge-default'>00:00:00:003</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=36</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">chrome_FlightTest</span></div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>9:48:00 PM</td>
+        <td>
+          To verify user is able to select date from Calendar for the lowest price
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log skip-bg">Skip</span></td>
+        <td>9:48:00 PM</td>
+        <td>
+          Method allTest.FlightTest.lowestDateSelection() on instance allTest.FlightTest@63070bab depends on not successfully finished methods 
+[allTest.FlightTest.validationOfLowestFares() on instance allTest.FlightTest@63070bab]
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="skip" test-id="37"
+          author=""
+          tag="chrome_FlightTest"
+          device="">
+          <div class="test-detail">
+            <p class="name">Traveller Details</p>
+            <p class="text-sm">
+              <span>9:48:00 PM</span> / <span>00:00:00:002</span>
+              <span class="badge skip-bg log float-right">Skip</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-skip">Traveller Details</h5>
+<span class='badge badge-success'>01.07.2024 9:48:00 PM</span>
+<span class='badge badge-danger'>01.07.2024 9:48:00 PM</span>
+<span class='badge badge-default'>00:00:00:002</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=37</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">chrome_FlightTest</span></div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>9:48:00 PM</td>
+        <td>
+          To verify user is able to add details in Travellers and class menu
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log skip-bg">Skip</span></td>
+        <td>9:48:00 PM</td>
+        <td>
+          Method allTest.FlightTest.enterTravellerDetails() on instance allTest.FlightTest@63070bab depends on not successfully finished methods 
+[allTest.FlightTest.lowestDateSelection() on instance allTest.FlightTest@63070bab]
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="skip" test-id="38"
+          author=""
+          tag="chrome_FlightTest"
+          device="">
+          <div class="test-detail">
+            <p class="name">Validation of Search button</p>
+            <p class="text-sm">
+              <span>9:48:00 PM</span> / <span>00:00:00:003</span>
+              <span class="badge skip-bg log float-right">Skip</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-skip">Validation of Search button</h5>
+<span class='badge badge-success'>01.07.2024 9:48:00 PM</span>
+<span class='badge badge-danger'>01.07.2024 9:48:00 PM</span>
+<span class='badge badge-default'>00:00:00:003</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=38</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">chrome_FlightTest</span></div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>9:48:00 PM</td>
+        <td>
+          To verify the functionality of "Search flights" button after user click it
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log skip-bg">Skip</span></td>
+        <td>9:48:00 PM</td>
+        <td>
+          Method allTest.FlightTest.verifySearchButton() on instance allTest.FlightTest@63070bab depends on not successfully finished methods 
+[allTest.FlightTest.enterTravellerDetails() on instance allTest.FlightTest@63070bab]
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="skip" test-id="39"
+          author=""
+          tag="chrome_FlightTest"
+          device="">
+          <div class="test-detail">
+            <p class="name">Validation of price filter</p>
+            <p class="text-sm">
+              <span>9:48:00 PM</span> / <span>00:00:00:002</span>
+              <span class="badge skip-bg log float-right">Skip</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-skip">Validation of price filter</h5>
+<span class='badge badge-success'>01.07.2024 9:48:00 PM</span>
+<span class='badge badge-danger'>01.07.2024 9:48:00 PM</span>
+<span class='badge badge-default'>00:00:00:002</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=39</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">chrome_FlightTest</span></div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>9:48:00 PM</td>
+        <td>
+          To verify the functionality of Price Filter
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log skip-bg">Skip</span></td>
+        <td>9:48:00 PM</td>
+        <td>
+          Method allTest.FlightTest.verifyPriceFilter() on instance allTest.FlightTest@63070bab depends on not successfully finished methods 
+[allTest.FlightTest.verifySearchButton() on instance allTest.FlightTest@63070bab]
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="skip" test-id="40"
+          author=""
+          tag="chrome_FlightTest"
+          device="">
+          <div class="test-detail">
+            <p class="name">Validation of book flight button</p>
+            <p class="text-sm">
+              <span>9:48:00 PM</span> / <span>00:00:00:003</span>
+              <span class="badge skip-bg log float-right">Skip</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-skip">Validation of book flight button</h5>
+<span class='badge badge-success'>01.07.2024 9:48:00 PM</span>
+<span class='badge badge-danger'>01.07.2024 9:48:00 PM</span>
+<span class='badge badge-default'>00:00:00:003</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=40</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">chrome_FlightTest</span></div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>9:48:00 PM</td>
+        <td>
+          To verify the functionality of "Book now" button after user click on cheapest price flight
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log skip-bg">Skip</span></td>
+        <td>9:48:00 PM</td>
+        <td>
+          Method allTest.FlightTest.verifyBookBtn() on instance allTest.FlightTest@63070bab depends on not successfully finished methods 
+[allTest.FlightTest.verifyPriceFilter() on instance allTest.FlightTest@63070bab]
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="skip" test-id="41"
+          author=""
+          tag="chrome_FlightTest"
+          device="">
+          <div class="test-detail">
+            <p class="name">Validation of flight details</p>
+            <p class="text-sm">
+              <span>9:48:00 PM</span> / <span>00:00:00:003</span>
+              <span class="badge skip-bg log float-right">Skip</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-skip">Validation of flight details</h5>
+<span class='badge badge-success'>01.07.2024 9:48:00 PM</span>
+<span class='badge badge-danger'>01.07.2024 9:48:00 PM</span>
+<span class='badge badge-default'>00:00:00:003</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=41</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">chrome_FlightTest</span></div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>9:48:00 PM</td>
+        <td>
+          To verify the details of flight is displayed at overview page
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log skip-bg">Skip</span></td>
+        <td>9:48:00 PM</td>
+        <td>
+          Method allTest.FlightTest.verifyFlightDetails() on instance allTest.FlightTest@63070bab depends on not successfully finished methods 
+[allTest.FlightTest.verifyBookBtn() on instance allTest.FlightTest@63070bab]
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="skip" test-id="42"
+          author=""
+          tag="chrome_FlightTest"
+          device="">
+          <div class="test-detail">
+            <p class="name">Filling passenger details</p>
+            <p class="text-sm">
+              <span>9:48:00 PM</span> / <span>00:00:00:002</span>
+              <span class="badge skip-bg log float-right">Skip</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-skip">Filling passenger details</h5>
+<span class='badge badge-success'>01.07.2024 9:48:00 PM</span>
+<span class='badge badge-danger'>01.07.2024 9:48:00 PM</span>
+<span class='badge badge-default'>00:00:00:002</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=42</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">chrome_FlightTest</span></div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>9:48:00 PM</td>
+        <td>
+          To verify user is able to fill passenger details 
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log skip-bg">Skip</span></td>
+        <td>9:48:00 PM</td>
+        <td>
+          Method allTest.FlightTest.enterPassengerDetails() on instance allTest.FlightTest@63070bab depends on not successfully finished methods 
+[allTest.FlightTest.verifyFlightDetails() on instance allTest.FlightTest@63070bab]
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="skip" test-id="43"
+          author=""
+          tag="chrome_FlightTest"
+          device="">
+          <div class="test-detail">
+            <p class="name">Verify Passenger details</p>
+            <p class="text-sm">
+              <span>9:48:00 PM</span> / <span>00:00:00:003</span>
+              <span class="badge skip-bg log float-right">Skip</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-skip">Verify Passenger details</h5>
+<span class='badge badge-success'>01.07.2024 9:48:00 PM</span>
+<span class='badge badge-danger'>01.07.2024 9:48:00 PM</span>
+<span class='badge badge-default'>00:00:00:003</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=43</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">chrome_FlightTest</span></div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>9:48:00 PM</td>
+        <td>
+          To verify passenger details are displayed correctly
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log skip-bg">Skip</span></td>
+        <td>9:48:00 PM</td>
+        <td>
+          Method allTest.FlightTest.verifyPassengerDetails() on instance allTest.FlightTest@63070bab depends on not successfully finished methods 
+[allTest.FlightTest.enterPassengerDetails() on instance allTest.FlightTest@63070bab]
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="skip" test-id="44"
+          author=""
+          tag="chrome_FlightTest"
+          device="">
+          <div class="test-detail">
+            <p class="name">Verfication of 'Credit/Debit/ATM Card' option</p>
+            <p class="text-sm">
+              <span>9:48:00 PM</span> / <span>00:00:00:003</span>
+              <span class="badge skip-bg log float-right">Skip</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-skip">Verfication of 'Credit/Debit/ATM Card' option</h5>
+<span class='badge badge-success'>01.07.2024 9:48:00 PM</span>
+<span class='badge badge-danger'>01.07.2024 9:48:00 PM</span>
+<span class='badge badge-default'>00:00:00:003</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=44</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">chrome_FlightTest</span></div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>9:48:00 PM</td>
+        <td>
+          To verify if user is able to choose 'Credit/Debit/ATM Card' option
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log skip-bg">Skip</span></td>
+        <td>9:48:00 PM</td>
+        <td>
+          Method allTest.FlightTest.verifyCardPaymentOption() on instance allTest.FlightTest@63070bab depends on not successfully finished methods 
+[allTest.FlightTest.verifyPassengerDetails() on instance allTest.FlightTest@63070bab]
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="skip" test-id="45"
+          author=""
+          tag="chrome_FlightTest"
+          device="">
+          <div class="test-detail">
+            <p class="name">Verfication of card details fields</p>
+            <p class="text-sm">
+              <span>9:48:00 PM</span> / <span>00:00:00:002</span>
+              <span class="badge skip-bg log float-right">Skip</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-skip">Verfication of card details fields</h5>
+<span class='badge badge-success'>01.07.2024 9:48:00 PM</span>
+<span class='badge badge-danger'>01.07.2024 9:48:00 PM</span>
+<span class='badge badge-default'>00:00:00:002</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=45</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">chrome_FlightTest</span></div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>9:48:00 PM</td>
+        <td>
+          To verify if user is able to enter credit card details
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log skip-bg">Skip</span></td>
+        <td>9:48:00 PM</td>
+        <td>
+          Method allTest.FlightTest.verifyCardDetailsFields() on instance allTest.FlightTest@63070bab depends on not successfully finished methods 
+[allTest.FlightTest.verifyCardPaymentOption() on instance allTest.FlightTest@63070bab]
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="skip" test-id="46"
+          author=""
+          tag="chrome_FlightTest"
+          device="">
+          <div class="test-detail">
+            <p class="name">Verfication of 'Pay without saving card' option</p>
+            <p class="text-sm">
+              <span>9:48:00 PM</span> / <span>00:00:00:002</span>
+              <span class="badge skip-bg log float-right">Skip</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-skip">Verfication of 'Pay without saving card' option</h5>
+<span class='badge badge-success'>01.07.2024 9:48:00 PM</span>
+<span class='badge badge-danger'>01.07.2024 9:48:00 PM</span>
+<span class='badge badge-default'>00:00:00:002</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=46</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">chrome_FlightTest</span></div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>9:48:00 PM</td>
+        <td>
+          To verify functionality of 'Pay without saving card' option
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log skip-bg">Skip</span></td>
+        <td>9:48:00 PM</td>
+        <td>
+          Method allTest.FlightTest.verifyPayWithoutSavingCardButton() on instance allTest.FlightTest@63070bab depends on not successfully finished methods 
+[allTest.FlightTest.verifyCardDetailsFields() on instance allTest.FlightTest@63070bab]
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+<div class="test-content scrollable">
+<div class="test-content-tools">
+<ul><li><a class="back-to-test" href="#"><i class="fa fa-arrow-left"></i></a></li></ul>
+</div>
+<div class="test-content-detail"><div class="detail-body"></div></div>
+</div></div>
+<div class="test-wrapper row view category-view attributes-view">
+<div class="test-list">
+<div class="test-list-tools">
+<ul class="tools pull-left"><li><a href=""><span class="font-size-14">Category</span></a></li></ul>
+<ul class="tools text-right"><li><a href="#"><span class="badge badge-primary">3</span></a></li></ul>
+</div>
+<div class="test-list-wrapper scrollable">
+<ul class="test-list-item">
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>2</span>
+<span class='badge log badge-danger'>1</span>
+</span>
+<p class="name">chrome_LoginTest</p>
+<p class="duration text-sm">3 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>chrome_LoginTest</h4>
+<span status="pass" class='badge log pass-bg'>2 passed</span>
+<span status="fail" class='badge log badge-danger'>1 failed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>21:47:15 PM</td>
+<td>
+<a href="#" class="linked" test-id='2' id='2'>Verify login functionality using invalid mobile number</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>21:47:16 PM</td>
+<td>
+<a href="#" class="linked" test-id='4' id='4'>Verify login functionality using invalid mobile number</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>21:47:17 PM</td>
+<td>
+<a href="#" class="linked" test-id='5' id='5'>Verify login functionality using valid mobile number</a>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>2</span>
+<span class='badge log badge-danger'>1</span>
+<span class='badge log badge-skip'>22</span>
+</span>
+<p class="name">chrome_HotelsTest</p>
+<p class="duration text-sm">25 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>chrome_HotelsTest</h4>
+<span status="pass" class='badge log pass-bg'>2 passed</span>
+<span status="fail" class='badge log badge-danger'>1 failed</span>
+<span status="skip" class='badge log badge-skip'>22 skipped</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>21:47:12 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='1'>Navigation to Hotel page</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>21:47:19 PM</td>
+<td>
+<a href="#" class="linked" test-id='8' id='8'>Validation of radio buttons</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>21:47:20 PM</td>
+<td>
+<a href="#" class="linked" test-id='11' id='11'>Validation of 'Where' menu</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>21:47:51 PM</td>
+<td>
+<a href="#" class="linked" test-id='14' id='14'>Validation of the date fields</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>21:47:51 PM</td>
+<td>
+<a href="#" class="linked" test-id='15' id='15'>Validation of 'Adults' field</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>21:47:51 PM</td>
+<td>
+<a href="#" class="linked" test-id='16' id='16'>Validation of 'Rooms' field</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>21:47:51 PM</td>
+<td>
+<a href="#" class="linked" test-id='17' id='17'>Validation of 'Children' fields</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>21:47:51 PM</td>
+<td>
+<a href="#" class="linked" test-id='18' id='18'>Verify functionality to add 0 rooms</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>21:47:51 PM</td>
+<td>
+<a href="#" class="linked" test-id='19' id='19'>Verify functionality to add 0 adults</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>21:47:51 PM</td>
+<td>
+<a href="#" class="linked" test-id='20' id='20'>Validation of 'Search' field</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>21:47:51 PM</td>
+<td>
+<a href="#" class="linked" test-id='21' id='21'>Verification of Hotel search criteria</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>21:47:51 PM</td>
+<td>
+<a href="#" class="linked" test-id='22' id='22'>Verification of sorting options</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>21:47:51 PM</td>
+<td>
+<a href="#" class="linked" test-id='23' id='23'>Validation of Price filter</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>21:47:51 PM</td>
+<td>
+<a href="#" class="linked" test-id='24' id='24'>Validation of Customer Rating filter</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>21:47:51 PM</td>
+<td>
+<a href="#" class="linked" test-id='25' id='25'>Verify selection of hotel</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>21:47:51 PM</td>
+<td>
+<a href="#" class="linked" test-id='26' id='26'>Verify selection of room options</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>21:47:51 PM</td>
+<td>
+<a href="#" class="linked" test-id='27' id='27'>Verification of search criteria</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>21:47:51 PM</td>
+<td>
+<a href="#" class="linked" test-id='28' id='28'>Verification of Offer Code selection</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>21:47:51 PM</td>
+<td>
+<a href="#" class="linked" test-id='29' id='29'>Verification of Price Summary</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>21:47:51 PM</td>
+<td>
+<a href="#" class="linked" test-id='30' id='30'>Verification of required fields</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>21:47:51 PM</td>
+<td>
+<a href="#" class="linked" test-id='31' id='31'>Verification of 'Proceed To Payment Options' button</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>21:47:51 PM</td>
+<td>
+<a href="#" class="linked" test-id='32' id='32'>Verfication of details on Payment Gateway</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>21:47:51 PM</td>
+<td>
+<a href="#" class="linked" test-id='33' id='33'>Verfication of 'Credit/Debit/ATM Card' option</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>21:47:51 PM</td>
+<td>
+<a href="#" class="linked" test-id='34' id='34'>Verfication of card details fields</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>21:47:51 PM</td>
+<td>
+<a href="#" class="linked" test-id='35' id='35'>Verfication of 'Pay without saving card' option</a>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>6</span>
+<span class='badge log badge-danger'>1</span>
+<span class='badge log badge-skip'>11</span>
+</span>
+<p class="name">chrome_FlightTest</p>
+<p class="duration text-sm">18 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>chrome_FlightTest</h4>
+<span status="pass" class='badge log pass-bg'>6 passed</span>
+<span status="fail" class='badge log badge-danger'>1 failed</span>
+<span status="skip" class='badge log badge-skip'>11 skipped</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>21:47:15 PM</td>
+<td>
+<a href="#" class="linked" test-id='3' id='3'>Navigation to Hotel page</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>21:47:18 PM</td>
+<td>
+<a href="#" class="linked" test-id='6' id='6'>Verification of From textfield</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>21:47:19 PM</td>
+<td>
+<a href="#" class="linked" test-id='7' id='7'>From city</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>21:47:20 PM</td>
+<td>
+<a href="#" class="linked" test-id='9' id='9'>Verification of To textfield</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>21:47:20 PM</td>
+<td>
+<a href="#" class="linked" test-id='10' id='10'>To city</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>21:47:21 PM</td>
+<td>
+<a href="#" class="linked" test-id='12' id='12'>Verification of Date Button</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>21:47:21 PM</td>
+<td>
+<a href="#" class="linked" test-id='13' id='13'>Verification of Cheap Fares</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>21:48:00 PM</td>
+<td>
+<a href="#" class="linked" test-id='36' id='36'>Selecting lowest fare date</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>21:48:00 PM</td>
+<td>
+<a href="#" class="linked" test-id='37' id='37'>Traveller Details</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>21:48:00 PM</td>
+<td>
+<a href="#" class="linked" test-id='38' id='38'>Validation of Search button</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>21:48:00 PM</td>
+<td>
+<a href="#" class="linked" test-id='39' id='39'>Validation of price filter</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>21:48:00 PM</td>
+<td>
+<a href="#" class="linked" test-id='40' id='40'>Validation of book flight button</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>21:48:00 PM</td>
+<td>
+<a href="#" class="linked" test-id='41' id='41'>Validation of flight details</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>21:48:00 PM</td>
+<td>
+<a href="#" class="linked" test-id='42' id='42'>Filling passenger details</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>21:48:00 PM</td>
+<td>
+<a href="#" class="linked" test-id='43' id='43'>Verify Passenger details</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>21:48:00 PM</td>
+<td>
+<a href="#" class="linked" test-id='44' id='44'>Verfication of 'Credit/Debit/ATM Card' option</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>21:48:00 PM</td>
+<td>
+<a href="#" class="linked" test-id='45' id='45'>Verfication of card details fields</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>21:48:00 PM</td>
+<td>
+<a href="#" class="linked" test-id='46' id='46'>Verfication of 'Pay without saving card' option</a>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="test-content scrollable">
+<div class="test-content-detail">
+<div class="detail-body"></div>
+</div>
+</div>
+</div>        </div>
+      </div>
+    </div>
+  </div>
+<script src="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@d6562a79075e061305ccfdb82f01e5e195e2d307/spark/js/spark-script.js"></script>
+<script type="text/javascript"></script></body>
+</html>

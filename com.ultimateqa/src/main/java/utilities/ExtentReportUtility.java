@@ -11,8 +11,7 @@ public class ExtentReportUtility {
 	//Method to create the instance of the ExtentReports class 
 	public static ExtentReports getReportInstance(String filePath)
 	{
-		if(report== null)
-		{
+		
 			//Creates the object of the spark reporter using the filepath for the HTML file 
 			ExtentSparkReporter spark = new ExtentSparkReporter(filePath);
 			spark.config().setDocumentTitle("UI Automation Results");
@@ -32,7 +31,7 @@ public class ExtentReportUtility {
 			report.setSystemInfo("Browser", "Edge");
 			report.setSystemInfo("Browser", "Firefox");
 			
-		}
+		
 
 		return report;
 	}

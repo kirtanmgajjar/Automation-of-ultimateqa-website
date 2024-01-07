@@ -1,73 +1,82 @@
 package test;
 
+import org.testng.annotations.CustomAttribute;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 import baseClass.BaseClass;
-import static utilities.ListenerUtility.setPassMessage;
+import pages.HomePage;
 
-public class SubmitFormTest extends BaseClass {
+import static org.testng.Assert.assertTrue;
+
+public class SubmitFormTest extends BaseClass 
+{
+	
 		
 	@Test(testName = "Free Consultation Button",
-			description = "To validate the functionality of \"Free Consultation Button\"")
+			description = "To validate the functionality of \"Free Consultation Button\"",
+			attributes = {@CustomAttribute(name="passMessage",values={"Form submission page is successfully opened"})})
 	public void clickConsultation() throws InterruptedException
 	{
 		
 		cp.verifyTitle();
 		cp.clickFreeConsultation();
-		setPassMessage("Form submission page is successfully opened");
 	}
 	
 	
-	@Test(testName = "Submit form",
+	@Test(testName = "Submit form", threadPoolSize = 3, invocationCount = 1,
 			description = "To validate submit functioality by filling details",
 			dependsOnMethods = {"clickConsultation"},
-			dataProvider = "filldetails")
+			dataProvider = "filldetails",
+			attributes = {@CustomAttribute(name="passMessage",values= {"Details are submitted successfully"})})
 	public void fillForm(String data[])
 	{
 		sf.fillDetails(data);
-		setPassMessage("Details are submitted successfully");
 		
 	}
 	
 	@Test(testName = "Navigate to homepage",
 			description = "To validate the navigation to homepage",
-			dependsOnMethods = {"fillForm"})
+			dependsOnMethods = {"fillForm"},
+			attributes = {@CustomAttribute(name="passMessage",values= {"Navigated to homepage successfully"})})
 	public void navigateToHomepage() throws InterruptedException
 	{
 		hp.navigateHomePage();
-		setPassMessage("Navigated to homepage successfully");
 	}
 	
 	@Test(testName = "Search courses",
 			description = "To validate the search functionality for seaching courses based on the subject",
-			dependsOnMethods = "navigateToHomepage")
+			dependsOnMethods = "navigateToHomepage",
+			attributes = {@CustomAttribute(name="passMessage",values= {"Results Found"})})
 	public void validateSearchResults()
 	{
 		hp.hoverLearningMenu();
 		hp.clickFreeCourse();
 		fp.searchCourse("Selenium");
-		if(fp.hasSearchResults())
-			setPassMessage("Results Found");
-		else
-			setPassMessage("No Results Found");
+//		if(fp.hasSearchResults())
+//			setPassMessage("Results Found");
+//		else
+//			setPassMessage("No Results Found");
+		
+		assertTrue(fp.hasSearchResults());
 	}
 	
 	@Test(testName = "Navigate to SignIn page",
 			description = "To validate page by navigating to Signin page",
-			dependsOnMethods = "validateSearchResults")
+			dependsOnMethods = "validateSearchResults",
+			attributes = {@CustomAttribute(name="passMessage",values= {"Navigated to SignIn page successfully"})})
 	public void navigateToSignin()
 	{
 
 		fp.navigateToSignin();
-		setPassMessage("Navigated to SignIn page successfully");
 	}
 	
 	
 	
 	@Test(testName = "Error Message",
 			description = "To validate by sigining with wrong credentials and retreiving the error message",
-			dependsOnMethods = "navigateToSignin")
+			dependsOnMethods = "navigateToSignin",
+			attributes = {@CustomAttribute(name="passMessage",values= {"Error message successfully displayed"})})
 	public void signIn() throws InterruptedException
 	{
 		sp.sendEmail();
@@ -75,18 +84,9 @@ public class SubmitFormTest extends BaseClass {
 		sp.clickSubmit();
 	}
 	
-	@DataProvider(name = "filldetails")
+	@DataProvider(name = "filldetails",parallel = true)
 	public String[][] getData()
 	{
-		dataExcel.openSheet("Data");
-		String[][] data = new String[dataExcel.getRowCount()][dataExcel.getColumnCount()+1];
-		for(int i =0; i<dataExcel.getRowCount();i++)
-		{
-			for(int j=0;j<dataExcel.getColumnCount()+1;j++)
-			{
-				data[i][j] = dataExcel.getCellData(i+1, j);
-			}
-		}
-		return data;
+		return registrationData;
 	}
 }

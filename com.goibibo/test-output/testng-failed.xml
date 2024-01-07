@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite parallel="tests" name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" parallel="tests" name="Test2(failed)">
+    <classes>
+      <class name="allTest.LoginTest">
+        <methods>
+          <include name="signIn"/>
+          <include name="tearDown"/>
+          <include name="configPages"/>
+          <include name="invalidSignIn"/>
+          <include name="configurations"/>
+        </methods>
+      </class> <!-- allTest.LoginTest -->
+    </classes>
+  </test> <!-- Test2(failed) -->
+  <test thread-count="5" parallel="tests" name="Test1(failed)">
+    <classes>
+      <class name="allTest.HotelsTest">
+        <methods>
+          <include name="verifySortingOptions"/>
+          <include name="verifyHotelSelection"/>
+          <include name="verify0RoomAdd"/>
+          <include name="validationOfRoomsField"/>
+          <include name="verifyPayWithoutSavingCardButton"/>
+          <include name="validationOfDateFields"/>
+          <include name="verifyDetailsOnPaymentGateway"/>
+          <include name="verifyCardPaymentOption"/>
+          <include name="tearDown"/>
+          <include name="verify0AdultAdd"/>
+          <include name="validationOfWhereSearchfield"/>
+          <include name="verifyPaymentButton"/>
+          <include name="validationOfChildrenField"/>
+          <include name="verifyPriceFilter"/>
+          <include name="verifyOfferCodeSelection"/>
+          <include name="navigateToHotelsPage"/>
+          <include name="validationOfAdultsField"/>
+          <include name="verifyRequiredFields"/>
+          <include name="verifyCustomerRatingFilter"/>
+          <include name="validationOfRadioButtons"/>
+          <include name="validationOfSearchField"/>
+          <include name="configPages"/>
+          <include name="verifyPriceSummary"/>
+          <include name="validateSearchCriteria"/>
+          <include name="configurations"/>
+          <include name="verifyCardDetailsFields"/>
+          <include name="verifyRoomOptionsSelection"/>
+          <include name="verifySearchCriteria"/>
+        </methods>
+      </class> <!-- allTest.HotelsTest -->
+    </classes>
+  </test> <!-- Test1(failed) -->
+  <test thread-count="5" parallel="tests" name="Test3(failed)">
+    <classes>
+      <class name="allTest.FlightTest">
+        <methods>
+          <include name="validationOfLowestFares"/>
+          <include name="verifyOriginCity"/>
+          <include name="navigateToFLightsPage"/>
+          <include name="verifyFromTextBox"/>
+          <include name="verifyFlightDetails"/>
+          <include name="verifyPassengerDetails"/>
+          <include name="verifyPriceFilter"/>
+          <include name="verifyPayWithoutSavingCardButton"/>
+          <include name="verifyBookBtn"/>
+          <include name="verifyDestinationCity"/>
+          <include name="verifyToTextBox"/>
+          <include name="tearDown"/>
+          <include name="configPages"/>
+          <include name="verifySearchButton"/>
+          <include name="enterTravellerDetails"/>
+          <include name="verifyCardDetailsFields"/>
+          <include name="verifyCardPaymentOption"/>
+          <include name="lowestDateSelection"/>
+          <include name="verifyDateBtn"/>
+          <include name="enterPassengerDetails"/>
+          <include name="configurations"/>
+        </methods>
+      </class> <!-- allTest.FlightTest -->
+    </classes>
+  </test> <!-- Test3(failed) -->
+</suite> <!-- Failed suite [Suite] -->

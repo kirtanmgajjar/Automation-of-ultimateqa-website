@@ -1,14 +1,15 @@
 package pages;
 
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import static utilities.ListenerUtility.setPassMessage;
+//import static utilities.ListenerUtility.setPassMessage;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 
 import baseClass.BaseClass;
 
-public class SignInPage extends BaseClass {
+public class SignInPage extends BasePage {
 	
 	@FindBy(id = "user[email]")
 	WebElement email;
@@ -19,9 +20,9 @@ public class SignInPage extends BaseClass {
 	@FindBy(id = "notice")
 	WebElement errorMsg;
 	
-	public SignInPage()
+	public SignInPage(WebDriver driver)
 	{
-		PageFactory.initElements(driver, this);
+		super(driver);
 	}
 	
 	public void sendEmail()
@@ -43,6 +44,12 @@ public class SignInPage extends BaseClass {
 		System.out.println("-----------------------------------------");
 		System.out.println("Error message displayed is :\n"+errorMsg2);
 		System.out.println("-----------------------------------------");
-		setPassMessage("Error message is "+errorMsg2);
+		//setPassMessage("Error message is "+errorMsg2);
+	}
+
+	@Override
+	public void verifyPage() {
+		// TODO Auto-generated method stub
+		
 	}
 }
